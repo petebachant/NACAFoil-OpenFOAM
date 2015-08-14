@@ -21,7 +21,7 @@ internalField   uniform 0;
 
 boundaryField
 {
-    wing
+    airfoil
     {
         type            nutkWallFunction;
         value           uniform 0;

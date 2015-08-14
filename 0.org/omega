@@ -31,7 +31,7 @@ boundaryField
         value           $internalField;
     }
 
-    wing
+    airfoil
     {
         type            omegaWallFunction;
         value           $internalField;
