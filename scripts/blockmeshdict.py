@@ -125,8 +125,9 @@ vertices = np.vstack((vertices, vertices2))
 
 
 # Edge 4-5 and 16-17
-#pts1 = [Xu(2:C_max_idx-1), W*ones(size(Xu(2:C_max_idx-1))), Zu(2:C_max_idx-1)] 
-#pts5 = [pts1(:,1), -pts1(:,2), pts1(:,3)]
+pts1 = np.concatenate([Xu[1:C_max_idx], W*ones(np.shape(Xu[1:C_max_idx])), 
+                       Zu[1:C_max_idx]], axis=1) 
+pts5 = np.concatenate([pts1[:, 0], -pts1[:, 1], pts1[:, 2]], axis=1)
 
 """
 # Edge 5-7 and 17-19
