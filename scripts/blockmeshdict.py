@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
+from __future__ import division, print_function
+import numpy as np
+from numpy import linspace, zeros, sin, cos, atan, size
+
 # ------------------------ START OF MESH PARAMETER REGION -------------------- #
 
 # Foil geometry
-c = 1                # Geometric chord length
+c = 1.0              # Geometric chord length
 alpha = 0.1745       # Angle of attack (in radians)
-NACA = [4 4 1 2]     # NACA 4-digit designation as a row vector
+NACA = [4, 4, 1, 2]  # NACA 4-digit designation as a row vector
 
 # Mesh dimensions
 scale = 1            # Scaling factor
@@ -29,17 +33,17 @@ ExpArc = 50          # Expansion rate along the inlet arc
 
 
 # Create a vector with x-coordinates, camber and thickness
-beta=linspace(0,pi,Ni)
-x = c*(0.5*(1-cos(beta)))
+beta = linspace(0, pi, Ni)
+x = c*(0.5*(1 - cos(beta)))
 z_c = zeros(size(x))
 z_t = zeros(size(x))
 theta = zeros(size(x))
 
 
 # Values of m, p and t
-m = NACA(1)/100
-p = NACA(2)/10
-t = (NACA(3)*10 + NACA(4))/100
+m = NACA[0]/100
+p = NACA[1]/10
+t = (NACA[2]*10 + NACA[3])/100
 
 
 # Calculate thickness
@@ -51,71 +55,66 @@ t = (NACA(3)*10 + NACA(4))/100
 # See http://turbmodels.larc.nasa.gov/naca4412sep_val.html
 #     http://en.wikipedia.org/wiki/NACA_airfoil
 
-#y_t = (t*c/0.2) * (0.2969.*(x/c).^0.5 - 0.1260.*(x/c) - 0.3516.*(x/c).^2 + 0.2843.*(x/c).^3 - 0.1015.*(x/c).^4)
-z_t = (t*c/0.2) * (0.2969.*(x/c).^0.5 - 0.1260.*(x/c) - 0.3516.*(x/c).^2 + 0.2843.*(x/c).^3 - 0.1036.*(x/c).^4)
+#y_t = (t*c/0.2) * (0.2969*(x/c)**0.5 - 0.1260*(x/c) - 0.3516*(x/c)**2 + 0.2843*(x/c)**3 - 0.1015*(x/c)**4)
+z_t = (t*c/0.2)*(0.2969*(x/c)**0.5 - 0.1260*(x/c) - 0.3516*(x/c)**2 \
+       + 0.2843*(x/c)**3 - 0.1036*(x/c)**4)
 
-
-# Calculate camber
-if (p > 0)
-  # Calculate camber
-  z_c = z_c + (m.*x/p^2) .* (2*p - x/c) .* (x < p*c)
-  z_c = z_c + (m.*(c-x)/(1-p)^2) .* (1 + x/c - 2*p) .* (x >= p*c)
-
-
-  # Calculate theta-value
-  theta = theta + atan( (m/p^2) * (2*p - 2*x/c) ) .* (x < p*c)
-  theta = theta + atan( (m/(1-p)^2) * (-2*x/c + 2*p) ) .* (x >= p*c)
-end
+if p > 0:
+    # Calculate camber
+    z_c += (m*x/p**2)*(2*p - x/c)*(x < p*c)
+    z_c += (m*(c-x)/(1 - p)**2)*(1 + x/c - 2*p)*(x >= p*c)
+    # Calculate theta-value
+    theta += atan((m/p**2) * (2*p - 2*x/c))*(x < p*c)
+    theta += atan((m/(1 - p)**2) * (-2*x/c + 2*p))*(x >= p*c)
 
 
 # Calculate coordinates of upper surface
-Xu = x - z_t.*sin(theta)
-Zu = z_c + z_t.*cos(theta)
+Xu = x - z_t*sin(theta)
+Zu = z_c + z_t*cos(theta)
 
 
 # Calculate coordinates of lower surface
-Xl = x + z_t.*sin(theta)
-Zl = z_c - z_t.*cos(theta)
+Xl = x + z_t*sin(theta)
+Zl = z_c - z_t*cos(theta)
 
 
 # Rotate foil to reach specified angle of attack
 upper = [cos(alpha), sin(alpha); -sin(alpha), cos(alpha)] * [Xu ; Zu]
 lower = [cos(alpha), sin(alpha); -sin(alpha), cos(alpha)] * [Xl ; Zl]
 
-Xu = upper(1,:)'
-Zu = upper(2,:)'
-Xl = lower(1,:)'
-Zl = lower(2,:)'
+Xu = upper[0, :].conj().transpose()
+Zu = upper[1, :].conj().transpose()
+Xl = lower[0, :].conj().transpose()
+Zl = lower[1, :].conj().transpose()
 
-if (p > 0)
-  # Find index i of max. camber
-  C_max_idx = find(z_c == max(z_c))
-else
-  # Otherwise use location of max. thickness
-  C_max_idx = find(z_t == max(z_t))
-end
+if (p > 0):
+    # Find index i of max. camber
+    C_max_idx = find(z_c == max(z_c))
+else:
+    # Otherwise use location of max. thickness
+    C_max_idx = find(z_t == max(z_t))
 
 
 # Move point of mesh "nose"
-NoseX = (-H+Xu(C_max_idx))*cos(alpha)
-NoseZ = -(-H+Xu(C_max_idx))*sin(alpha)
+NoseX = (-H + Xu(C_max_idx))*cos(alpha)
+NoseZ = -(-H + Xu(C_max_idx))*sin(alpha)
 
 
 # Calculate the location of the vertices on the positive y-axis and put them in a matrix
 vertices = zeros(12, 3)
 
-vertices(1,:)  = [NoseX,            W,            NoseZ]
-vertices(2,:)  = [Xu(C_max_idx),    W,                H]
-vertices(3,:)  = [Xu(Ni),           W,                H]
-vertices(4,:)  = [D,                W,                H]
-vertices(5,:)  = [0,                W,                0]
-vertices(6,:)  = [Xu(C_max_idx),    W,    Zu(C_max_idx)]
-vertices(7,:)  = [Xl(C_max_idx),    W,    Zl(C_max_idx)]
-vertices(8,:)  = [Xu(Ni),           W,           Zu(Ni)]
-vertices(9,:)  = [D,                W,           Zu(Ni)]
-vertices(10,:) = [Xl(C_max_idx),    W,               -H]
-vertices(11,:) = [Xu(Ni),           W,               -H]
-vertices(12,:) = [D,                W,               -H]
+vertices[0, :]  = [NoseX,            W,            NoseZ]
+vertices[1, :]  = [Xu(C_max_idx),    W,                H]
+vertices[2, :]  = [Xu(Ni),           W,                H]
+vertices[3, :]  = [D,                W,                H]
+vertices[4, :]  = [0,                W,                0]
+vertices[5, :]  = [Xu(C_max_idx),    W,    Zu(C_max_idx)]
+vertices[6, :]  = [Xl(C_max_idx),    W,    Zl(C_max_idx)]
+vertices[7, :]  = [Xu(Ni),           W,           Zu(Ni)]
+vertices[8, :]  = [D,                W,           Zu(Ni)]
+vertices[9, :]  = [Xl(C_max_idx),    W,               -H]
+vertices[10, :] = [Xu(Ni),           W,               -H]
+vertices[11, :] = [D,                W,               -H]
 
 # Create vertices for other side (negative y-axis)
 vertices = [vertices; vertices(:,1), -vertices(:,2), vertices(:,3)]
