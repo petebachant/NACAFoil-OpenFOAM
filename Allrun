@@ -4,8 +4,22 @@ cd ${0%/*} || exit 1    # run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
+mkdir -p constant/polyMesh
+
+if [ "$1" != "" ]
+    then foil=$1
+else
+    foil="0012"
+fi
+
+if [ "$2" != "" ]
+    then alpha_deg=$2
+else
+    alpha_deg=4
+fi
+
 cp -rf 0.org 0
-./scripts/meshgen.m
+python scripts/blockmeshdict.py $foil $alpha_deg
 runApplication blockMesh
 runApplication createPatch -overwrite
 simpleFoam | tee log.simpleFoam

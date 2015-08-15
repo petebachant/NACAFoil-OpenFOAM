@@ -7,3 +7,5 @@ cd ${0%/*} || exit 1    # run from this directory
 rm -rf 0 > /dev/null 2>&1
 
 cleanCase
+
+rm -rf constant/polyMesh
