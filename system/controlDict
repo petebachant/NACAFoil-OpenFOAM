@@ -31,7 +31,7 @@ writeControl    runTime;
 
 writeInterval   100;
 
-purgeWrite      0;
+purgeWrite      1;
 
 writeFormat     ascii;
 
@@ -60,6 +60,30 @@ functions
         log                 true;
         rhoInf              1;
         CofR                (0.4974612746 -0.01671895744 0.125);
+    }
+    
+    forceCoeffs
+    {
+        type                forceCoeffs;
+        functionObjectLibs  ("libforces.so");
+        outputControl       timeStep;
+        outputInterval      1;
+     
+        patches             ("airfoil.*");
+        pName               p;
+        UName               U;
+        rhoName             rhoInf;
+        log                 true;
+         
+        liftDir             (0 0 1);
+        dragDir             (1 0 0);
+        CofR                (0.25 0 0);
+        pitchAxis           (0 1 0);
+         
+        magUInf             0.2;
+        rhoInf              1000;
+        lRef                1;
+        Aref                1;
     }
 }
 
