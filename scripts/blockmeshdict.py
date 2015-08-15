@@ -119,14 +119,16 @@ vertices[10, :] = [Xu[-1], W, -H]
 vertices[11, :] = [D, W, -H]
 
 # Create vertices for other side (negative y-axis)
-vertices = np.hstack((vertices, vertices[:, 0, None], -vertices[:, 1, None], 
-                      vertices[:, 2, None]))
+vertices2 = vertices.copy()
+vertices2[:, 1] *= -1
+vertices = np.vstack((vertices, vertices2))
+
+
+# Edge 4-5 and 16-17
+#pts1 = [Xu(2:C_max_idx-1), W*ones(size(Xu(2:C_max_idx-1))), Zu(2:C_max_idx-1)] 
+#pts5 = [pts1(:,1), -pts1(:,2), pts1(:,3)]
 
 """
-# Edge 4-5 and 16-17
-pts1 = [Xu(2:C_max_idx-1), W*ones(size(Xu(2:C_max_idx-1))), Zu(2:C_max_idx-1)] 
-pts5 = [pts1(:,1), -pts1(:,2), pts1(:,3)]
-
 # Edge 5-7 and 17-19
 pts2 = [Xu(C_max_idx+1:Ni-1), W*ones(size(Xu(C_max_idx+1:Ni-1))), Zu(C_max_idx+1:Ni-1)] 
 pts6 = [pts2(:,1), -pts2(:,2), pts2(:,3)]
