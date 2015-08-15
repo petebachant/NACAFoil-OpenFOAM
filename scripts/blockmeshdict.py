@@ -129,38 +129,40 @@ pts1 = np.concatenate([Xu[1:C_max_idx], W*ones(np.shape(Xu[1:C_max_idx])),
                        Zu[1:C_max_idx]], axis=1) 
 pts5 = np.concatenate([pts1[:, 0], -pts1[:, 1], pts1[:, 2]], axis=1)
 
-"""
 # Edge 5-7 and 17-19
-pts2 = [Xu(C_max_idx+1:Ni-1), W*ones(size(Xu(C_max_idx+1:Ni-1))), Zu(C_max_idx+1:Ni-1)] 
-pts6 = [pts2(:,1), -pts2(:,2), pts2(:,3)]
+pts2 = np.concatenate([Xu[C_max_idx + 1:Ni - 1], 
+                       W*ones(np.shape(Xu[C_max_idx + 1:Ni - 1])), 
+                       Zu[C_max_idx + 1:Ni - 1]], axis=1)
+pts6 = np.concatenate([pts2[:, 0], -pts2[:, 1], pts2[:, 2]], axis=1)
 
 # Edge 4-6 and 16-18
-pts3 = [Xl(2:C_max_idx-1), W*ones(size(Xl(2:C_max_idx-1))), Zl(2:C_max_idx-1)] 
-pts7 = [pts3(:,1), -pts3(:,2), pts3(:,3)]
+pts3 = np.concatenate([Xl[1:C_max_idx], W*ones(np.shape(Xl[1:C_max_idx])), 
+                       Zl[1:C_max_idx]], axis=1)
+pts7 = np.concatenate([pts3[:, 0], -pts3[:, 1], pts3[:, 2]], axis=1)
 
 # Edge 6-7 and 18-19
-pts4 = [Xl(C_max_idx+1:Ni-1), W*ones(size(Xl(C_max_idx+1:Ni-1))), Zl(C_max_idx+1:Ni-1)] 
-pts8 = [pts4(:,1), -pts4(:,2), pts4(:,3)]
+pts4 = np.concatenate([Xl[C_max_idx + 1:Ni - 1],
+                      W*ones(np.shape(Xl[C_max_idx + 1:Ni - 1])),
+                      Zl[C_max_idx + 1:Ni - 1]], axis=1) 
+pts8 = np.concatenate([pts4[:, 0], -pts4[:, 1], pts4[:, 2]], axis=1)
 
 # Edge 0-1 and 12-13
-pts9 = [-H*cos(pi/4)+Xu(C_max_idx), W, H*sin(pi/4)]
-pts11 = [pts9(:,1), -pts9(:,2), pts9(:,3)]
+pts9 = np.array([-H*cos(pi/4) + Xu[C_max_idx, 0], W, H*sin(pi/4)])
+pts11 = np.array([pts9[0], -pts9[1], pts9[2]])
 
 # Edge 0-9 and 12-21
-pts10 = [-H*cos(pi/4)+Xu(C_max_idx), W, -H*sin(pi/4)]
-pts12 = [pts10(:,1), -pts10(:,2), pts10(:,3)]
-
+pts10 = np.array([-H*cos(pi/4) + Xu[C_max_idx, 0], W, -H*sin(pi/4)])
+pts12 = np.array([pts10[0], -pts10[1], pts10[2]])
 
 # Calculate number of mesh points along 4-5 and 4-6
 #Nleading = (C_max_idx/Ni)*Nx
-Nleading = (x(C_max_idx)/c)*Nx
+Nleading = int((x[C_max_idx]/c)*Nx)
 
 # Calculate number of mesh points along 5-7 and 6-7
 Ntrailing = Nx - Nleading
 
-
 # Open file
-f = open('constant/polyMesh/blockMeshDict', 'w')
+f = open('constant/polyMesh/blockMeshDict-python', 'w')
 
 
 # Write file
@@ -184,7 +186,7 @@ f.write('convertToMeters %f; \n', scale)
 f.write('\n')
 f.write('vertices \n')       
 f.write('( \n')
-f.write('    (%f %f %f)\n', vertices')
+f.write('    (%f %f %f)\n', vertices.H)
 f.write('); \n')
 f.write('\n')
 f.write('blocks \n')
@@ -203,48 +205,48 @@ f.write('( \n')
 
 f.write('    spline 4 5 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f) \n', pts1')
+f.write('            (%f %f %f) \n', pts1.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 5 7 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts2')
+f.write('            (%f %f %f)\n', pts2.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 4 6 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts3')
+f.write('            (%f %f %f)\n', pts3.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 6 7 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts4')
+f.write('            (%f %f %f)\n', pts4.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 16 17 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts5')
+f.write('            (%f %f %f)\n', pts5.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 17 19 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts6')
+f.write('            (%f %f %f)\n', pts6.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 16 18 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts7')
+f.write('            (%f %f %f)\n', pts7.conj().transpose())
 f.write('        ) \n')
 
 f.write('    spline 18 19 \n')
 f.write('        ( \n')
-f.write('            (%f %f %f)\n', pts8')
+f.write('            (%f %f %f)\n', pts8.conj().transpose())
 f.write('        ) \n')
 
-f.write('    arc 0 1 (%f %f %f) \n', pts9')
-f.write('    arc 0 9 (%f %f %f) \n', pts10')
-f.write('    arc 12 13 (%f %f %f) \n', pts11')
-f.write('    arc 12 21 (%f %f %f) \n', pts12')
+f.write('    arc 0 1 (%f %f %f) \n', pts9.conj().transpose())
+f.write('    arc 0 9 (%f %f %f) \n', pts10.conj().transpose())
+f.write('    arc 12 13 (%f %f %f) \n', pts11.conj().transpose())
+f.write('    arc 12 21 (%f %f %f) \n', pts12.conj().transpose())
 
 f.write('); \n')
 f.write('\n')
@@ -307,5 +309,3 @@ f.write('// ********************************************************************
 
 # Close file
 f.close()
-
-"""
