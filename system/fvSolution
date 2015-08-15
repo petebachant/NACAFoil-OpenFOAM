@@ -60,16 +60,16 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 0;
+    nNonOrthogonalCorrectors 1;
      
     pRefCell        0;
     pRefValue       0;
  
     residualControl
     {
-        p               1e-5;
-        U               1e-5;
-        "(k|omega)"     1e-5;
+        p               1e-2;
+        U               1e-3;
+        "(k|omega)"     1e-3;
     }
 }
 
