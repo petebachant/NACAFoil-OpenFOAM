@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 
-import pdb
 from __future__ import division, print_function
 import numpy as np
-from numpy import linspace, zeros, ones, sin, cos, atan, size
-
-pdb.set_trace()
+from numpy import linspace, zeros, ones, sin, cos, arctan, pi
 
 # ------------------------ START OF MESH PARAMETER REGION -------------------- #
 
@@ -67,8 +64,8 @@ if p > 0:
     z_c += (m*x/p**2)*(2*p - x/c)*(x < p*c)
     z_c += (m*(c-x)/(1 - p)**2)*(1 + x/c - 2*p)*(x >= p*c)
     # Calculate theta-value
-    theta += atan((m/p**2) * (2*p - 2*x/c))*(x < p*c)
-    theta += atan((m/(1 - p)**2) * (-2*x/c + 2*p))*(x >= p*c)
+    theta += arctan((m/p**2) * (2*p - 2*x/c))*(x < p*c)
+    theta += arctan((m/(1 - p)**2) * (-2*x/c + 2*p))*(x >= p*c)
 
 
 # Calculate coordinates of upper surface
@@ -101,31 +98,31 @@ else:
 
 
 # Move point of mesh "nose"
-NoseX = (-H + Xu(C_max_idx))*cos(alpha)
-NoseZ = -(-H + Xu(C_max_idx))*sin(alpha)
+NoseX = (-H + Xu[C_max_idx])*cos(alpha)
+NoseZ = -(-H + Xu[C_max_idx])*sin(alpha)
 
 
 # Calculate the location of the vertices on the positive y-axis and put them in a matrix
-vertices = zeros(12, 3)
+vertices = zeros((12, 3))
 
-vertices[0, :] = np.concatenate((NoseX, W, NoseZ))
-vertices[1, :] = np.concatenate((Xu(C_max_idx), W, H))
-vertices[2, :] = np.concatenate((Xu(Ni), W, H))
-vertices[3, :] = np.concatenate((D, W, H))
-vertices[4, :] = np.concatenate((0, W, 0))
-vertices[5, :] = np.concatenate((Xu(C_max_idx), W, Zu(C_max_idx)))
-vertices[6, :] = np.concatenate((Xl(C_max_idx), W, Zl(C_max_idx)))
-vertices[7, :] = np.concatenate((Xu(Ni), W, Zu(Ni)))
-vertices[8, :] = np.concatenate((D, W, Zu(Ni)))
-vertices[9, :] = np.concatenate((Xl(C_max_idx), W, -H))
-vertices[10, :] = np.concatenate((Xu(Ni), W, -H))
-vertices[11, :] = np.concatenate((D, W, -H))
+vertices[0, :] = [NoseX[0], W, NoseZ[0]]
+vertices[1, :] = [Xu[C_max_idx], W, H]
+vertices[2, :] = [Xu[-1], W, H]
+vertices[3, :] = [D, W, H]
+vertices[4, :] = [0, W, 0]
+vertices[5, :] = [Xu[C_max_idx], W, Zu[C_max_idx]]
+vertices[6, :] = [Xl[C_max_idx], W, Zl[C_max_idx]]
+vertices[7, :] = [Xu[-1], W, Zu[-1]]
+vertices[8, :] = [D, W, Zu[-1]]
+vertices[9, :] = [Xl[C_max_idx], W, -H]
+vertices[10, :] = [Xu[-1], W, -H]
+vertices[11, :] = [D, W, -H]
 
 # Create vertices for other side (negative y-axis)
-vertices = np.concatenate((vertices, vertices[:, 0], -vertices[:, 1], 
-                           vertices[:, 2]))
+vertices = np.hstack((vertices, vertices[:, 0, None], -vertices[:, 1, None], 
+                      vertices[:, 2, None]))
 
-
+"""
 # Edge 4-5 and 16-17
 pts1 = [Xu(2:C_max_idx-1), W*ones(size(Xu(2:C_max_idx-1))), Zu(2:C_max_idx-1)] 
 pts5 = [pts1(:,1), -pts1(:,2), pts1(:,3)]
@@ -307,3 +304,5 @@ f.write('// ********************************************************************
 
 # Close file
 f.close()
+
+"""
