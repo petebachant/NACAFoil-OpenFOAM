@@ -12,7 +12,10 @@ import matplotlib.pyplot as plt
 def plot_foil_perf(foil="0012"):
     df = pd.read_csv("processed/NACA{}.csv".format(foil))
     plt.figure()
-    plt.plot(df.alpha_deg, df.cl)
+    plt.plot(df.alpha_deg, df.cl/df.cd, "-o")
+    plt.xlabel(r"$\alpha$ (deg)")
+    plt.ylabel(r"$C_l/C_d$")
+    plt.tight_layout()
 
 if __name__ == "__main__":
     plot_foil_perf()
