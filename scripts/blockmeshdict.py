@@ -35,9 +35,9 @@ ExpArc = 50          # Expansion rate along the inlet arc
 # Create a vector with x-coordinates, camber and thickness
 beta = linspace(0, pi, Ni)
 x = c*(0.5*(1 - cos(beta)))
-z_c = zeros(size(x))
-z_t = zeros(size(x))
-theta = zeros(size(x))
+z_c = zeros(len(x))
+z_t = zeros(len(x))
+theta = zeros(len(x))
 
 
 # Values of m, p and t
@@ -117,7 +117,8 @@ vertices[10, :] = np.concatenate((Xu(Ni), W, -H))
 vertices[11, :] = np.concatenate((D, W, -H))
 
 # Create vertices for other side (negative y-axis)
-vertices = [vertices; vertices(:,1), -vertices(:,2), vertices(:,3)]
+vertices = np.concatenate((vertices, vertices[:, 0], -vertices[:, 1], 
+                           vertices[:, 2]))
 
 
 # Edge 4-5 and 16-17
