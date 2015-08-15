@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 
+import pdb
 from __future__ import division, print_function
 import numpy as np
 from numpy import linspace, zeros, ones, sin, cos, atan, size
+
+pdb.set_trace()
 
 # ------------------------ START OF MESH PARAMETER REGION -------------------- #
 
@@ -79,8 +82,10 @@ Zl = z_c - z_t*cos(theta)
 
 
 # Rotate foil to reach specified angle of attack
-upper = [cos(alpha), sin(alpha); -sin(alpha), cos(alpha)] * [Xu ; Zu]
-lower = [cos(alpha), sin(alpha); -sin(alpha), cos(alpha)] * [Xl ; Zl]
+upper = np.matrix([[cos(alpha), sin(alpha)], 
+                   [-sin(alpha), cos(alpha)]])*np.vstack((Xu, Zu))
+lower = np.matrix([[cos(alpha), sin(alpha)], 
+                  [-sin(alpha), cos(alpha)]])*np.vstack((Xl, Zl))
 
 Xu = upper[0, :].conj().transpose()
 Zu = upper[1, :].conj().transpose()
