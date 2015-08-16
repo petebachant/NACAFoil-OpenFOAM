@@ -1,1 +1,15 @@
 constant/polyMesh
+processed
+*.pyc
+*.gz
+log.*
+postProcessing
+*~
+processor*
+[0-9]*
+[0-9]*.[0-9]*
+!0.org
+constant/extendedFeatureEdgeMesh
+*.eMesh
+constant/cellToRegion
+*.OpenFOAM
