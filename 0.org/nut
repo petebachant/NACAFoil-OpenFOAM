@@ -23,7 +23,7 @@ boundaryField
 {
     airfoil
     {
-        type            nutkWallFunction;
+        type            nutUSpaldingWallFunction;
         value           uniform 0;
     }
 
