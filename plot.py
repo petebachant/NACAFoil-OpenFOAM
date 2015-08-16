@@ -9,8 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def plot_foil_perf(foil="0012"):
-    df = pd.read_csv("processed/NACA{}.csv".format(foil))
+def plot_foil_perf(foil="0012", Re=2e5):
+    df = pd.read_csv("processed/NACA{}_{:.1e}.csv".format(foil, Re))
     plt.figure()
     plt.plot(df.alpha_deg, df.cl/df.cd, "-o")
     plt.xlabel(r"$\alpha$ (deg)")
