@@ -34,7 +34,7 @@ boundaryField
     airfoil
     {
         type            fixedValue;
-        value           1e-12;
+        value           uniform 1e-12;
     }
 
     #include "include/frontBackTopBottomPatches"
