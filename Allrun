@@ -23,3 +23,5 @@ python scripts/blockmeshdict.py $foil $alpha_deg
 runApplication blockMesh
 runApplication createPatch -overwrite
 simpleFoam | tee log.simpleFoam
+runApplication createTurbulenceFields -latestTime
+runApplication sample -latestTime
