@@ -45,7 +45,7 @@ if __name__ == "__main__":
                         help="Do not show")
     args = parser.parse_args()
 
-    plot_foil_perf(args.quantity, args.foil, args.Reynolds)
+    plot_foil_perf(args.quantity, args.foil, float(args.Reynolds))
     
     if args.save:
         if not os.path.isdir("figures"):
