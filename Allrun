@@ -25,3 +25,4 @@ runApplication createPatch -overwrite
 simpleFoam | tee log.simpleFoam
 runApplication createTurbulenceFields -latestTime
 runApplication sample -latestTime
+runApplication yPlus -latestTime
