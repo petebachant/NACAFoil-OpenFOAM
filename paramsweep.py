@@ -77,4 +77,4 @@ if __name__ == "__main__":
     if not os.path.isdir("processed"):
         os.mkdir("processed")
 
-    alpha_sweep("0012", 0, 5, 1, Re=2e5)
+    alpha_sweep("0012", 0, 25, 1, Re=2e5)
