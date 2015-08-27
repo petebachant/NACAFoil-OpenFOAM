@@ -16,22 +16,23 @@ def read_force_coeffs():
     """Read force coefficients from output file."""
     data = np.loadtxt("postProcessing/forceCoeffs/0/forceCoeffs.dat",
                       skiprows=9)
-    return {"iterations": data.shape[0], "cl": data[-1, 3], 
+    return {"iterations": data.shape[0], "cl": data[-1, 3],
             "cd": data[-1, 2], "cm": data[-1, 1]}
 
 def read_turbulence_fields():
     """Read sampled turbulence fields."""
     t = max(os.listdir("postProcessing/sets"))
-    with open("postProcessing/sets/{}/point_k_omega_epsilon.xy".format(t)) as f:
-        line = f.read().split()
-    return {"x_turbulence": float(line[0]),
-            "k": float(line[1]),
-            "omega": float(line[2]),
-            "epsilon": float(line[3])}
+    fp = "postProcessing/sets/{}/line_k_omega_epsilon.csv".format(t)
+    df = pd.read_csv(fp)
+    i = np.where(df.k == df.k.max())[0][0]
+    return {"z": df.z[i],
+            "k": df.k[i],
+            "omega": df.omega[i],
+            "epsilon": df.epsilon[i]}
 
 def set_Re(Re):
     """
-    Set Reynolds number (to two significant digits) via kinematic viscosity in 
+    Set Reynolds number (to two significant digits) via kinematic viscosity in
     the input files.
     """
     print("Setting Reynolds number to {:.1e}".format(Re))
@@ -75,5 +76,5 @@ def Re_alpha_sweep(foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop,
 if __name__ == "__main__":
     if not os.path.isdir("processed"):
         os.mkdir("processed")
-    
+
     alpha_sweep("0012", 0, 5, 1, Re=2e5)

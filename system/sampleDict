@@ -14,17 +14,19 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-setFormat raw;
+setFormat csv;
 
 interpolationScheme cellPoint;
 
 sets
 (
-    point
+    line
     {
-        type        cloud;
-        axis        x;
-        points      ((1.25 0 0));
+        type    uniform;
+        axis    z;
+        start   (1.25 0 -0.5);
+        end     (1.25 1 0.5);
+        nPoints 101;
     }
 );
 
