@@ -25,7 +25,7 @@ def read_turbulence_fields():
     fp = "postProcessing/sets/{}/line_k_omega_epsilon.csv".format(t)
     df = pd.read_csv(fp)
     i = np.where(df.k == df.k.max())[0][0]
-    return {"z": df.z[i],
+    return {"z_turbulence": df.z[i],
             "k": df.k[i],
             "omega": df.omega[i],
             "epsilon": df.epsilon[i]}
@@ -52,12 +52,29 @@ def read_Re():
             if len(line) > 1 and line[0] == "nu":
                 return U_infty*c/float(line[-1])
 
-def alpha_sweep(foil, start, stop, step, Re=2e5):
+def read_yplus():
+    """Read average yPlus from log.yPlus."""
+    with open("log.yPlus") as f:
+        for line in f.readlines():
+            line = line.split()
+            try:
+                if line[0] == "y+":
+                    yplus = float(line[-1])
+                    return yplus
+            except IndexError:
+                pass
+
+def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     """Vary the foil angle of attack and log results."""
     set_Re(Re)
     alpha_list = np.arange(start, stop, step)
-    df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re","iterations",
-                               "x_turbulence", "k", "omega", "epsilon"])
+    df_fname = "processed/NACA{}_{:.1e}.csv".format(foil, Re)
+    if append:
+        df = pd.read_csv(df_fname)
+    else:
+        df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
+                                   "mean_yplus", "iterations", "k", "omega",
+                                   "epsilon", "z_turbulence"])
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])
@@ -65,8 +82,9 @@ def alpha_sweep(foil, start, stop, step, Re=2e5):
         d["alpha_deg"] = alpha
         d.update(read_turbulence_fields())
         d["Re"] = read_Re()
+        d["mean_yplus"] = read_yplus()
         df = df.append(d, ignore_index=True)
-        df.to_csv("processed/NACA{}_{:.1e}.csv".format(foil, Re), index=False)
+        df.to_csv(df_fname, index=False)
 
 def Re_alpha_sweep(foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop,
                    alpha_step):
