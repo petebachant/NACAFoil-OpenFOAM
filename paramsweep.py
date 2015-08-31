@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import os
 from subprocess import call
+import argparse
 
 U_infty = 1.0
 c = 1.0
@@ -95,4 +96,19 @@ if __name__ == "__main__":
     if not os.path.isdir("processed"):
         os.mkdir("processed")
 
-    alpha_sweep("0012", 0, 25, 1, Re=2e5)
+    parser = argparse.ArgumentParser(description="Vary the foil angle of \
+                                     attack and log results.")
+    parser.add_argument("start", type=int, help="Start angle of sweep.")
+    parser.add_argument("stop", type=int, help="End angle of sweep. The sweep \
+                        does not include this value.")
+    parser.add_argument("step", nargs='?', type=int, default=1,
+                        help="Spacing between values.")
+    parser.add_argument("--foil", "-f", default="0012", help="Foil")
+    parser.add_argument("--Reynolds", "-R", type=float, default=2e5,
+                        help="Reynolds number")
+    parser.add_argument("--append", "-a", action="store_true", default=False,
+                        help="Append to previous results")
+    args = parser.parse_args()
+
+    alpha_sweep(args.foil, args.start, args.stop, args.step,
+                Re=args.Reynolds, append=args.append)
