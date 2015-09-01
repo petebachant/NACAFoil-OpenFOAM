@@ -8,8 +8,9 @@ OpenFOAM case files for simulating NACA foils.
 * NumPy
 * pandas
 * matplotlib
+* [yPlus](https://github.com/petebachant/yPlus)
 
-Note: All are included in the 
+Note: All Python dependencies are included in the 
 [Anaconda Python distribution](http://continuum.io/downloads).
 
 ## Usage
