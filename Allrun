@@ -18,11 +18,13 @@ else
     alpha_deg=4
 fi
 
+app=`getApplication`
+
 cp -rf 0.org 0
 python scripts/blockmeshdict.py $foil $alpha_deg
 runApplication blockMesh
 runApplication createPatch -overwrite
-simpleFoam | tee log.simpleFoam
+$app | tee log.$app
 runApplication createTurbulenceFields -latestTime
 runApplication sample -latestTime
 runApplication yPlus -latestTime
