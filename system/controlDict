@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     simpleFoam;
+application     pimpleFoam;
 
 startFrom       latestTime;
 
@@ -23,7 +23,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         3;
+endTime         20;
 
 deltaT          2e-3;
 
@@ -44,6 +44,10 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+adjustTimeStep  true;
+
+maxCo           2.0;
 
 functions
 {
