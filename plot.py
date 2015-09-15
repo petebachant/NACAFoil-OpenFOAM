@@ -64,7 +64,7 @@ if __name__ == "__main__":
     parser.add_argument("--noshow", action="store_true", default=False,
                         help="Do not show")
     parser.add_argument("--timeseries", "-t", action="store_true",
-                        default=False)
+                        default=False, help="Plot time series data")
     args = parser.parse_args()
 
     if args.timeseries:
