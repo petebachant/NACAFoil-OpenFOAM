@@ -73,7 +73,7 @@ PIMPLE
 {
     correctPhi          no;
     nOuterCorrectors    20;
-    nCorrectors         1;
+    nCorrectors         2;
     nNonOrthogonalCorrectors 1;
     pRefCell            0;
     pRefValue           0;
@@ -97,11 +97,11 @@ relaxationFactors
 {
     fields
     {
-        p               0.5;
+        p               0.7;
     }
     equations
     {
-        "(U|k|omega)"   0.7;
+        "(U|k|omega)"   0.8;
         "(U|k|omega)Final" 1.0;
     }
 }
