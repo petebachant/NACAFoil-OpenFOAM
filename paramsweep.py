@@ -98,10 +98,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Vary the foil angle of \
                                      attack and log results.")
-    parser.add_argument("start", type=int, help="Start angle of sweep.")
-    parser.add_argument("stop", type=int, help="End angle of sweep. The sweep \
+    parser.add_argument("start", type=float, help="Start angle of sweep.")
+    parser.add_argument("stop", type=float, help="End angle of sweep. The sweep\
                         does not include this value.")
-    parser.add_argument("step", nargs='?', type=int, default=1,
+    parser.add_argument("step", type=float, default=1.0,
                         help="Spacing between values.")
     parser.add_argument("--foil", "-f", default="0012", help="Foil")
     parser.add_argument("--Reynolds", "-R", type=float, default=2e5,
