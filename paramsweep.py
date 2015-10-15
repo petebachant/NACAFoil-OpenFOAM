@@ -28,7 +28,7 @@ def read_turbulence_fields():
     t = max(os.listdir("postProcessing/sets"))
     fp = "postProcessing/sets/{}/line_kMean_omegaMean_nutMean.csv".format(t)
     df = pd.read_csv(fp)
-    i = np.where(df.k == df.k.max())[0][0]
+    i = np.where(df.kMean == df.kMean.max())[0][0]
     return {"z_turbulence": df.z[i],
             "k": df.kMean[i],
             "omega": df.omegaMean[i],
