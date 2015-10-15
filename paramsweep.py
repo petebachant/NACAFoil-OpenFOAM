@@ -13,12 +13,14 @@ import argparse
 U_infty = 1.0
 c = 1.0
 
+
 def read_force_coeffs():
     """Read force coefficients from output file."""
     data = np.loadtxt("postProcessing/forceCoeffs/0/forceCoeffs.dat",
                       skiprows=9)
     return {"iterations": data.shape[0], "cl": data[-1, 3],
             "cd": data[-1, 2], "cm": data[-1, 1]}
+
 
 def read_turbulence_fields():
     """Read sampled turbulence fields."""
@@ -30,6 +32,7 @@ def read_turbulence_fields():
             "k": df.k[i],
             "omega": df.omega[i],
             "epsilon": df.epsilon[i]}
+
 
 def set_Re(Re):
     """
@@ -44,6 +47,7 @@ def set_Re(Re):
     with open("constant/transportProperties", "w") as f:
         f.write(txt.format(nu=nu))
 
+
 def read_Re():
     """Read nu from the input files to calculate Reynolds number."""
     with open("constant/transportProperties") as f:
@@ -52,6 +56,7 @@ def read_Re():
             line = line.split()
             if len(line) > 1 and line[0] == "nu":
                 return U_infty*c/float(line[-1])
+
 
 def read_yplus():
     """Read average yPlus from log.yPlus."""
@@ -64,6 +69,7 @@ def read_yplus():
                     return yplus
             except IndexError:
                 pass
+
 
 def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     """Vary the foil angle of attack and log results."""
@@ -87,10 +93,12 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         df = df.append(d, ignore_index=True)
         df.to_csv(df_fname, index=False)
 
+
 def Re_alpha_sweep(foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop,
                    alpha_step):
     """Create a coefficient dataset for a list of Reynolds numbers."""
     pass
+
 
 if __name__ == "__main__":
     if not os.path.isdir("processed"):
