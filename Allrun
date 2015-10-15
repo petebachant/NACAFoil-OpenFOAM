@@ -24,6 +24,5 @@ runApplication blockMesh
 runApplication createPatch -overwrite
 # simpleFoam | tee log.simpleFoam
 pimpleFoam | tee log.pimpleFoam
-runApplication createTurbulenceFields -latestTime
 runApplication sample -latestTime
 runApplication yPlus -latestTime
