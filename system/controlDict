@@ -75,13 +75,6 @@ functions
         Aref                1;
     }
 
-    turbulenceFields
-    {
-        type            turbulenceFields;
-        functionObjectLibs ("libutilityFunctionObjects.so");
-        fields          (epsilon);
-    }
-
     fieldAverage
     {
         type            fieldAverage;
@@ -109,13 +102,6 @@ functions
             }
 
             omega
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-
-            turbulenceModel:epsilon
             {
                 mean        on;
                 prime2Mean  off;

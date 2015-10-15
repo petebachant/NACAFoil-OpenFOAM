@@ -29,12 +29,14 @@ def read_turbulence_fields():
     fname = os.listdir("postProcessing/sets/{}".format(t))[0]
     fp = "postProcessing/sets/{}/{}".format(t, fname)
     df = pd.read_csv(fp)
+    beta_star = 0.09
+    df["epsilonMean"] = beta_star*df.kMean*df.omegaMean
     i = np.where(df.kMean == df.kMean.max())[0][0]
     return {"z_turbulence": df.z[i],
             "k": df.kMean[i],
             "omega": df.omegaMean[i],
             "nut": df.nutMean[i],
-            "epsilon": df["turbulenceModel:epsilonMean"][i]}
+            "epsilon": df.epsilonMean[i]}
 
 
 def set_Re(Re):
@@ -84,7 +86,7 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     else:
         df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
                                    "mean_yplus", "t0", "t1", "k", "omega",
-                                   "nut", "z_turbulence"])
+                                   "epsilon", "nut", "z_turbulence"])
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])
