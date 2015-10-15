@@ -30,6 +30,6 @@ sets
     }
 );
 
-fields (kMean omegaMean nutMean);
+fields (kMean omegaMean turbulenceModel:epsilonMean nutMean);
 
 // *********************************************************************** //

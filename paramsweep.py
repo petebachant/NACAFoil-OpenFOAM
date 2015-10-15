@@ -26,13 +26,15 @@ def read_force_coeffs(t0=10.0):
 def read_turbulence_fields():
     """Read sampled turbulence fields."""
     t = max(os.listdir("postProcessing/sets"))
-    fp = "postProcessing/sets/{}/line_kMean_omegaMean_nutMean.csv".format(t)
+    fname = os.listdir("postProcessing/sets/{}".format(t))[0]
+    fp = "postProcessing/sets/{}/{}".format(t, fname)
     df = pd.read_csv(fp)
     i = np.where(df.k == df.k.max())[0][0]
     return {"z_turbulence": df.z[i],
             "k": df.kMean[i],
             "omega": df.omegaMean[i],
-            "nut": df.nutMean[i]}
+            "nut": df.nutMean[i],
+            "epsilon": df["turbulenceModel:epsilonMean"][i]}
 
 
 def set_Re(Re):
