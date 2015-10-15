@@ -9,29 +9,30 @@ import pandas as pd
 import os
 from subprocess import call
 import argparse
+from modules.processing import *
 
 U_infty = 1.0
 c = 1.0
 
 
-def read_force_coeffs():
+def read_force_coeffs(t0=10.0):
     """Read force coefficients from output file."""
-    data = np.loadtxt("postProcessing/forceCoeffs/0/forceCoeffs.dat",
-                      skiprows=9)
-    return {"iterations": data.shape[0], "cl": data[-1, 3],
-            "cd": data[-1, 2], "cm": data[-1, 1]}
+    df = load_force_coeffs()
+    df = df[df.time >= t0]
+    return {"t0": t0, "t1": df.time.max(), "cl": df.cl.mean(),
+            "cd": df.cd.mean(), "cm": df.cm.mean()}
 
 
 def read_turbulence_fields():
     """Read sampled turbulence fields."""
     t = max(os.listdir("postProcessing/sets"))
-    fp = "postProcessing/sets/{}/line_k_omega_epsilon.csv".format(t)
+    fp = "postProcessing/sets/{}/line_kMean_omegaMean_nutMean.csv".format(t)
     df = pd.read_csv(fp)
     i = np.where(df.k == df.k.max())[0][0]
     return {"z_turbulence": df.z[i],
-            "k": df.k[i],
-            "omega": df.omega[i],
-            "epsilon": df.epsilon[i]}
+            "k": df.kMean[i],
+            "omega": df.omegaMean[i],
+            "nut": df.nutMean[i]}
 
 
 def set_Re(Re):
@@ -80,8 +81,8 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         df = pd.read_csv(df_fname)
     else:
         df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
-                                   "mean_yplus", "iterations", "k", "omega",
-                                   "epsilon", "z_turbulence"])
+                                   "mean_yplus", "t0", "t1", "k", "omega",
+                                   "nut", "z_turbulence"])
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])

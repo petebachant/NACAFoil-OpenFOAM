@@ -30,6 +30,6 @@ sets
     }
 );
 
-fields (k omega epsilon);
+fields (kMean omegaMean nutMean);
 
 // *********************************************************************** //
