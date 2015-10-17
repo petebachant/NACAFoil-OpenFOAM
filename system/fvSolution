@@ -19,7 +19,7 @@ solvers
     p
     {
         solver           GAMG;
-        tolerance        1e-7;
+        tolerance        1e-6;
         relTol           0.1;
         smoother         GaussSeidel;
         nPreSweeps       0;
@@ -30,30 +30,27 @@ solvers
         mergeLevels      1;
     }
 
-    U
+    pFinal
+    {
+        $p;
+        relTol          0;
+    }
+
+    "(U|k|omega)"
     {
         solver           smoothSolver;
         smoother         GaussSeidel;
-        tolerance        1e-8;
+        tolerance        1e-7;
         relTol           0.1;
         nSweeps          1;
     }
 
-    k
+    "(U|k|omega)Final"
     {
         solver           smoothSolver;
         smoother         GaussSeidel;
-        tolerance        1e-8;
-        relTol           0.1;
-        nSweeps          1;
-    }
-
-    omega
-    {
-        solver           smoothSolver;
-        smoother         GaussSeidel;
-        tolerance        1e-8;
-        relTol           0.1;
+        tolerance        1e-7;
+        relTol           0;
         nSweeps          1;
     }
 }
@@ -61,15 +58,38 @@ solvers
 SIMPLE
 {
     nNonOrthogonalCorrectors 1;
-     
+
     pRefCell        0;
     pRefValue       0;
- 
+
     residualControl
     {
-        p               1e-4;
-        U               1e-5;
-        "(k|omega)"     1e-5;
+        p               1e-2;
+        U               1e-2;
+    }
+}
+
+PIMPLE
+{
+    correctPhi          no;
+    nOuterCorrectors    20;
+    nCorrectors         2;
+    nNonOrthogonalCorrectors 1;
+    pRefCell            0;
+    pRefValue           0;
+
+    residualControl
+    {
+        U
+        {
+            tolerance 1e-3;
+            relTol 0;
+        }
+        p
+        {
+            tolerance 1e-2;
+            relTol 0;
+        }
     }
 }
 
@@ -77,11 +97,11 @@ relaxationFactors
 {
     fields
     {
-        p               0.3;
+        p               0.7;
     }
     equations
     {
-        "(U|k|omega)"   0.7;
+        "(U|k|omega)"   0.8;
         "(U|k|omega)Final" 1.0;
     }
 }

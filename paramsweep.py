@@ -9,27 +9,35 @@ import pandas as pd
 import os
 from subprocess import call
 import argparse
+from modules.processing import *
 
 U_infty = 1.0
 c = 1.0
 
-def read_force_coeffs():
+
+def read_force_coeffs(t0=10.0):
     """Read force coefficients from output file."""
-    data = np.loadtxt("postProcessing/forceCoeffs/0/forceCoeffs.dat",
-                      skiprows=9)
-    return {"iterations": data.shape[0], "cl": data[-1, 3],
-            "cd": data[-1, 2], "cm": data[-1, 1]}
+    df = load_force_coeffs()
+    df = df[df.time >= t0]
+    return {"t0": t0, "t1": df.time.max(), "cl": df.cl.mean(),
+            "cd": df.cd.mean(), "cm": df.cm.mean()}
+
 
 def read_turbulence_fields():
     """Read sampled turbulence fields."""
     t = max(os.listdir("postProcessing/sets"))
-    fp = "postProcessing/sets/{}/line_k_omega_epsilon.csv".format(t)
+    fname = os.listdir("postProcessing/sets/{}".format(t))[0]
+    fp = "postProcessing/sets/{}/{}".format(t, fname)
     df = pd.read_csv(fp)
-    i = np.where(df.k == df.k.max())[0][0]
+    beta_star = 0.09
+    df["epsilonMean"] = beta_star*df.kMean*df.omegaMean
+    i = np.where(df.kMean == df.kMean.max())[0][0]
     return {"z_turbulence": df.z[i],
-            "k": df.k[i],
-            "omega": df.omega[i],
-            "epsilon": df.epsilon[i]}
+            "k": df.kMean[i],
+            "omega": df.omegaMean[i],
+            "nut": df.nutMean[i],
+            "epsilon": df.epsilonMean[i]}
+
 
 def set_Re(Re):
     """
@@ -44,6 +52,7 @@ def set_Re(Re):
     with open("constant/transportProperties", "w") as f:
         f.write(txt.format(nu=nu))
 
+
 def read_Re():
     """Read nu from the input files to calculate Reynolds number."""
     with open("constant/transportProperties") as f:
@@ -52,6 +61,7 @@ def read_Re():
             line = line.split()
             if len(line) > 1 and line[0] == "nu":
                 return U_infty*c/float(line[-1])
+
 
 def read_yplus():
     """Read average yPlus from log.yPlus."""
@@ -65,6 +75,7 @@ def read_yplus():
             except IndexError:
                 pass
 
+
 def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     """Vary the foil angle of attack and log results."""
     set_Re(Re)
@@ -74,8 +85,8 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         df = pd.read_csv(df_fname)
     else:
         df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
-                                   "mean_yplus", "iterations", "k", "omega",
-                                   "epsilon", "z_turbulence"])
+                                   "mean_yplus", "t0", "t1", "k", "omega",
+                                   "epsilon", "nut", "z_turbulence"])
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])
@@ -87,10 +98,12 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         df = df.append(d, ignore_index=True)
         df.to_csv(df_fname, index=False)
 
+
 def Re_alpha_sweep(foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop,
                    alpha_step):
     """Create a coefficient dataset for a list of Reynolds numbers."""
     pass
+
 
 if __name__ == "__main__":
     if not os.path.isdir("processed"):
@@ -98,10 +111,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Vary the foil angle of \
                                      attack and log results.")
-    parser.add_argument("start", type=int, help="Start angle of sweep.")
-    parser.add_argument("stop", type=int, help="End angle of sweep. The sweep \
+    parser.add_argument("start", type=float, help="Start angle of sweep.")
+    parser.add_argument("stop", type=float, help="End angle of sweep. The sweep\
                         does not include this value.")
-    parser.add_argument("step", nargs='?', type=int, default=1,
+    parser.add_argument("step", type=float, default=1.0,
                         help="Spacing between values.")
     parser.add_argument("--foil", "-f", default="0012", help="Foil")
     parser.add_argument("--Reynolds", "-R", type=float, default=2e5,

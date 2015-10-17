@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     simpleFoam;
+application     pimpleFoam;
 
 startFrom       latestTime;
 
@@ -23,13 +23,13 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10000;
+endTime         20;
 
-deltaT          1;
+deltaT          2e-3;
 
 writeControl    runTime;
 
-writeInterval   100;
+writeInterval   0.01;
 
 purgeWrite      1;
 
@@ -44,6 +44,10 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
+
+adjustTimeStep  true;
+
+maxCo           2.0;
 
 functions
 {
@@ -69,6 +73,41 @@ functions
         rhoInf              1000;
         lRef                1;
         Aref                1;
+    }
+
+    fieldAverage
+    {
+        type            fieldAverage;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        timeStart       10;
+        outputControl   outputTime;
+        resetOnRestart  true;
+        resetOnOutput   false;
+
+        fields
+        (
+            nut
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            k
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            omega
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+        );
     }
 }
 
