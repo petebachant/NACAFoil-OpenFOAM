@@ -22,7 +22,6 @@ cp -rf 0.org 0
 python scripts/blockmeshdict.py $foil $alpha_deg
 runApplication blockMesh
 runApplication createPatch -overwrite
-# simpleFoam | tee log.simpleFoam
-pimpleFoam | tee log.pimpleFoam
+runApplication pimpleFoam
 runApplication sample -latestTime
 runApplication yPlus -latestTime
