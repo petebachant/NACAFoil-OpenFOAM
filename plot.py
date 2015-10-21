@@ -12,7 +12,7 @@ import modules.processing as proc
 
 labels = {"cl": r"$C_l$", "cd": r"$C_d$", "cl/cd": r"$C_l/C_d$", "k": "$k$",
           "omega": r"$\omega$", "epsilon": r"$\epsilon$",
-          "alpha_deg": r"$\alpha$ (deg)"}
+          "alpha_deg": r"$\alpha$ (deg)", "cm": r"$C_m$"}
 
 
 def plot_time_series(quantity="cl"):
@@ -58,7 +58,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plotting results")
     parser.add_argument("quantity", nargs="?", default="cl/cd",
                         help="Which quantity to plot",
-                        choices=["cl", "cd", "cl/cd", "k", "omega", "epsilon"])
+                        choices=["cl", "cd", "cm", "cl/cd", "k", "omega",
+                                 "epsilon"])
     parser.add_argument("-x", help="Quantity on x-axis", default="alpha_deg")
     parser.add_argument("--foil", "-f", help="Foil", default="0012")
     parser.add_argument("--Reynolds", "-R", help="Reynolds number", default=2e5)
