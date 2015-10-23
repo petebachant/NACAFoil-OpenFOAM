@@ -4,6 +4,7 @@ from __future__ import division, print_function
 import argparse
 import numpy as np
 from numpy import linspace, zeros, ones, sin, cos, arctan, pi
+import os
 
 def gen_blockmeshdict(foil="0012", alpha_deg=4):
     """
@@ -51,7 +52,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
 
     # Calculate thickness
     # The upper expression will give the airfoil a finite thickness at the trailing
-    # edge, witch might cause trouble. The lower expression is correxted to give 
+    # edge, witch might cause trouble. The lower expression is corrected to give
     # zero thickness at the trailing edge, but the foil is strictly speaking no
     # longer a proper NACA airfoil.
     #
@@ -72,19 +73,19 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
 
 
     # Calculate coordinates of upper surface
-    Xu = x - z_t*sin(theta)
+    Xu = x - z_t*sin(theta) - scale/4.0
     Zu = z_c + z_t*cos(theta)
 
 
     # Calculate coordinates of lower surface
-    Xl = x + z_t*sin(theta)
+    Xl = x + z_t*sin(theta) - scale/4.0
     Zl = z_c - z_t*cos(theta)
 
 
     # Rotate foil to reach specified angle of attack
-    upper = np.matrix([[cos(alpha), sin(alpha)], 
+    upper = np.matrix([[cos(alpha), sin(alpha)],
                        [-sin(alpha), cos(alpha)]])*np.vstack((Xu, Zu))
-    lower = np.matrix([[cos(alpha), sin(alpha)], 
+    lower = np.matrix([[cos(alpha), sin(alpha)],
                       [-sin(alpha), cos(alpha)]])*np.vstack((Xl, Zl))
 
     Xu = upper[0, :].conj().transpose()
@@ -112,7 +113,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     vertices[1, :] = [Xu[C_max_idx], W, H]
     vertices[2, :] = [Xu[-1], W, H]
     vertices[3, :] = [D, W, H]
-    vertices[4, :] = [0, W, 0]
+    vertices[4, :] = [Xu[0], W, Zu[0]]
     vertices[5, :] = [Xu[C_max_idx], W, Zu[C_max_idx]]
     vertices[6, :] = [Xl[C_max_idx], W, Zl[C_max_idx]]
     vertices[7, :] = [Xu[-1], W, Zu[-1]]
@@ -128,25 +129,25 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
 
 
     # Edge 4-5 and 16-17
-    pts1 = np.concatenate([Xu[1:C_max_idx], W*ones(np.shape(Xu[1:C_max_idx])), 
-                           Zu[1:C_max_idx]], axis=1) 
+    pts1 = np.concatenate([Xu[1:C_max_idx], W*ones(np.shape(Xu[1:C_max_idx])),
+                           Zu[1:C_max_idx]], axis=1)
     pts5 = np.concatenate([pts1[:, 0], -pts1[:, 1], pts1[:, 2]], axis=1)
 
     # Edge 5-7 and 17-19
-    pts2 = np.concatenate([Xu[C_max_idx + 1:Ni - 1], 
-                           W*ones(np.shape(Xu[C_max_idx + 1:Ni - 1])), 
+    pts2 = np.concatenate([Xu[C_max_idx + 1:Ni - 1],
+                           W*ones(np.shape(Xu[C_max_idx + 1:Ni - 1])),
                            Zu[C_max_idx + 1:Ni - 1]], axis=1)
     pts6 = np.concatenate([pts2[:, 0], -pts2[:, 1], pts2[:, 2]], axis=1)
 
     # Edge 4-6 and 16-18
-    pts3 = np.concatenate([Xl[1:C_max_idx], W*ones(np.shape(Xl[1:C_max_idx])), 
+    pts3 = np.concatenate([Xl[1:C_max_idx], W*ones(np.shape(Xl[1:C_max_idx])),
                            Zl[1:C_max_idx]], axis=1)
     pts7 = np.concatenate([pts3[:, 0], -pts3[:, 1], pts3[:, 2]], axis=1)
 
     # Edge 6-7 and 18-19
     pts4 = np.concatenate([Xl[C_max_idx + 1:Ni - 1],
                           W*ones(np.shape(Xl[C_max_idx + 1:Ni - 1])),
-                          Zl[C_max_idx + 1:Ni - 1]], axis=1) 
+                          Zl[C_max_idx + 1:Ni - 1]], axis=1)
     pts8 = np.concatenate([pts4[:, 0], -pts4[:, 1], pts4[:, 2]], axis=1)
 
     # Edge 0-1 and 12-13
@@ -172,7 +173,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     f.write("/*--------------------------------*- C++ -*----------------------------------*\\ \n")
     f.write("| =========                 |                                                 | \n")
     f.write("| \\\\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | \n")
-    f.write("|  \\\\    /   O peration     | Version:  2.1.0                                 | \n")
+    f.write("|  \\\\    /   O peration     | Version:  2.4.x                                 | \n")
     f.write("|   \\\\  /    A nd           | Web:      www.OpenFOAM.com                      | \n")
     f.write("|    \\\\/     M anipulation  |                                                 | \n")
     f.write("\\*---------------------------------------------------------------------------*/ \n")
@@ -187,7 +188,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     f.write("\n")
     f.write("convertToMeters %f; \n" % scale)
     f.write("\n")
-    f.write("vertices \n")       
+    f.write("vertices \n")
     f.write("( \n")
     for vertex in vertices:
         f.write("    (%f %f %f)\n" % tuple(vertex))
@@ -321,15 +322,16 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
 
     # Close file
     f.close()
-    
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plotting results")
     parser.add_argument("foil", help="NACA foil digits")
     parser.add_argument("alpha_deg", help="Angle of attack (deg)")
     args = parser.parse_args()
-    
+
     print("Generating blockMeshDict for a NACA {} at {} "
           "degrees angle of attack".format(args.foil, args.alpha_deg))
-    
-    gen_blockmeshdict(args.foil, float(args.alpha_deg))
 
+    if not os.path.isdir("constant/polyMesh"):
+        os.makedirs("constant/polyMesh")
+    gen_blockmeshdict(args.foil, float(args.alpha_deg))
