@@ -66,7 +66,7 @@ functions
 
         liftDir             (0 0 1);
         dragDir             (1 0 0);
-        CofR                (0.25 0 0);
+        CofR                (0 0 0);
         pitchAxis           (0 1 0);
 
         magUInf             1.0;
