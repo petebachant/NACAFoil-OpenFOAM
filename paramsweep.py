@@ -15,7 +15,7 @@ U_infty = 1.0
 c = 1.0
 
 
-def read_force_coeffs(t0=10.0):
+def read_force_coeffs(t0=20.0):
     """Read force coefficients from output file."""
     df = load_force_coeffs()
     df = df[df.time >= t0]
