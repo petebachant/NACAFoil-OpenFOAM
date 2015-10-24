@@ -24,4 +24,4 @@ runApplication blockMesh
 runApplication createPatch -overwrite
 runApplication pimpleFoam
 runApplication sample -latestTime
-runApplication yPlus -latestTime
+runApplication yPlusRAS -latestTime
