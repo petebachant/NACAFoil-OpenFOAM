@@ -65,11 +65,11 @@ def read_Re():
 
 def read_yplus():
     """Read average yPlus from log.yPlus."""
-    with open("log.yPlus") as f:
+    with open("log.yPlusRAS") as f:
         for line in f.readlines():
             line = line.split()
             try:
-                if line[0] == "y+":
+                if "airfoil" in line and "y+" in line:
                     yplus = float(line[-1])
                     return yplus
             except IndexError:
