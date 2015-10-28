@@ -12,7 +12,8 @@ import modules.processing as proc
 
 labels = {"cl": r"$C_l$", "cd": r"$C_d$", "cl/cd": r"$C_l/C_d$", "k": "$k$",
           "omega": r"$\omega$", "epsilon": r"$\epsilon$",
-          "alpha_deg": r"$\alpha$ (deg)", "cm": r"$C_m$"}
+          "alpha_deg": r"$\alpha$ (deg)", "cm": r"$C_m$", "cn": "$C_n$",
+          "cc": "$C_c$"}
 
 
 def plot_time_series(quantity="cl"):
@@ -34,6 +35,9 @@ def plot_time_series(quantity="cl"):
 
 def plot_foil_perf(quantity="cl/cd", foil="0012", Re=2e5, x="alpha_deg"):
     df = pd.read_csv("processed/NACA{}_{:.1e}.csv".format(foil, Re))
+    alpha = np.deg2rad(df.alpha_deg)
+    df["cn"] = df.cl*np.cos(alpha) - df.cd*np.sin(alpha)
+    df["cc"] = df.cl*np.sin(alpha) - df.cd*np.cos(alpha)
     plt.figure()
     if quantity == "cl/cd":
         q = df.cl/df.cd
@@ -59,7 +63,7 @@ if __name__ == "__main__":
     parser.add_argument("quantity", nargs="?", default="cl/cd",
                         help="Which quantity to plot",
                         choices=["cl", "cd", "cm", "cl/cd", "k", "omega",
-                                 "epsilon"])
+                                 "epsilon", "cn", "cc"])
     parser.add_argument("-x", help="Quantity on x-axis", default="alpha_deg")
     parser.add_argument("--foil", "-f", help="Foil", default="0012")
     parser.add_argument("--Reynolds", "-R", help="Reynolds number", default=2e5)
