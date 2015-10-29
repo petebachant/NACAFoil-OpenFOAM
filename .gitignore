@@ -1,5 +1,4 @@
 constant/polyMesh
-processed
 *.pyc
 *.gz
 log.*
