@@ -9,7 +9,7 @@ import pandas as pd
 import os
 from subprocess import call, check_output
 import argparse
-from modules.processing import *
+from pynfof.processing import *
 
 U_infty = 1.0
 c = 1.0
