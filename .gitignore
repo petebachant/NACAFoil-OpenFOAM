@@ -12,3 +12,4 @@ constant/extendedFeatureEdgeMesh
 *.eMesh
 constant/cellToRegion
 *.OpenFOAM
+figures

@@ -9,11 +9,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import argparse
 import pynfof.processing as proc
+import os
 
-labels = {"cl": r"$C_l$", "cd": r"$C_d$", "cl/cd": r"$C_l/C_d$", "k": "$k$",
-          "omega": r"$\omega$", "epsilon": r"$\epsilon$",
-          "alpha_deg": r"$\alpha$ (deg)", "cm": r"$C_m$", "cn": "$C_n$",
-          "cc": "$C_c$"}
+labels = {"cl": r"$C_l$", "cd": r"$C_d$", "cl/cd": r"$C_l/C_d$",
+          "k": r"$k/U_\infty^2$", "omega": r"$\omega$", "epsilon":
+          r"$\epsilon$", "alpha_deg": r"$\alpha$ (deg)", "cm": r"$C_m$",
+          "cn": "$C_n$", "cc": "$C_c$"}
 
 
 def plot_time_series(quantity="cl"):
@@ -45,7 +46,7 @@ def plot_foil_perf(quantity="cl/cd", foil="0012", Re=2e5, x="alpha_deg",
         q = df.cl/df.cd
     else:
         q = df[quantity]
-    ax.plot(df[x], q, "-o", label="NACA " + foil)
+    ax.plot(df[x], q, marker, label="NACA " + foil)
     ax.set_xlabel(labels[x])
     ax.set_ylabel(labels[quantity])
     ax.grid(True)
@@ -58,20 +59,25 @@ def plot_foil_perf(quantity="cl/cd", foil="0012", Re=2e5, x="alpha_deg",
 def plot_multiple_foils(quantity="cl/cd", foils=["0012", "0021"], Re=2e5,
                         x="alpha_deg", save=False):
     """Plot performance for multiple foils."""
-    fig, ax = subplots()
-    for foil in foils:
-        plot_foil_perf(quantity=quantity, foil=foil, Re=Re, x=x, ax=ax)
+    fig, ax = plt.subplots()
+    for foil, m in zip(foils, ("-o", "--^", "-s", "--v")):
+        plot_foil_perf(quantity=quantity, foil=foil, Re=Re, x=x, ax=ax,
+                       marker=m)
     ax.legend(loc="best")
     fig.tight_layout()
     if save:
-        fig.savefig("figures/NACA_" + "-".join(foils) + ".pdf")
-        fig.savefig("figures/NACA_" + "-".join(foils) + ".png", dpi=300)
+        figname = "NACA-" + "-".join(foils) + "-" + quantity.replace("/", "") \
+                + "-vs-" + x
+        fig.savefig("figures/" + figname + ".pdf")
+        fig.savefig("figures/" + figname + ".png", dpi=300)
 
 
 if __name__ == "__main__":
     try:
         import seaborn
-        seaborn.set(style="white", context="notebook", font_scale=1.5)
+        seaborn.set(style="white", context="notebook", font_scale=1.5,
+                    rc={"axes.grid": True, "legend.frameon": True,
+                        "lines.markeredgewidth": 1.4, "lines.markersize": 10})
     except ImportError:
         print("Could not import seaborn for plot styling. Try")
         print("\n    conda install seaborn\n\nor")
@@ -84,6 +90,7 @@ if __name__ == "__main__":
                                  "epsilon", "cn", "cc"])
     parser.add_argument("-x", help="Quantity on x-axis", default="alpha_deg")
     parser.add_argument("--foil", "-f", help="Foil", default="0012")
+    parser.add_argument("--foils", "-F", help="Multiple foils", nargs="*")
     parser.add_argument("--Reynolds", "-R", help="Reynolds number", default=2e5)
     parser.add_argument("--save", "-s", action="store_true", help="Save plots")
     parser.add_argument("--noshow", action="store_true", default=False,
@@ -92,16 +99,18 @@ if __name__ == "__main__":
                         default=False, help="Plot time series data")
     args = parser.parse_args()
 
-    if args.timeseries:
-        plot_time_series(args.quantity)
-    else:
-        plot_foil_perf(args.quantity, args.foil, float(args.Reynolds),
-                       x=args.x)
-
     if args.save:
         if not os.path.isdir("figures"):
             os.mkdir("figures")
-        plt.savefig("figures/{}.pdf".format(args.quantity))
+
+    if args.timeseries:
+        plot_time_series(args.quantity)
+    elif args.foils:
+        plot_multiple_foils(args.quantity, args.foils, float(args.Reynolds),
+                            x=args.x, save=args.save)
+    else:
+        plot_foil_perf(args.quantity, args.foil, float(args.Reynolds),
+                       x=args.x)
 
     if not args.noshow:
         plt.show()
