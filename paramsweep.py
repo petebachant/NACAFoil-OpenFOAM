@@ -7,9 +7,9 @@ from __future__ import division, print_function
 import numpy as np
 import pandas as pd
 import os
-from subprocess import call
+from subprocess import call, check_output
 import argparse
-from modules.processing import *
+from pynfof.processing import *
 
 U_infty = 1.0
 c = 1.0
@@ -76,6 +76,12 @@ def read_yplus():
                 pass
 
 
+def read_openfoam_build():
+    """Read OpenFOAM build from log.pimpleFoam"""
+    return check_output(["grep", "Build",
+                         "log.pimpleFoam"]).strip().split()[-1].decode()
+
+
 def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     """Vary the foil angle of attack and log results."""
     set_Re(Re)
@@ -86,7 +92,8 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     else:
         df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
                                    "mean_yplus", "t0", "t1", "k", "omega",
-                                   "epsilon", "nut", "z_turbulence"])
+                                   "epsilon", "nut", "z_turbulence",
+                                   "OpenFOAM_build"])
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])
@@ -95,6 +102,7 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         d.update(read_turbulence_fields())
         d["Re"] = read_Re()
         d["mean_yplus"] = read_yplus()
+        d["OpenFOAM_build"] = read_openfoam_build()
         df = df.append(d, ignore_index=True)
         df.to_csv(df_fname, index=False)
 
