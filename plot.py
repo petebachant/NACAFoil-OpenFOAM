@@ -33,21 +33,39 @@ def plot_time_series(quantity="cl"):
     plt.tight_layout()
 
 
-def plot_foil_perf(quantity="cl/cd", foil="0012", Re=2e5, x="alpha_deg"):
+def plot_foil_perf(quantity="cl/cd", foil="0012", Re=2e5, x="alpha_deg",
+                   ax=None, marker="-o"):
     df = pd.read_csv("processed/NACA{}_{:.1e}.csv".format(foil, Re))
     alpha = np.deg2rad(df.alpha_deg)
     df["cn"] = df.cl*np.cos(alpha) - df.cd*np.sin(alpha)
     df["cc"] = df.cl*np.sin(alpha) - df.cd*np.cos(alpha)
-    plt.figure()
+    if ax is None:
+        fig, ax = plt.subplots()
     if quantity == "cl/cd":
         q = df.cl/df.cd
     else:
         q = df[quantity]
-    plt.plot(df[x], q, "-o")
-    plt.xlabel(labels[x])
-    plt.ylabel(labels[quantity])
-    plt.grid(True)
-    plt.tight_layout()
+    ax.plot(df[x], q, "-o", label="NACA " + foil)
+    ax.set_xlabel(labels[x])
+    ax.set_ylabel(labels[quantity])
+    ax.grid(True)
+    try:
+        fig.tight_layout()
+    except UnboundLocalError:
+        pass
+
+
+def plot_multiple_foils(quantity="cl/cd", foils=["0012", "0021"], Re=2e5,
+                        x="alpha_deg", save=False):
+    """Plot performance for multiple foils."""
+    fig, ax = subplots()
+    for foil in foils:
+        plot_foil_perf(quantity=quantity, foil=foil, Re=Re, x=x, ax=ax)
+    ax.legend(loc="best")
+    fig.tight_layout()
+    if save:
+        fig.savefig("figures/NACA_" + "-".join(foils) + ".pdf")
+        fig.savefig("figures/NACA_" + "-".join(foils) + ".png", dpi=300)
 
 
 if __name__ == "__main__":
