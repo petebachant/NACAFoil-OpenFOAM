@@ -1,6 +1,6 @@
 # NACA foil OpenFOAM case files
 
-OpenFOAM (2.4.x) case files for simulating NACA foils.
+OpenFOAM (3.0.x) case files for simulating NACA foils.
 
 
 ## Dependencies
