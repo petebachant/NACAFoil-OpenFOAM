@@ -166,14 +166,14 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     Ntrailing = Nx - Nleading
 
     # Open file
-    f = open("constant/polyMesh/blockMeshDict", "w")
+    f = open("system/blockMeshDict", "w")
 
 
     # Write file
     f.write("/*--------------------------------*- C++ -*----------------------------------*\\ \n")
     f.write("| =========                 |                                                 | \n")
     f.write("| \\\\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | \n")
-    f.write("|  \\\\    /   O peration     | Version:  2.4.x                                 | \n")
+    f.write("|  \\\\    /   O peration     | Version:  3.0.x                                 | \n")
     f.write("|   \\\\  /    A nd           | Web:      www.OpenFOAM.com                      | \n")
     f.write("|    \\\\/     M anipulation  |                                                 | \n")
     f.write("\\*---------------------------------------------------------------------------*/ \n")
@@ -323,6 +323,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     # Close file
     f.close()
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plotting results")
     parser.add_argument("foil", help="NACA foil digits")
@@ -332,6 +333,4 @@ if __name__ == "__main__":
     print("Generating blockMeshDict for a NACA {} at {} "
           "degrees angle of attack".format(args.foil, args.alpha_deg))
 
-    if not os.path.isdir("constant/polyMesh"):
-        os.makedirs("constant/polyMesh")
     gen_blockmeshdict(args.foil, float(args.alpha_deg))

@@ -13,3 +13,4 @@ constant/extendedFeatureEdgeMesh
 constant/cellToRegion
 *.OpenFOAM
 figures
+system/blockMeshDict
