@@ -18,10 +18,23 @@ else
     alpha_deg=4
 fi
 
+parallel=false
+
 cp -rf 0.org 0
 python scripts/blockmeshdict.py $foil $alpha_deg
 runApplication blockMesh
 runApplication createPatch -overwrite
-runApplication pimpleFoam
+# runApplication refineMesh -all -overwrite
+
+if [ $parallel = true ]
+    then
+    runApplication decomposePar
+    nProc=$(getNumberOfProcessors)
+    runParallel pimpleFoam $nProc
+    runApplication reconstructPar
+else
+    runApplication pimpleFoam
+fi
+
 runApplication sample -latestTime
-runApplication yPlusRAS -latestTime
+runApplication yPlus -latestTime
