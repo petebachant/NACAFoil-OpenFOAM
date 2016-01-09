@@ -1,6 +1,4 @@
-"""
-This module contains processing functions.
-"""
+"""This module contains processing functions."""
 
 import numpy as np
 import pandas as pd
@@ -20,10 +18,10 @@ def load_force_coeffs_single(timedir):
 
 
 def load_force_coeffs(steady=False):
-    """
-    Load force coefficients from file. If steady, the file from the `0`
-    directory is used, and the last values are returned. Otherwise, arrays are
-    loaded from the latest file.
+    """Load force coefficients from file.
+
+    If steady, the file from the `0` directory is used, and the last values are
+    returned. Otherwise, arrays are loaded from the latest file.
     """
     if steady:
         return load_force_coeffs_single("0")
@@ -32,4 +30,4 @@ def load_force_coeffs(steady=False):
         timedirs = sorted(os.listdir("postProcessing/forceCoeffs"))
         for t in timedirs:
             df = df.append(load_force_coeffs_single(t), ignore_index=True)
-    return df.sort("time")
+    return df.sort_values(by="time")
