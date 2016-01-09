@@ -11,7 +11,8 @@ OpenFOAM (3.0.x) case files for simulating NACA foils.
 * matplotlib
 
 Note: All dependencies are included in the
-[Anaconda Python distribution](http://continuum.io/downloads).
+[Anaconda Python distribution](http://continuum.io/downloads). Python 3.5 is
+recommended.
 
 
 ## Usage
