@@ -54,21 +54,16 @@ functions
     forceCoeffs
     {
         type                forceCoeffs;
-        functionObjectLibs  ("libforces.so");
-        outputControl       timeStep;
-        outputInterval      1;
-
+        libs                ("libforces.so");
+        writeControl        timeStep;
+        writeInterval       1;
         patches             ("airfoil.*");
-        pName               p;
-        UName               U;
-        rhoName             rhoInf;
+        rho                 rhoInf;
         log                 true;
-
         liftDir             (0 0 1);
         dragDir             (1 0 0);
         CofR                (0 0 0);
         pitchAxis           (0 1 0);
-
         magUInf             1.0;
         rhoInf              1000;
         lRef                1;
@@ -78,10 +73,10 @@ functions
     fieldAverage
     {
         type            fieldAverage;
-        functionObjectLibs ("libfieldFunctionObjects.so");
+        libs            ("libfieldFunctionObjects.so");
         enabled         true;
         timeStart       10;
-        outputControl   outputTime;
+        writeControl    outputTime;
         resetOnRestart  true;
         resetOnOutput   false;
 
