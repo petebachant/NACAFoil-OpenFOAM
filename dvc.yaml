@@ -1,0 +1,13 @@
+stages:
+  naca0012-re2e5:
+    foreach: ${aoa-values}
+    do:
+      cmd: calkit xenv python run.py 0012 ${item} -R 2e5
+      deps:
+        - system
+        - constant
+        - run.py
+        - scripts/blockmeshdict.py
+        - 0.org
+      outs:
+        - cases/naca0012-re2e5-aoa-${item}
