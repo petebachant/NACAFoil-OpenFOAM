@@ -11,3 +11,12 @@ datasets:
   - path: processed/NACA0012_6e6_Ladson_180grit.csv
     imported_from:
       url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+environments:
+  foam:
+    kind: docker
+    image: openfoam-2406-foampy
+    wdir: /work
+    path: Dockerfile
+    layers:
+      - miniforge
+      - foampy
