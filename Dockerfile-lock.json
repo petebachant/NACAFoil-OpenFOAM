@@ -5,7 +5,7 @@
         ],
         "Parent": "",
         "Comment": "buildkit.dockerfile.v0",
-        "Created": "2025-01-07T15:33:34.365300503Z",
+        "Created": "2025-01-07T16:04:18.294354843Z",
         "Author": "",
         "Config": {
             "Hostname": "",
@@ -47,7 +47,7 @@
         },
         "Architecture": "arm64",
         "Os": "linux",
-        "Size": 588252874,
+        "Size": 588254453,
         "GraphDriver": {
             "Data": null,
             "Name": "overlayfs"
@@ -64,11 +64,11 @@
                 "sha256:ff4e7762e6ed5372aba6749b69a413ced69f4a637f4e7235aceb26536e358dec",
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
                 "sha256:145f5abd514d5d7306476748362dbbb32baa18b8fc7d87c5ecf8f7f830ed0e84",
-                "sha256:1e9e326058491ef780797c5aa5246f424432c7eee478ab42b6133b0a4b881a87",
-                "sha256:b9adad1795df1c4871fe9119588680f6c7b33a3f7c2975feba1c4f74888c86a3",
+                "sha256:a60b408c4bd3ae7a9fcfbc5970efd77742253059bbc77b75d05d315ded09fda9",
+                "sha256:511eb7d54c17757aac7697f9dcb771151258afb931f38515603b06d3b998afef",
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
             ]
         },
-        "DockerfileMD5": "e16e969c40e79c189ff32796acd3db5f"
+        "DockerfileMD5": "4cb9eb167796afa0dc6c167f02f57351"
     }
 ]

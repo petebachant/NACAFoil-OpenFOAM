@@ -38,7 +38,7 @@ RUN apt-get update > /dev/null && \
     echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> /etc/skel/.bashrc && \
     echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> ~/.bashrc
 
-RUN pip install --no-cache-dir numpy pandas matplotlib h5py \
+RUN pip install --no-cache-dir numpy==2.2.1 pandas matplotlib h5py \
     && pip install --no-cache-dir scipy \
     && pip install --no-cache-dir foampy
 
