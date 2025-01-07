@@ -83,7 +83,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     NoseZ = -(-H + Xu[C_max_idx])*sin(alpha)
     # Calculate the location of the vertices on the positive y-axis and put them in a matrix
     vertices = zeros((12, 3))
-    vertices[0] = [NoseX[0], W, NoseZ[0]]
+    vertices[0, :] = [NoseX[0], W, NoseZ[0]]
     vertices[1, :] = [Xu[C_max_idx], W, H]
     vertices[2, :] = [Xu[-1], W, H]
     vertices[3, :] = [D, W, H]
