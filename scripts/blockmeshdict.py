@@ -179,7 +179,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
         "| \\\\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           | \n"
     )
     f.write(
-        "|  \\\\    /   O peration     | Version:  3.0.x                                 | \n"
+        "|  \\\\    /   O peration     | Version:  v2406                                 | \n"
     )
     f.write(
         "|   \\\\  /    A nd           | Web:      www.OpenFOAM.com                      | \n"
@@ -215,7 +215,7 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
         "// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * // \n"
     )
     f.write("\n")
-    f.write("convertToMeters %f; \n" % scale)
+    f.write("scale %f; \n" % scale)
     f.write("\n")
     f.write("vertices \n")
     f.write("( \n")
