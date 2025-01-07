@@ -1,3 +1,13 @@
 name: nacafoil-openfoam
 title: Simulating a NACA airfoil with OpenFOAM
 description:
+datasets:
+  - path: processed/NACA0012_6e6_Ladson_80grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_120grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_180grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
