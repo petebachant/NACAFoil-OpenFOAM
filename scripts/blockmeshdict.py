@@ -83,17 +83,17 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     NoseZ = -(-H + Xu[C_max_idx])*sin(alpha)
     # Calculate the location of the vertices on the positive y-axis and put them in a matrix
     vertices = zeros((12, 3))
-    vertices[0, :] = [NoseX[0], W, NoseZ[0]]
-    vertices[1, :] = [Xu[C_max_idx], W, H]
-    vertices[2, :] = [Xu[-1], W, H]
+    vertices[0, :] = [NoseX[0, 0], W, NoseZ[0, 0]]
+    vertices[1, :] = [Xu[C_max_idx, 0], W, H]
+    vertices[2, :] = [Xu[-1, 0], W, H]
     vertices[3, :] = [D, W, H]
-    vertices[4, :] = [Xu[0], W, Zu[0]]
-    vertices[5, :] = [Xu[C_max_idx], W, Zu[C_max_idx]]
-    vertices[6, :] = [Xl[C_max_idx], W, Zl[C_max_idx]]
-    vertices[7, :] = [Xu[-1], W, Zu[-1]]
-    vertices[8, :] = [D, W, Zu[-1]]
-    vertices[9, :] = [Xl[C_max_idx], W, -H]
-    vertices[10, :] = [Xu[-1], W, -H]
+    vertices[4, :] = [Xu[0, 0], W, Zu[0, 0]]
+    vertices[5, :] = [Xu[C_max_idx, 0], W, Zu[C_max_idx, 0]]
+    vertices[6, :] = [Xl[C_max_idx, 0], W, Zl[C_max_idx, 0]]
+    vertices[7, :] = [Xu[-1, 0], W, Zu[-1, 0]]
+    vertices[8, :] = [D, W, Zu[-1, 0]]
+    vertices[9, :] = [Xl[C_max_idx, 0], W, -H]
+    vertices[10, :] = [Xu[-1, 0], W, -H]
     vertices[11, :] = [D, W, -H]
     # Create vertices for other side (negative y-axis)
     vertices2 = vertices.copy()
