@@ -40,3 +40,6 @@ figures:
   - path: figures/naca0012-re2e5-aoa-0-umag.png
     title: Velocity magnitude at 0 degrees angle of attack
     stage: plot-flow@0
+  - path: figures/naca0012-re2e5-aoa-0-umag.html
+    title: Velocity magnitude at 0 degrees angle of attack (interactive)
+    stage: plot-flow@0
