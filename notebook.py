@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.10.9"
+__generated_with = "0.9.33"
 app = marimo.App(width="medium")
 
 
@@ -12,19 +12,26 @@ def _():
 
 @app.cell
 def _(pd):
-    df = pd.read_csv("processed/all-simulated.csv")
+    df = pd.read_csv("processed/all-simulated.csv").sort_values("alpha_deg")
     df
     return (df,)
 
 
 @app.cell
 def _(df):
-    df.sort_values("alpha_deg").plot(x="alpha_deg", y="cl", backend="plotly")
+    df.plot(x="alpha_deg", y="cl", backend="plotly")
     return
 
 
 @app.cell
-def _():
+def _(df):
+    df["cl_cd"] = df["cl"] / df["cd"]
+    df.plot(x="alpha_deg", y="cl_cd", backend="plotly")
+    return
+
+
+@app.cell
+def __():
     return
 
 
