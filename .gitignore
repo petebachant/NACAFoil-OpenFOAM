@@ -16,3 +16,4 @@ system/blockMeshDict
 cases
 *.foam
 .DS_Store
+scratch.ipynb
