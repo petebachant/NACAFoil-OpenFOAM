@@ -31,7 +31,7 @@ writeControl    timeStep;
 
 writeInterval   50;
 
-purgeWrite      0;
+purgeWrite      1;
 
 writeFormat     ascii;
 
@@ -99,6 +99,19 @@ functions
                 base        time;
             }
         );
+    }
+
+    yPlus
+    {
+        type            yPlus;
+        libs            (fieldFunctionObjects);
+        writePrecision  8;
+        writeToFile     true;
+        useUserTime     true;
+        enabled         true;
+        log             true;
+        executeControl  writeTime;
+        writeControl    writeTime;
     }
 }
 

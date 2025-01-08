@@ -37,4 +37,3 @@ else
 fi
 
 runApplication sample -latestTime
-runApplication yPlus -latestTime
