@@ -25,6 +25,6 @@ fig.update_layout(
     yaxis=dict(title="Lift-to-drag ratio"),
     showlegend=True,
     title=None,
-    margin=dict(t=50)
+    margin=dict(t=50),
 )
 fig.write_json("figures/naca0012-clcd.json")
