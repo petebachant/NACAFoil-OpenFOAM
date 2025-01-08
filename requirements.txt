@@ -2,3 +2,7 @@ pandas>=2
 numpy
 marimo>=0.10.9
 plotly
+ipykernel
+nbformat>=4.2.0
+matplotlib
+seaborn
