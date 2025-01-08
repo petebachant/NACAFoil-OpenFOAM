@@ -1,2 +1,4 @@
 pandas>=2
 numpy
+marimo>=0.10.9
+plotly
