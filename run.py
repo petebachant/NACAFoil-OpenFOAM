@@ -81,6 +81,7 @@ if __name__ == "__main__":
             "system/createPatchDict",
             "system/fvSchemes",
             "system/fvSolution",
+            "system/surfaces",
         ]
         for path in paths:
             shutil.copy(path, os.path.join(case_dir, path))
@@ -93,6 +94,12 @@ if __name__ == "__main__":
     # Run simpleFoam
     foampy.run(
         "simpleFoam",
+        overwrite=args.overwrite,
+    )
+    # Run post processing
+    foampy.run(
+        "postProcess",
+        args=["-func", "surfaces", "-latestTime"],
         overwrite=args.overwrite,
     )
     # Touch case.foam file so we can easily open with ParaView
