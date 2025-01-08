@@ -39,7 +39,7 @@ FRONT_BACK_PATCHES = """
 """
 
 
-def gen_blockmeshdict(foil="0012", alpha_deg=4):
+def gen_blockmeshdict(foil="0012", alpha_deg=4, case_dir="."):
     """Write a `blockMeshDict` for a NACA foil at specified angle of attack."""
     # Foil geometry
     c = 1.0  # Geometric chord length
@@ -352,17 +352,18 @@ def gen_blockmeshdict(foil="0012", alpha_deg=4):
     txt += " \n"
     txt += "// ************************************************************************* // \n"
     # Write to file
-    with open("system/blockMeshDict", "w") as f:
+    with open(os.path.join(case_dir, "system", "blockMeshDict"), "w") as f:
         f.write(txt)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create blockMeshDict")
-    parser.add_argument("foil", help="NACA foil digits")
-    parser.add_argument("alpha_deg", help="Angle of attack (deg)")
+    parser.add_argument("foil", help="NACA foil digits.")
+    parser.add_argument("alpha_deg", help="Angle of attack (deg).")
+    parser.add_argument("--case", default=".", help="Case directory.")
     args = parser.parse_args()
     print(
         "Generating blockMeshDict for a NACA {} at {} "
         "degrees angle of attack".format(args.foil, args.alpha_deg)
     )
-    gen_blockmeshdict(args.foil, float(args.alpha_deg))
+    gen_blockmeshdict(args.foil, float(args.alpha_deg), case_dir=args.case)
