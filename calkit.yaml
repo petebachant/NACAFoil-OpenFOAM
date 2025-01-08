@@ -17,6 +17,7 @@ environments:
     image: openfoam-2406-foampy
     wdir: /work
     path: Dockerfile
+    default: true
     layers:
       - miniforge
       - foampy
