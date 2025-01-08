@@ -39,4 +39,4 @@ figures:
     stage: plot-clcd
   - path: figures/naca0012-re2e5-aoa-0-umag.png
     title: Velocity magnitude at 0 degrees angle of attack
-    stage: plot-flow
+    stage: plot-flow@0
