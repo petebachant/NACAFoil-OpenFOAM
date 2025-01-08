@@ -1692,11 +1692,11 @@ stages:
   plot-flow@0:
     cmd: calkit xenv -n py python scripts/plot-flow.py 0
     deps:
-    - path: cases/naca0012-re2e5-aoa-0
+    - path: cases/naca0012-re2e5-aoa-0/postProcessing/surfaces
       hash: md5
-      md5: 03c8b28ccbdb7062ab36a658a94c07db.dir
-      size: 30230820
-      nfiles: 42
+      md5: 3b4d90a9a729e8b378a8c154e4f5e1ca.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1704,7 +1704,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-0-umag.html
       hash: md5
-      md5: 6804170e700e8ab2e6ae1b9082a96161
+      md5: 735d5eaa278c7254ea23af8c49551a77
       size: 2873710
     - path: figures/naca0012-re2e5-aoa-0-umag.png
       hash: md5
@@ -1713,11 +1713,11 @@ stages:
   plot-flow@1:
     cmd: calkit xenv -n py python scripts/plot-flow.py 1
     deps:
-    - path: cases/naca0012-re2e5-aoa-1
+    - path: cases/naca0012-re2e5-aoa-1/postProcessing/surfaces
       hash: md5
-      md5: 526e8a5c143f537a795823d03d535f58.dir
-      size: 30237240
-      nfiles: 42
+      md5: 6d2d389802c4b86023c17f1f2f195d60.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1725,8 +1725,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-1-umag.html
       hash: md5
-      md5: 5b37d0c4ecedf5a67b8a93de6cbf1168
-      size: 2870010
+      md5: cab18fc4b10dc5a7451969c86dfd51d2
+      size: 2870002
     - path: figures/naca0012-re2e5-aoa-1-umag.png
       hash: md5
       md5: e64109680623a343b3a4098d857280fb
@@ -1734,11 +1734,11 @@ stages:
   plot-flow@2:
     cmd: calkit xenv -n py python scripts/plot-flow.py 2
     deps:
-    - path: cases/naca0012-re2e5-aoa-2
+    - path: cases/naca0012-re2e5-aoa-2/postProcessing/surfaces
       hash: md5
-      md5: 3579a7c92241cfcff1134a09435ea58f.dir
-      size: 30230525
-      nfiles: 42
+      md5: 7fce5efa210c88eeae8c27db0a3f787d.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1746,7 +1746,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-2-umag.html
       hash: md5
-      md5: d7c912c4964e18c6dccb99929b01ee80
+      md5: 1d1cb7eb63a88d87a60931050e972ee0
       size: 2867946
     - path: figures/naca0012-re2e5-aoa-2-umag.png
       hash: md5
@@ -1755,11 +1755,11 @@ stages:
   plot-flow@3:
     cmd: calkit xenv -n py python scripts/plot-flow.py 3
     deps:
-    - path: cases/naca0012-re2e5-aoa-3
+    - path: cases/naca0012-re2e5-aoa-3/postProcessing/surfaces
       hash: md5
-      md5: b68f0d4513b3eca43f93ad72a586dedc.dir
-      size: 30222377
-      nfiles: 42
+      md5: 88f3675ead74ca6d684786f7d3fab36a.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1767,8 +1767,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-3-umag.html
       hash: md5
-      md5: 8526058d44e6899a024933ad24581dc4
-      size: 2866478
+      md5: c2c17c5f7e36c3c97535f6768a29a9a8
+      size: 2866474
     - path: figures/naca0012-re2e5-aoa-3-umag.png
       hash: md5
       md5: bb03ae5f2b0f43112f1c25dc2a3b52b0
@@ -1776,11 +1776,11 @@ stages:
   plot-flow@4:
     cmd: calkit xenv -n py python scripts/plot-flow.py 4
     deps:
-    - path: cases/naca0012-re2e5-aoa-4
+    - path: cases/naca0012-re2e5-aoa-4/postProcessing/surfaces
       hash: md5
-      md5: 4a772cd6fa107b0a6a758d830c18fd33.dir
-      size: 30209324
-      nfiles: 42
+      md5: f07b33e76e455cb4df8d50eafd1d09ee.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1788,8 +1788,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-4-umag.html
       hash: md5
-      md5: f9663d0f342057bbcf77aa152118ec1a
-      size: 2869074
+      md5: 67f684424661c0b334849639d7e465ce
+      size: 2869070
     - path: figures/naca0012-re2e5-aoa-4-umag.png
       hash: md5
       md5: 5bb1d19af8ed6f665baa74af5f6ceeea
@@ -1797,11 +1797,11 @@ stages:
   plot-flow@5:
     cmd: calkit xenv -n py python scripts/plot-flow.py 5
     deps:
-    - path: cases/naca0012-re2e5-aoa-5
+    - path: cases/naca0012-re2e5-aoa-5/postProcessing/surfaces
       hash: md5
-      md5: b6e8cc9680b6ac2314bd2bf5b256db90.dir
-      size: 30200858
-      nfiles: 42
+      md5: f1572e9a2baea3909e2d81ffb34f2be9.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1809,8 +1809,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-5-umag.html
       hash: md5
-      md5: 4ef50bb57ce59ff6c3ff852a0fe9a5e5
-      size: 2870294
+      md5: 92846069a485232a5b93a10962638325
+      size: 2870298
     - path: figures/naca0012-re2e5-aoa-5-umag.png
       hash: md5
       md5: dbd70850920e68cf97401b0ec763b51b
@@ -1818,11 +1818,11 @@ stages:
   plot-flow@6:
     cmd: calkit xenv -n py python scripts/plot-flow.py 6
     deps:
-    - path: cases/naca0012-re2e5-aoa-6
+    - path: cases/naca0012-re2e5-aoa-6/postProcessing/surfaces
       hash: md5
-      md5: d401e820faa4617409e27e2c8f6719d3.dir
-      size: 30188546
-      nfiles: 42
+      md5: a32f50aa4284f5d76584f7896855be37.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1830,7 +1830,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-6-umag.html
       hash: md5
-      md5: 30f0f6d8fb59172760a309c2ac48066f
+      md5: 01adebaeaf69a9f06ee5dd6053e44336
       size: 2875786
     - path: figures/naca0012-re2e5-aoa-6-umag.png
       hash: md5
@@ -1839,11 +1839,11 @@ stages:
   plot-flow@7:
     cmd: calkit xenv -n py python scripts/plot-flow.py 7
     deps:
-    - path: cases/naca0012-re2e5-aoa-7
+    - path: cases/naca0012-re2e5-aoa-7/postProcessing/surfaces
       hash: md5
-      md5: 84e90928b10603415b2ac3b5931432b9.dir
-      size: 30181752
-      nfiles: 42
+      md5: 48767aeeb21b194d71abb8564b86bc3b.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1851,8 +1851,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-7-umag.html
       hash: md5
-      md5: 3dc208ab26d2fe4f35960cabbfdf9b04
-      size: 2885950
+      md5: 64a871e9bc9c76b3eaf5240d806a1b39
+      size: 2885962
     - path: figures/naca0012-re2e5-aoa-7-umag.png
       hash: md5
       md5: a1a29e80f245a86adee5a0c74135aa82
@@ -1860,11 +1860,11 @@ stages:
   plot-flow@8:
     cmd: calkit xenv -n py python scripts/plot-flow.py 8
     deps:
-    - path: cases/naca0012-re2e5-aoa-8
+    - path: cases/naca0012-re2e5-aoa-8/postProcessing/surfaces
       hash: md5
-      md5: a642316d16e442d2ef8353c845ed8cc7.dir
-      size: 30170397
-      nfiles: 42
+      md5: 36fdef157a12593eb883a2242cb8ecc7.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1872,7 +1872,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-8-umag.html
       hash: md5
-      md5: 5d64a7321b5994f22bc98a788d22f662
+      md5: 5b533b94a5b40ce6506c8f6a8417dbe0
       size: 2890250
     - path: figures/naca0012-re2e5-aoa-8-umag.png
       hash: md5
@@ -1881,11 +1881,11 @@ stages:
   plot-flow@9:
     cmd: calkit xenv -n py python scripts/plot-flow.py 9
     deps:
-    - path: cases/naca0012-re2e5-aoa-9
+    - path: cases/naca0012-re2e5-aoa-9/postProcessing/surfaces
       hash: md5
-      md5: 5d2544720c8a4b85bc1dcb6a0a2bd84d.dir
-      size: 30158506
-      nfiles: 42
+      md5: 999388d7362f789e60c935e08fdd33c3.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1893,8 +1893,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-9-umag.html
       hash: md5
-      md5: 712d95ea72858a40aa4bccaa6c145699
-      size: 2893518
+      md5: 80c8894fb452aa2be4d6549a061fc9aa
+      size: 2893514
     - path: figures/naca0012-re2e5-aoa-9-umag.png
       hash: md5
       md5: 8c1a4c4caeaffaed28308a2cfa23643d
@@ -1902,11 +1902,11 @@ stages:
   plot-flow@10:
     cmd: calkit xenv -n py python scripts/plot-flow.py 10
     deps:
-    - path: cases/naca0012-re2e5-aoa-10
+    - path: cases/naca0012-re2e5-aoa-10/postProcessing/surfaces
       hash: md5
-      md5: 751488317e32c51ce7e19eb2224f4596.dir
-      size: 30144010
-      nfiles: 42
+      md5: dc788e215af66237606f61385b0e5134.dir
+      size: 5149025
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1914,8 +1914,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-10-umag.html
       hash: md5
-      md5: d7ed141d7abdd9b59454e9360aa6f860
-      size: 2897886
+      md5: 623462a305c9a768a4d0d86ce641df47
+      size: 2897866
     - path: figures/naca0012-re2e5-aoa-10-umag.png
       hash: md5
       md5: 3d2508fceb86104263f8070a187f8bf6
@@ -1923,11 +1923,11 @@ stages:
   plot-flow@11:
     cmd: calkit xenv -n py python scripts/plot-flow.py 11
     deps:
-    - path: cases/naca0012-re2e5-aoa-11
+    - path: cases/naca0012-re2e5-aoa-11/postProcessing/surfaces
       hash: md5
-      md5: ebcc88d8e9a71d7b62d499d6538d7231.dir
-      size: 30136667
-      nfiles: 42
+      md5: 658d49a244bd124784535218ce46af0b.dir
+      size: 5149025
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1935,8 +1935,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-11-umag.html
       hash: md5
-      md5: 931434f26e945f2115fc31aa3e6bc3a4
-      size: 2902802
+      md5: 6663d3a9f2df7ff102f0f9571e5af1c3
+      size: 2902806
     - path: figures/naca0012-re2e5-aoa-11-umag.png
       hash: md5
       md5: b027067e1dbabfc52529e3b0142132f8
@@ -1944,11 +1944,11 @@ stages:
   plot-flow@12:
     cmd: calkit xenv -n py python scripts/plot-flow.py 12
     deps:
-    - path: cases/naca0012-re2e5-aoa-12
+    - path: cases/naca0012-re2e5-aoa-12/postProcessing/surfaces
       hash: md5
-      md5: ea5389f2b10ca8f75d9774a6cbf211d7.dir
-      size: 30122294
-      nfiles: 42
+      md5: b8f2eb03fb39bfda1580e93f1e086f4e.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1956,8 +1956,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-12-umag.html
       hash: md5
-      md5: aae2fd7839e10a99fb15f3d4261aa870
-      size: 2907354
+      md5: b6795e5971930e3bf0bddf370c4a8443
+      size: 2907346
     - path: figures/naca0012-re2e5-aoa-12-umag.png
       hash: md5
       md5: 84b5ba7fc9b3a9b9b1dc21493f9098ad
@@ -1965,11 +1965,11 @@ stages:
   plot-flow@13:
     cmd: calkit xenv -n py python scripts/plot-flow.py 13
     deps:
-    - path: cases/naca0012-re2e5-aoa-13
+    - path: cases/naca0012-re2e5-aoa-13/postProcessing/surfaces
       hash: md5
-      md5: 01ac3466c0d63461947f53e17365f5f7.dir
-      size: 30114910
-      nfiles: 42
+      md5: 7bcf8cfa1f01312f8059d67a88f430b1.dir
+      size: 5149025
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1977,7 +1977,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-13-umag.html
       hash: md5
-      md5: cc68e947a0b858dc21599631ec92e487
+      md5: 5daf5508a40330526338b5566f46d92d
       size: 2909654
     - path: figures/naca0012-re2e5-aoa-13-umag.png
       hash: md5
@@ -1986,11 +1986,11 @@ stages:
   plot-flow@14:
     cmd: calkit xenv -n py python scripts/plot-flow.py 14
     deps:
-    - path: cases/naca0012-re2e5-aoa-14
+    - path: cases/naca0012-re2e5-aoa-14/postProcessing/surfaces
       hash: md5
-      md5: c307be5f095a598d3fb39412e4ad5036.dir
-      size: 30110934
-      nfiles: 42
+      md5: 3f45565cbbab0b7c909a6767e0bbc814.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -1998,8 +1998,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-14-umag.html
       hash: md5
-      md5: a1eb75a52bf5924d00682eb23a42d452
-      size: 2915998
+      md5: 01bccecfdaadc49418e1a91d96df019d
+      size: 2916010
     - path: figures/naca0012-re2e5-aoa-14-umag.png
       hash: md5
       md5: 8e2e5ca0cf137c6c4b8d8512295816a9
@@ -2007,11 +2007,11 @@ stages:
   plot-flow@15:
     cmd: calkit xenv -n py python scripts/plot-flow.py 15
     deps:
-    - path: cases/naca0012-re2e5-aoa-15
+    - path: cases/naca0012-re2e5-aoa-15/postProcessing/surfaces
       hash: md5
-      md5: fd82e19b4eb21431170040aa7f06c1a2.dir
-      size: 30107445
-      nfiles: 42
+      md5: eb068250c29abee608ab7f1179087932.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2019,7 +2019,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-15-umag.html
       hash: md5
-      md5: 41aad37eeb80e12540ba3f8822630c33
+      md5: 2cac2ce200d8bf7b822ce0b7c1418032
       size: 2917186
     - path: figures/naca0012-re2e5-aoa-15-umag.png
       hash: md5
@@ -2028,11 +2028,11 @@ stages:
   plot-flow@16:
     cmd: calkit xenv -n py python scripts/plot-flow.py 16
     deps:
-    - path: cases/naca0012-re2e5-aoa-16
+    - path: cases/naca0012-re2e5-aoa-16/postProcessing/surfaces
       hash: md5
-      md5: 3e81f8f710f4a026b78209c2a1465f4d.dir
-      size: 30110019
-      nfiles: 42
+      md5: 3b18e885679472db49323437daf5390b.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2040,8 +2040,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-16-umag.html
       hash: md5
-      md5: 11854e8c1c1c34e59e34d3d39caaeed8
-      size: 2918726
+      md5: 6027aabc23f1184a4b5aa1e01508a454
+      size: 2918722
     - path: figures/naca0012-re2e5-aoa-16-umag.png
       hash: md5
       md5: c669703001111af02424a915f4fe2657
@@ -2049,11 +2049,11 @@ stages:
   plot-flow@17:
     cmd: calkit xenv -n py python scripts/plot-flow.py 17
     deps:
-    - path: cases/naca0012-re2e5-aoa-17
+    - path: cases/naca0012-re2e5-aoa-17/postProcessing/surfaces
       hash: md5
-      md5: b4bfda737210bd79c8be73ae48365164.dir
-      size: 30103786
-      nfiles: 42
+      md5: 700127330635e153d1b9dc9eaed245ae.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2061,8 +2061,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-17-umag.html
       hash: md5
-      md5: 59bf1cc137a4cf165086cd6b9259ea37
-      size: 2920566
+      md5: f315c8d376ac41e8b8afe3f5b6a763f4
+      size: 2920582
     - path: figures/naca0012-re2e5-aoa-17-umag.png
       hash: md5
       md5: 7e52e2e5b6c252ca95484eb82aadee79
@@ -2070,11 +2070,11 @@ stages:
   plot-flow@18:
     cmd: calkit xenv -n py python scripts/plot-flow.py 18
     deps:
-    - path: cases/naca0012-re2e5-aoa-18
+    - path: cases/naca0012-re2e5-aoa-18/postProcessing/surfaces
       hash: md5
-      md5: a5aaa148b355208ce9cb864365662352.dir
-      size: 30108234
-      nfiles: 42
+      md5: f979228f7c1c341dd3a4aa58b1b5d6c7.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2082,8 +2082,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-18-umag.html
       hash: md5
-      md5: 3da69c67a9d2510129a0ca219e4562e0
-      size: 2923390
+      md5: 60fb17de66c6c513530e2eeabc4db602
+      size: 2923402
     - path: figures/naca0012-re2e5-aoa-18-umag.png
       hash: md5
       md5: 2535a3ca71b19bb3f1d6472671a48b9b
@@ -2091,11 +2091,11 @@ stages:
   plot-flow@19:
     cmd: calkit xenv -n py python scripts/plot-flow.py 19
     deps:
-    - path: cases/naca0012-re2e5-aoa-19
+    - path: cases/naca0012-re2e5-aoa-19/postProcessing/surfaces
       hash: md5
-      md5: 7ef0fade29cce59250bff14f61bfa6a1.dir
-      size: 30105641
-      nfiles: 42
+      md5: 217efb35ba2af38766cffc8a1d005b15.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2103,8 +2103,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-19-umag.html
       hash: md5
-      md5: 5f8201c9f917b7232ab3a1a653195970
-      size: 2926518
+      md5: a0399eb2344693cebd5d880db98eebe0
+      size: 2926514
     - path: figures/naca0012-re2e5-aoa-19-umag.png
       hash: md5
       md5: 588e6fff4fd853768e61be8ff38ab25c
@@ -2112,11 +2112,11 @@ stages:
   plot-flow@20:
     cmd: calkit xenv -n py python scripts/plot-flow.py 20
     deps:
-    - path: cases/naca0012-re2e5-aoa-20
+    - path: cases/naca0012-re2e5-aoa-20/postProcessing/surfaces
       hash: md5
-      md5: 22c4ac65c4403efaa97d3d65916e130e.dir
-      size: 30123369
-      nfiles: 42
+      md5: 65bcd991e7de1d485743f969eaaf7455.dir
+      size: 5149026
+      nfiles: 1
     - path: scripts/plot-flow.py
       hash: md5
       md5: 80db8a52b59b9f949ebd047f1f6f4be9
@@ -2124,8 +2124,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-20-umag.html
       hash: md5
-      md5: 1ff0e882cd8b669d3c0e150681da8d5e
-      size: 2928346
+      md5: f03526788871c7a3f5e15ee618bdf508
+      size: 2928338
     - path: figures/naca0012-re2e5-aoa-20-umag.png
       hash: md5
       md5: 48f919dd1c34bf59e301c3162cc9ce58

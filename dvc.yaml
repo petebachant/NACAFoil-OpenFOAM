@@ -49,7 +49,7 @@ stages:
       cmd: calkit xenv -n py python scripts/plot-flow.py ${item}
       deps:
         - scripts/plot-flow.py
-        - cases/naca0012-re2e5-aoa-${item}
+        - cases/naca0012-re2e5-aoa-${item}/postProcessing/surfaces
       outs:
         - figures/naca0012-re2e5-aoa-${item}-umag.png
         - figures/naca0012-re2e5-aoa-${item}-umag.html
