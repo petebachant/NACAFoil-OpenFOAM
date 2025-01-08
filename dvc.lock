@@ -1,0 +1,1490 @@
+schema: '2.0'
+stages:
+  naca0012-re2e5@0:
+    cmd: calkit xenv python run.py 0012 0
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-0
+      hash: md5
+      md5: e8fb7bb9f83acc1bbf0418409be8a551.dir
+      size: 25079367
+      nfiles: 39
+  naca0012-re2e5@1:
+    cmd: calkit xenv python run.py 0012 1
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-1
+      hash: md5
+      md5: 1dc433765353d920e90f92907179c75b.dir
+      size: 25085790
+      nfiles: 39
+  naca0012-re2e5@2:
+    cmd: calkit xenv python run.py 0012 2
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-2
+      hash: md5
+      md5: 8e807aa60cd28d122dd94ce963cfb9a0.dir
+      size: 25079077
+      nfiles: 39
+  naca0012-re2e5@3:
+    cmd: calkit xenv python run.py 0012 3
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-3
+      hash: md5
+      md5: 512a18d030e8170a2ed6b44d7279ebbe.dir
+      size: 25070940
+      nfiles: 39
+  naca0012-re2e5@4:
+    cmd: calkit xenv python run.py 0012 4
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-4
+      hash: md5
+      md5: 36f426d0704426cd4346af35080135d9.dir
+      size: 25057874
+      nfiles: 39
+  naca0012-re2e5@5:
+    cmd: calkit xenv python run.py 0012 5
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-5
+      hash: md5
+      md5: eef11c5710db7d0fd97286662938529f.dir
+      size: 25049411
+      nfiles: 39
+  naca0012-re2e5@6:
+    cmd: calkit xenv python run.py 0012 6
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-6
+      hash: md5
+      md5: 6f43d9f83a62ebd61f52411152732eb4.dir
+      size: 25037092
+      nfiles: 39
+  naca0012-re2e5@7:
+    cmd: calkit xenv python run.py 0012 7
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-7
+      hash: md5
+      md5: 3c19e525241908954f8017a2513f2667.dir
+      size: 25030303
+      nfiles: 39
+  naca0012-re2e5@8:
+    cmd: calkit xenv python run.py 0012 8
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-8
+      hash: md5
+      md5: 959fdba120a9cdeee3c3e763c8fc4305.dir
+      size: 25018947
+      nfiles: 39
+  naca0012-re2e5@9:
+    cmd: calkit xenv python run.py 0012 9
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-9
+      hash: md5
+      md5: 21e679daa31f71bf61a19bd74893a0ac.dir
+      size: 25007063
+      nfiles: 39
+  naca0012-re2e5@10:
+    cmd: calkit xenv python run.py 0012 10
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-10
+      hash: md5
+      md5: dfd6ecb8883d498a286435f3bb3dc5d4.dir
+      size: 24992575
+      nfiles: 39
+  naca0012-re2e5@11:
+    cmd: calkit xenv python run.py 0012 11
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-11
+      hash: md5
+      md5: cc7e28b14d319525a1a4a24064f6d9e0.dir
+      size: 24985216
+      nfiles: 39
+  naca0012-re2e5@12:
+    cmd: calkit xenv python run.py 0012 12
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-12
+      hash: md5
+      md5: f730f8838cc2a07c1106aced20656832.dir
+      size: 24970838
+      nfiles: 39
+  naca0012-re2e5@13:
+    cmd: calkit xenv python run.py 0012 13
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-13
+      hash: md5
+      md5: 23688efddaba56ed964d675db40f7e75.dir
+      size: 24963465
+      nfiles: 39
+  naca0012-re2e5@14:
+    cmd: calkit xenv python run.py 0012 14
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-14
+      hash: md5
+      md5: 9cbcbbd025be0f6e04a6134c22409c97.dir
+      size: 24959484
+      nfiles: 39
+  naca0012-re2e5@15:
+    cmd: calkit xenv python run.py 0012 15
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-15
+      hash: md5
+      md5: 0b5a36ad1a9ade7ed1ddc063f3e5ea9c.dir
+      size: 24956007
+      nfiles: 39
+  naca0012-re2e5@16:
+    cmd: calkit xenv python run.py 0012 16
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-16
+      hash: md5
+      md5: 4440b1a9216e1126384c3391b5326fc2.dir
+      size: 24958575
+      nfiles: 39
+  naca0012-re2e5@17:
+    cmd: calkit xenv python run.py 0012 17
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-17
+      hash: md5
+      md5: 2d1dd2069798a79c0778d35b7c651ab8.dir
+      size: 24952329
+      nfiles: 39
+  naca0012-re2e5@18:
+    cmd: calkit xenv python run.py 0012 18
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-18
+      hash: md5
+      md5: d60998d96d0bacb6c01482b543ff12e4.dir
+      size: 24956780
+      nfiles: 39
+  naca0012-re2e5@19:
+    cmd: calkit xenv python run.py 0012 19
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-19
+      hash: md5
+      md5: e39cb7e9e413c3ff4e4702e536963944.dir
+      size: 24954186
+      nfiles: 39
+  naca0012-re2e5@20:
+    cmd: calkit xenv python run.py 0012 20
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-20
+      hash: md5
+      md5: b67e622cbf70ad8458fa76d47ebe30fb.dir
+      size: 24971937
+      nfiles: 39
+  naca0012-re2e5@21:
+    cmd: calkit xenv python run.py 0012 21
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-21
+      hash: md5
+      md5: a848c0e9ced1e8bee03bf7cf7c972e57.dir
+      size: 25001309
+      nfiles: 39
+  naca0012-re2e5@22:
+    cmd: calkit xenv python run.py 0012 22
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-22
+      hash: md5
+      md5: 4616ebdf9331ed2efc20ee88fd8f1120.dir
+      size: 24962715
+      nfiles: 39
+  naca0012-re2e5@23:
+    cmd: calkit xenv python run.py 0012 23
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-23
+      hash: md5
+      md5: 1ada8931005acf0f73e331bb7e4700fd.dir
+      size: 25003292
+      nfiles: 39
+  naca0012-re2e5@24:
+    cmd: calkit xenv python run.py 0012 24
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-24
+      hash: md5
+      md5: 1625159fb945adc9218c396b5d545e9a.dir
+      size: 24974650
+      nfiles: 39
+  naca0012-re2e5@25:
+    cmd: calkit xenv python run.py 0012 25
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-25
+      hash: md5
+      md5: 094ccda99743c2a40462f4c22cb503b6.dir
+      size: 24961886
+      nfiles: 39
+  naca0012-re2e5@26:
+    cmd: calkit xenv python run.py 0012 26
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-26
+      hash: md5
+      md5: e1f9853ef21bf37479bdd1ae4b26b398.dir
+      size: 25081442
+      nfiles: 39
+  naca0012-re2e5@27:
+    cmd: calkit xenv python run.py 0012 27
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-27
+      hash: md5
+      md5: b7194729647ab832067b40dc0e9f6ec8.dir
+      size: 24952967
+      nfiles: 39
+  naca0012-re2e5@28:
+    cmd: calkit xenv python run.py 0012 28
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-28
+      hash: md5
+      md5: ac35d3b972e2840e34c2972e85a5f5ef.dir
+      size: 24932728
+      nfiles: 39
+  naca0012-re2e5@29:
+    cmd: calkit xenv python run.py 0012 29
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-29
+      hash: md5
+      md5: 3d854d957e0040bd586985d202edadd0.dir
+      size: 24936788
+      nfiles: 39
+  naca0012-re2e5@30:
+    cmd: calkit xenv python run.py 0012 30
+    deps:
+    - path: 0.org
+      hash: md5
+      md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
+      size: 8534
+      nfiles: 8
+    - path: constant/transportProperties
+      hash: md5
+      md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
+      size: 917
+    - path: constant/turbulenceProperties
+      hash: md5
+      md5: 81c40a3ff037b51ad5778f402f3a462f
+      size: 982
+    - path: run.py
+      hash: md5
+      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
+      size: 3102
+      isexec: true
+    - path: scripts/blockmeshdict.py
+      hash: md5
+      md5: 693dd158f8af0bdf0af544e235ff37ea
+      size: 13357
+      isexec: true
+    - path: system/controlDict
+      hash: md5
+      md5: 3199fd3f752ef4c54d9cbcb8995c67c5
+      size: 2121
+    - path: system/createPatchDict
+      hash: md5
+      md5: 4c5e5b52677609614e59dfb1ff428167
+      size: 1571
+    - path: system/fvSchemes
+      hash: md5
+      md5: b8393e0728227e10501f1f4044f548ff
+      size: 1533
+    - path: system/fvSolution
+      hash: md5
+      md5: e107359b5d6071dbed589a032a8a0355
+      size: 2566
+    outs:
+    - path: cases/naca0012-re2e5-aoa-30
+      hash: md5
+      md5: 6e20e552df21041eaa54704e9e37363f.dir
+      size: 25028121
+      nfiles: 39
