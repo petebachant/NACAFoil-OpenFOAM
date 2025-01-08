@@ -1,45 +1,39 @@
-# NACA foil OpenFOAM case files
+# NACA foil OpenFOAM
 
-OpenFOAM (3.0.x) case files for simulating NACA foils.
-
-
-## Dependencies
-
-* Python
-* NumPy
-* pandas
-* matplotlib
-
-Note: All dependencies are included in the
-[Anaconda Python distribution](http://continuum.io/downloads). Python 3.5 is
-recommended.
-
+A [Calkit](https://calkit.org) project that simulates
+NACA airfoils with OpenFOAM in a Docker container.
 
 ## Usage
 
+To download all of the cases and their results, execute
+
+```sh
+calkit pull
+```
+
+To run all cases and aggregate the results, execute
+
+```sh
+calkit run
+```
+
 To run a single case, execute
 
-    ./Allrun {foil} {alpha_deg}
+```sh
+calkit xenv python run.py {profile} {angle_of_attack}
+```
 
 For example, to simulate the flow around a NACA 0012 at 8 degrees angle
 of attack, run
 
-    ./Allrun 0012 8
-
-To automatically simulate multiple angles of attack, execute
-
-    python paramsweep.py
-
-To plot the results for multiple angles of attack, run
-
-    python plot.py
-
+```sh
+calkit xenv python run.py 0012 8
+```
 
 ## Acknowledgements
 
 `blockMeshDict` generation script based on work by
 [Håkon Strandenes](https://www.hpc.ntnu.no/display/hpc/OpenFOAM+-+Airfoil+Calculations#OpenFOAM-AirfoilCalculations-3:Calculationofforcesandforcecoefficients).
-
 
 ## Experimental data
 
@@ -51,7 +45,6 @@ linked from http://turbmodels.larc.nasa.gov/naca0012_val.html. Header:
 # Re=6 million, with transition tripped
 # M=0.15
 ```
-
 
 ## License
 
