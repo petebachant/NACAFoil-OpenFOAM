@@ -1498,10 +1498,10 @@ stages:
       nfiles: 1209
     - path: scripts/aggregate.py
       hash: md5
-      md5: 5ca07337e03fd1f2f92440fb3f0817f1
+      md5: 6a78b4ad0dae0ceb9b29e2b748a7066b
       size: 1836
     outs:
     - path: processed/all-simulated.csv
       hash: md5
-      md5: 8e5afbbe280e51410eafff848885cf2a
-      size: 1955
+      md5: 3e4299f4e87273b0153131323aa911f2
+      size: 1968

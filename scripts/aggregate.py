@@ -15,9 +15,9 @@ def load_force_coeffs(casedir: str = ".", timedir: str = "0") -> pd.DataFrame:
     data = np.loadtxt(fpath, skiprows=13)
     df = pd.DataFrame()
     df["time"] = data[:, 0]
-    df["cl"] = data[:, 3]
-    df["cd"] = data[:, 2]
-    df["cm"] = data[:, 1]
+    df["cl"] = data[:, 4]
+    df["cd"] = data[:, 1]
+    df["cm"] = data[:, 7]
     return df
 
 
