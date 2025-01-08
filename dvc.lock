@@ -1488,3 +1488,20 @@ stages:
       md5: 6e20e552df21041eaa54704e9e37363f.dir
       size: 25028121
       nfiles: 39
+  aggregate-results:
+    cmd: calkit xenv -n py python scripts/aggregate.py
+    deps:
+    - path: cases
+      hash: md5
+      md5: 5ef2142f2a7b98b889b2026bf11d2680.dir
+      size: 774973154
+      nfiles: 1209
+    - path: scripts/aggregate.py
+      hash: md5
+      md5: 5ca07337e03fd1f2f92440fb3f0817f1
+      size: 1836
+    outs:
+    - path: processed/all-simulated.csv
+      hash: md5
+      md5: 8e5afbbe280e51410eafff848885cf2a
+      size: 1955

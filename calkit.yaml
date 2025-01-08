@@ -11,6 +11,9 @@ datasets:
   - path: processed/NACA0012_6e6_Ladson_180grit.csv
     imported_from:
       url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/all-simulated.csv
+    title: All simulation results
+    stage: aggregate-results
 environments:
   foam:
     kind: docker

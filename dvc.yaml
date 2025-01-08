@@ -15,3 +15,15 @@ stages:
         - 0.org
       outs:
         - cases/naca0012-re2e5-aoa-${item}
+  aggregate-results:
+    cmd: calkit xenv -n py python scripts/aggregate.py
+    deps:
+      - scripts/aggregate.py
+      - cases
+    outs:
+      - processed/all-simulated.csv:
+          cache: false
+    meta:
+      calkit:
+        type: dataset
+        title: All simulation results
