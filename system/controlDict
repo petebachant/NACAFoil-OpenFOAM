@@ -15,23 +15,23 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     pimpleFoam;
+application     simpleFoam;
 
-startFrom       latestTime;
+startFrom       startTime;
 
 startTime       0;
 
 stopAt          endTime;
 
-endTime         30;
+endTime         500;
 
-deltaT          2e-3;
+deltaT          1;
 
-writeControl    runTime;
+writeControl    timeStep;
 
-writeInterval   0.01;
+writeInterval   50;
 
-purgeWrite      1;
+purgeWrite      0;
 
 writeFormat     ascii;
 
@@ -44,10 +44,6 @@ timeFormat      general;
 timePrecision   6;
 
 runTimeModifiable true;
-
-adjustTimeStep  true;
-
-maxCo           2.0;
 
 functions
 {

@@ -30,10 +30,10 @@ if [ $parallel = true ]
     then
     runApplication decomposePar
     nProc=$(getNumberOfProcessors)
-    runParallel pimpleFoam $nProc
+    runParallel simpleFoam $nProc
     runApplication reconstructPar
 else
-    runApplication pimpleFoam
+    runApplication simpleFoam
 fi
 
 runApplication sample -latestTime
