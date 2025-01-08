@@ -1,6 +1,9 @@
 name: nacafoil-openfoam
 title: Simulating a NACA airfoil with OpenFOAM
 description:
+dependencies:
+  - docker
+  - uv
 datasets:
   - path: processed/NACA0012_6e6_Ladson_80grit.csv
     imported_from:
