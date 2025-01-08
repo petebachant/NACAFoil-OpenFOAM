@@ -8,6 +8,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -18,8 +22,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -42,12 +46,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-0
       hash: md5
-      md5: e8fb7bb9f83acc1bbf0418409be8a551.dir
-      size: 25079367
-      nfiles: 39
+      md5: eb11743de012f8370be6bf9cf71ca297.dir
+      size: 31474161
+      nfiles: 43
   naca0012-re2e5@1:
     cmd: calkit xenv python run.py 0012 1
     deps:
@@ -56,6 +64,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -66,8 +78,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -90,12 +102,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-1
       hash: md5
-      md5: 1dc433765353d920e90f92907179c75b.dir
-      size: 25085790
-      nfiles: 39
+      md5: 0b0616191ecd6038f088d15245a73beb.dir
+      size: 31488082
+      nfiles: 43
   naca0012-re2e5@2:
     cmd: calkit xenv python run.py 0012 2
     deps:
@@ -104,6 +120,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -114,8 +134,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -138,12 +158,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-2
       hash: md5
-      md5: 8e807aa60cd28d122dd94ce963cfb9a0.dir
-      size: 25079077
-      nfiles: 39
+      md5: c120dc61f20a1428c8248f5513656592.dir
+      size: 31480406
+      nfiles: 43
   naca0012-re2e5@3:
     cmd: calkit xenv python run.py 0012 3
     deps:
@@ -152,6 +176,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -162,8 +190,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -186,12 +214,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-3
       hash: md5
-      md5: 512a18d030e8170a2ed6b44d7279ebbe.dir
-      size: 25070940
-      nfiles: 39
+      md5: a65aef3e48a81d96376199791b2374b8.dir
+      size: 31465468
+      nfiles: 43
   naca0012-re2e5@4:
     cmd: calkit xenv python run.py 0012 4
     deps:
@@ -200,6 +232,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -210,8 +246,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -234,12 +270,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-4
       hash: md5
-      md5: 36f426d0704426cd4346af35080135d9.dir
-      size: 25057874
-      nfiles: 39
+      md5: 03d85d15f7d672599f1f0b129c0cc58f.dir
+      size: 31441606
+      nfiles: 43
   naca0012-re2e5@5:
     cmd: calkit xenv python run.py 0012 5
     deps:
@@ -248,6 +288,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -258,8 +302,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -282,12 +326,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-5
       hash: md5
-      md5: eef11c5710db7d0fd97286662938529f.dir
-      size: 25049411
-      nfiles: 39
+      md5: a7f406d96ad1db96078b7cfe93260e59.dir
+      size: 31428093
+      nfiles: 43
   naca0012-re2e5@6:
     cmd: calkit xenv python run.py 0012 6
     deps:
@@ -296,6 +344,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -306,8 +358,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -330,12 +382,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-6
       hash: md5
-      md5: 6f43d9f83a62ebd61f52411152732eb4.dir
-      size: 25037092
-      nfiles: 39
+      md5: 973e8e58199ebe28fbcdecea1c98faff.dir
+      size: 31407038
+      nfiles: 43
   naca0012-re2e5@7:
     cmd: calkit xenv python run.py 0012 7
     deps:
@@ -344,6 +400,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -354,8 +414,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -378,12 +438,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-7
       hash: md5
-      md5: 3c19e525241908954f8017a2513f2667.dir
-      size: 25030303
-      nfiles: 39
+      md5: b98d7f84227752daff0cdcc012ae9c0e.dir
+      size: 31391970
+      nfiles: 43
   naca0012-re2e5@8:
     cmd: calkit xenv python run.py 0012 8
     deps:
@@ -392,6 +456,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -402,8 +470,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -426,12 +494,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-8
       hash: md5
-      md5: 959fdba120a9cdeee3c3e763c8fc4305.dir
-      size: 25018947
-      nfiles: 39
+      md5: 1060e879479ac49cd5c049e82d1e044d.dir
+      size: 31368901
+      nfiles: 43
   naca0012-re2e5@9:
     cmd: calkit xenv python run.py 0012 9
     deps:
@@ -440,6 +512,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -450,8 +526,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -474,12 +550,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-9
       hash: md5
-      md5: 21e679daa31f71bf61a19bd74893a0ac.dir
-      size: 25007063
-      nfiles: 39
+      md5: 430d459117ae7f3bd5f74a154c145cf1.dir
+      size: 31351829
+      nfiles: 43
   naca0012-re2e5@10:
     cmd: calkit xenv python run.py 0012 10
     deps:
@@ -488,6 +568,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -498,8 +582,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -522,12 +606,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-10
       hash: md5
-      md5: dfd6ecb8883d498a286435f3bb3dc5d4.dir
-      size: 24992575
-      nfiles: 39
+      md5: bc8331855285f7b1dd9493e8928d34be.dir
+      size: 31328313
+      nfiles: 43
   naca0012-re2e5@11:
     cmd: calkit xenv python run.py 0012 11
     deps:
@@ -536,6 +624,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -546,8 +638,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -570,12 +662,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-11
       hash: md5
-      md5: cc7e28b14d319525a1a4a24064f6d9e0.dir
-      size: 24985216
-      nfiles: 39
+      md5: 9e9e58d165796014e54d11cf6bdacc49.dir
+      size: 31309044
+      nfiles: 43
   naca0012-re2e5@12:
     cmd: calkit xenv python run.py 0012 12
     deps:
@@ -584,6 +680,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -594,8 +694,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -618,12 +718,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-12
       hash: md5
-      md5: f730f8838cc2a07c1106aced20656832.dir
-      size: 24970838
-      nfiles: 39
+      md5: d35b773aec78b7c1c7dabcc71da2d5fa.dir
+      size: 31294196
+      nfiles: 43
   naca0012-re2e5@13:
     cmd: calkit xenv python run.py 0012 13
     deps:
@@ -632,6 +736,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -642,8 +750,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -666,12 +774,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-13
       hash: md5
-      md5: 23688efddaba56ed964d675db40f7e75.dir
-      size: 24963465
-      nfiles: 39
+      md5: 56aa6b1f5e7d78a39cc1ea84f56ffe5a.dir
+      size: 31278701
+      nfiles: 43
   naca0012-re2e5@14:
     cmd: calkit xenv python run.py 0012 14
     deps:
@@ -680,6 +792,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -690,8 +806,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -714,12 +830,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-14
       hash: md5
-      md5: 9cbcbbd025be0f6e04a6134c22409c97.dir
-      size: 24959484
-      nfiles: 39
+      md5: 2e579dad30c5393f1c203b8b4147f35b.dir
+      size: 31267741
+      nfiles: 43
   naca0012-re2e5@15:
     cmd: calkit xenv python run.py 0012 15
     deps:
@@ -728,6 +848,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -738,8 +862,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -762,12 +886,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-15
       hash: md5
-      md5: 0b5a36ad1a9ade7ed1ddc063f3e5ea9c.dir
-      size: 24956007
-      nfiles: 39
+      md5: 9141b98fc2e9d055622fc6fe13aac9af.dir
+      size: 31253995
+      nfiles: 43
   naca0012-re2e5@16:
     cmd: calkit xenv python run.py 0012 16
     deps:
@@ -776,6 +904,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -786,8 +918,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -810,12 +942,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-16
       hash: md5
-      md5: 4440b1a9216e1126384c3391b5326fc2.dir
-      size: 24958575
-      nfiles: 39
+      md5: be2ae4abbd55f572f8e6f9500fcdbb37.dir
+      size: 31249753
+      nfiles: 43
   naca0012-re2e5@17:
     cmd: calkit xenv python run.py 0012 17
     deps:
@@ -824,6 +960,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -834,8 +974,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -858,12 +998,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-17
       hash: md5
-      md5: 2d1dd2069798a79c0778d35b7c651ab8.dir
-      size: 24952329
-      nfiles: 39
+      md5: 170fe5f1ef1deb13c806ad3405203e3b.dir
+      size: 31244023
+      nfiles: 43
   naca0012-re2e5@18:
     cmd: calkit xenv python run.py 0012 18
     deps:
@@ -872,6 +1016,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -882,8 +1030,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -906,12 +1054,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-18
       hash: md5
-      md5: d60998d96d0bacb6c01482b543ff12e4.dir
-      size: 24956780
-      nfiles: 39
+      md5: 76333df3e4daa67318db5cc73fd16c3c.dir
+      size: 31241268
+      nfiles: 43
   naca0012-re2e5@19:
     cmd: calkit xenv python run.py 0012 19
     deps:
@@ -920,6 +1072,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -930,8 +1086,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -954,12 +1110,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-19
       hash: md5
-      md5: e39cb7e9e413c3ff4e4702e536963944.dir
-      size: 24954186
-      nfiles: 39
+      md5: 01100ed05e2f3d7b97c6ef4a947aeefa.dir
+      size: 31233714
+      nfiles: 43
   naca0012-re2e5@20:
     cmd: calkit xenv python run.py 0012 20
     deps:
@@ -968,6 +1128,10 @@ stages:
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
       size: 8534
       nfiles: 8
+    - path: Dockerfile
+      hash: md5
+      md5: 4cb9eb167796afa0dc6c167f02f57351
+      size: 2092
     - path: constant/transportProperties
       hash: md5
       md5: 68bd0f8ecbf1733b4feb4d0ff3fe6da1
@@ -978,8 +1142,8 @@ stages:
       size: 982
     - path: run.py
       hash: md5
-      md5: 4ffe6df22a1aa41864ebc34fafcd2f1f
-      size: 3102
+      md5: 61923be791accbdb19decfd53c6aa10e
+      size: 3289
       isexec: true
     - path: scripts/blockmeshdict.py
       hash: md5
@@ -1002,12 +1166,16 @@ stages:
       hash: md5
       md5: e107359b5d6071dbed589a032a8a0355
       size: 2566
+    - path: system/surfaces
+      hash: md5
+      md5: a49c51958d13f8eb27604217c161c0fc
+      size: 966
     outs:
     - path: cases/naca0012-re2e5-aoa-20
       hash: md5
-      md5: b67e622cbf70ad8458fa76d47ebe30fb.dir
-      size: 24971937
-      nfiles: 39
+      md5: 88898c8f66ca5394d7bf19f21da22e52.dir
+      size: 31249897
+      nfiles: 43
   naca0012-re2e5@21:
     cmd: calkit xenv python run.py 0012 21
     deps:
@@ -1493,15 +1661,31 @@ stages:
     deps:
     - path: cases
       hash: md5
-      md5: 5ef2142f2a7b98b889b2026bf11d2680.dir
-      size: 774973154
-      nfiles: 1209
+      md5: e61531d18a84682f0089f47044c0d96f.dir
+      size: 658248199
+      nfiles: 903
     - path: scripts/aggregate.py
       hash: md5
-      md5: 6a78b4ad0dae0ceb9b29e2b748a7066b
-      size: 1836
+      md5: 738b95f97b4b9f277e52bc4f6ce33c54
+      size: 1879
     outs:
     - path: processed/all-simulated.csv
       hash: md5
-      md5: 3e4299f4e87273b0153131323aa911f2
-      size: 1968
+      md5: c04e9776e769d6c038682b0acde22161
+      size: 1357
+  plot-clcd:
+    cmd: calkit xenv -n py python scripts/plot-clcd.py
+    deps:
+    - path: processed/all-simulated.csv
+      hash: md5
+      md5: c04e9776e769d6c038682b0acde22161
+      size: 1357
+    - path: scripts/plot-clcd.py
+      hash: md5
+      md5: b7a8b17332765bd780bef7f5476f04fe
+      size: 821
+    outs:
+    - path: figures/naca0012-clcd.json
+      hash: md5
+      md5: 62e3fd8d5aadfe27b97f62939de67183
+      size: 8056

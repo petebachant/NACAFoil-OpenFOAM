@@ -12,7 +12,7 @@ constant/extendedFeatureEdgeMesh
 *.eMesh
 constant/cellToRegion
 *.OpenFOAM
-figures
 system/blockMeshDict
 cases
 *.foam
+.DS_Store

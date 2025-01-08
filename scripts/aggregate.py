@@ -39,6 +39,7 @@ if __name__ == "__main__":
     casedirs = os.listdir("cases")
     rows = []
     for case in casedirs:
+        print(f"Loading data from {case}")
         casedir = os.path.join("cases", case)
         profile = case[4:8]
         case_split = case.split("-", maxsplit=3)

@@ -14,6 +14,7 @@ stages:
         - run.py
         - scripts/blockmeshdict.py
         - 0.org
+        - Dockerfile
       outs:
         - cases/naca0012-re2e5-aoa-${item}
   aggregate-results:
@@ -28,3 +29,11 @@ stages:
       calkit:
         type: dataset
         title: All simulation results
+  plot-clcd:
+    cmd: calkit xenv -n py python scripts/plot-clcd.py
+    deps:
+      - scripts/plot-clcd.py
+      - processed/all-simulated.csv
+    outs:
+      - figures/naca0012-clcd.json:
+          cache: false
