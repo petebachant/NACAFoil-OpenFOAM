@@ -31,3 +31,9 @@ environments:
     path: requirements.txt
     kind: uv-venv
     prefix: .venv
+figures:
+  - path: figures/naca0012-clcd.json
+    title: NACA 0012 lift-to-drag ratio
+    description: >
+      Plotted against the Ladson 180 grit experimental data.
+    stage: plot-clcd

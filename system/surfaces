@@ -10,7 +10,7 @@ surfaces
 {
    type                 surfaces;
    libs                 (sampling);
-   surfaceFormat        raw;
+   surfaceFormat        vtk;
    writeControl         writeTime;
    interpolationScheme  cellPoint;
    fields               (U p);
