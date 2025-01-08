@@ -1,14 +1,13 @@
 #!/usr/bin/env python
-"""
-This script runs multiple simulations to check sensitivity to parameters.
-"""
+"""This script runs multiple simulations to check sensitivity to parameters."""
 
-from __future__ import division, print_function
-import numpy as np
-import pandas as pd
+import argparse
 import os
 from subprocess import call, check_output
-import argparse
+
+import numpy as np
+import pandas as pd
+
 from pynfof.processing import *
 
 U_infty = 1.0
@@ -19,8 +18,13 @@ def read_force_coeffs(t0=20.0):
     """Read force coefficients from output file."""
     df = load_force_coeffs()
     df = df[df.time >= t0]
-    return {"t0": t0, "t1": df.time.max(), "cl": df.cl.mean(),
-            "cd": df.cd.mean(), "cm": df.cm.mean()}
+    return {
+        "t0": t0,
+        "t1": df.time.max(),
+        "cl": df.cl.mean(),
+        "cd": df.cd.mean(),
+        "cm": df.cm.mean(),
+    }
 
 
 def read_turbulence_fields():
@@ -30,13 +34,15 @@ def read_turbulence_fields():
     fp = "postProcessing/sets/{}/{}".format(t, fname)
     df = pd.read_csv(fp)
     beta_star = 0.09
-    df["epsilonMean"] = beta_star*df.kMean*df.omegaMean
+    df["epsilonMean"] = beta_star * df.kMean * df.omegaMean
     i = np.where(df.kMean == df.kMean.max())[0][0]
-    return {"z_turbulence": df.z[i],
-            "k": df.kMean[i],
-            "omega": df.omegaMean[i],
-            "nut": df.nutMean[i],
-            "epsilon": df.epsilonMean[i]}
+    return {
+        "z_turbulence": df.z[i],
+        "k": df.kMean[i],
+        "omega": df.omegaMean[i],
+        "nut": df.nutMean[i],
+        "epsilon": df.epsilonMean[i],
+    }
 
 
 def set_Re(Re):
@@ -45,7 +51,7 @@ def set_Re(Re):
     the input files.
     """
     print("Setting Reynolds number to {:.1e}".format(Re))
-    nu = U_infty*c/Re
+    nu = U_infty * c / Re
     nu = "{:.1e}".format(nu)
     with open("constant/transportProperties.template") as f:
         txt = f.read()
@@ -60,7 +66,7 @@ def read_Re():
             line = line.replace(";", "")
             line = line.split()
             if len(line) > 1 and line[0] == "nu":
-                return U_infty*c/float(line[-1])
+                return U_infty * c / float(line[-1])
 
 
 def read_yplus():
@@ -78,8 +84,12 @@ def read_yplus():
 
 def read_openfoam_build():
     """Read OpenFOAM build from log.pimpleFoam"""
-    return check_output(["grep", "Build",
-                         "log.pimpleFoam"]).strip().split()[-1].decode()
+    return (
+        check_output(["grep", "Build", "log.pimpleFoam"])
+        .strip()
+        .split()[-1]
+        .decode()
+    )
 
 
 def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
@@ -90,10 +100,24 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
     if append:
         df = pd.read_csv(df_fname)
     else:
-        df = pd.DataFrame(columns=["alpha_deg", "cl", "cd", "cm", "Re",
-                                   "mean_yplus", "t0", "t1", "k", "omega",
-                                   "epsilon", "nut", "z_turbulence",
-                                   "OpenFOAM_build"])
+        df = pd.DataFrame(
+            columns=[
+                "alpha_deg",
+                "cl",
+                "cd",
+                "cm",
+                "Re",
+                "mean_yplus",
+                "t0",
+                "t1",
+                "k",
+                "omega",
+                "epsilon",
+                "nut",
+                "z_turbulence",
+                "OpenFOAM_build",
+            ]
+        )
     for alpha in alpha_list:
         call("./Allclean")
         call(["./Allrun", foil, str(alpha)])
@@ -107,8 +131,9 @@ def alpha_sweep(foil, start, stop, step, Re=2e5, append=False):
         df.to_csv(df_fname, index=False)
 
 
-def Re_alpha_sweep(foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop,
-                   alpha_step):
+def Re_alpha_sweep(
+    foil, Re_start, Re_stop, Re_step, alpha_start, alpha_stop, alpha_step
+):
     """Create a coefficient dataset for a list of Reynolds numbers."""
     pass
 
@@ -117,19 +142,38 @@ if __name__ == "__main__":
     if not os.path.isdir("processed"):
         os.mkdir("processed")
 
-    parser = argparse.ArgumentParser(description="Vary the foil angle of \
-                                     attack and log results.")
+    parser = argparse.ArgumentParser(
+        description="Vary the foil angle of \
+                                     attack and log results."
+    )
     parser.add_argument("start", type=float, help="Start angle of sweep.")
-    parser.add_argument("stop", type=float, help="End angle of sweep. The sweep\
-                        does not include this value.")
-    parser.add_argument("step", type=float, default=1.0,
-                        help="Spacing between values.")
+    parser.add_argument(
+        "stop",
+        type=float,
+        help="End angle of sweep. The sweep\
+                        does not include this value.",
+    )
+    parser.add_argument(
+        "step", type=float, default=1.0, help="Spacing between values."
+    )
     parser.add_argument("--foil", "-f", default="0012", help="Foil")
-    parser.add_argument("--Reynolds", "-R", type=float, default=2e5,
-                        help="Reynolds number")
-    parser.add_argument("--append", "-a", action="store_true", default=False,
-                        help="Append to previous results")
+    parser.add_argument(
+        "--Reynolds", "-R", type=float, default=2e5, help="Reynolds number"
+    )
+    parser.add_argument(
+        "--append",
+        "-a",
+        action="store_true",
+        default=False,
+        help="Append to previous results",
+    )
     args = parser.parse_args()
 
-    alpha_sweep(args.foil, args.start, args.stop, args.step,
-                Re=args.Reynolds, append=args.append)
+    alpha_sweep(
+        args.foil,
+        args.start,
+        args.stop,
+        args.step,
+        Re=args.Reynolds,
+        append=args.append,
+    )
