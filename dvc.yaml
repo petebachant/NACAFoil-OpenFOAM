@@ -43,3 +43,13 @@ stages:
         title: NACA 0012 lift-to-drag ratio
         description: >
           Plotted against the Ladson 180 grit experimental data.
+  plot-flow:
+    foreach: ${aoa-values}
+    do:
+      cmd: calkit xenv -n py python scripts/plot-flow.py ${item}
+      deps:
+        - scripts/plot-flow.py
+        - cases/naca0012-re2e5-aoa-${item}
+      outs:
+        - figures/naca0012-re2e5-aoa-${item}-umag.png
+        - figures/naca0012-re2e5-aoa-${item}-umag.html
