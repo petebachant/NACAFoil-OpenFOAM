@@ -66,41 +66,6 @@ functions
         Aref                1;
     }
 
-    fieldAverage
-    {
-        type            fieldAverage;
-        libs            ("libfieldFunctionObjects.so");
-        enabled         true;
-        timeStart       10;
-        writeControl    outputTime;
-        resetOnRestart  true;
-        resetOnOutput   false;
-
-        fields
-        (
-            nut
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-
-            k
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-
-            omega
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-        );
-    }
-
     yPlus
     {
         type            yPlus;
