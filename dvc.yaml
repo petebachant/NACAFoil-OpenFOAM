@@ -8,6 +8,7 @@ stages:
         - system/fvSchemes
         - system/fvSolution
         - system/createPatchDict
+        - system/surfaces
         - constant/transportProperties
         - constant/turbulenceProperties
         - run.py
