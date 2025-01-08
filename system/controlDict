@@ -15,21 +15,21 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     pimpleFoam;
+application     simpleFoam;
 
-startFrom       latestTime;
+startFrom       startTime;
 
 startTime       0;
 
 stopAt          endTime;
 
-endTime         30;
+endTime         500;
 
-deltaT          2e-3;
+deltaT          1;
 
-writeControl    runTime;
+writeControl    timeStep;
 
-writeInterval   0.01;
+writeInterval   50;
 
 purgeWrite      1;
 
@@ -45,69 +45,38 @@ timePrecision   6;
 
 runTimeModifiable true;
 
-adjustTimeStep  true;
-
-maxCo           2.0;
-
 functions
 {
     forceCoeffs
     {
         type                forceCoeffs;
-        functionObjectLibs  ("libforces.so");
-        outputControl       timeStep;
-        outputInterval      1;
-
+        libs                ("libforces.so");
+        writeControl        timeStep;
+        writeInterval       1;
         patches             ("airfoil.*");
-        pName               p;
-        UName               U;
-        rhoName             rhoInf;
+        rho                 rhoInf;
         log                 true;
-
         liftDir             (0 0 1);
         dragDir             (1 0 0);
         CofR                (0 0 0);
         pitchAxis           (0 1 0);
-
         magUInf             1.0;
         rhoInf              1000;
         lRef                1;
         Aref                1;
     }
 
-    fieldAverage
+    yPlus
     {
-        type            fieldAverage;
-        functionObjectLibs ("libfieldFunctionObjects.so");
+        type            yPlus;
+        libs            (fieldFunctionObjects);
+        writePrecision  8;
+        writeToFile     true;
+        useUserTime     true;
         enabled         true;
-        timeStart       10;
-        outputControl   outputTime;
-        resetOnRestart  true;
-        resetOnOutput   false;
-
-        fields
-        (
-            nut
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-
-            k
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-
-            omega
-            {
-                mean        on;
-                prime2Mean  off;
-                base        time;
-            }
-        );
+        log             true;
+        executeControl  writeTime;
+        writeControl    writeTime;
     }
 }
 

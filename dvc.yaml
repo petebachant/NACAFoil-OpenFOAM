@@ -1,0 +1,30 @@
+stages:
+  naca0012-re2e5:
+    foreach: ${aoa-values}
+    do:
+      cmd: calkit xenv python run.py 0012 ${item}
+      deps:
+        - system/controlDict
+        - system/fvSchemes
+        - system/fvSolution
+        - system/createPatchDict
+        - system/surfaces
+        - constant/transportProperties
+        - constant/turbulenceProperties
+        - run.py
+        - scripts/blockmeshdict.py
+        - 0.org
+      outs:
+        - cases/naca0012-re2e5-aoa-${item}
+  aggregate-results:
+    cmd: calkit xenv -n py python scripts/aggregate.py
+    deps:
+      - scripts/aggregate.py
+      - cases
+    outs:
+      - processed/all-simulated.csv:
+          cache: false
+    meta:
+      calkit:
+        type: dataset
+        title: All simulation results

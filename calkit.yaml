@@ -1,0 +1,33 @@
+name: nacafoil-openfoam
+title: Simulating a NACA airfoil with OpenFOAM
+description:
+dependencies:
+  - docker
+  - uv
+datasets:
+  - path: processed/NACA0012_6e6_Ladson_80grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_120grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_180grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/all-simulated.csv
+    title: All simulation results
+    stage: aggregate-results
+environments:
+  foam:
+    kind: docker
+    image: openfoam-2406-foampy
+    wdir: /work
+    path: Dockerfile
+    default: true
+    layers:
+      - miniforge
+      - foampy
+  py:
+    path: requirements.txt
+    kind: uv-venv
+    prefix: .venv

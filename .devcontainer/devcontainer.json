@@ -1,0 +1,41 @@
+{
+  "image": "ghcr.io/calkit/devcontainer:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "iterative.dvc",
+        "esbenp.pretter-vscode",
+        "ms-python.vscode-pylance",
+        "streetsidesoftware.code-spell-checker",
+        "redhat.vscode-yaml",
+        "akamud.vscode-theme-onedark",
+        "mechatroner.rainbow-csv"
+      ],
+      "settings": {
+        "latex-workshop.latex.external.build.command": "calkit",
+        "latex-workshop.latex.external.build.args": [
+          "run"
+        ],
+        "dvc.doNotShowSetupAfterInstall": true,
+        "workbench.editorAssociations": {
+          "*.pdf": "latex-workshop-pdf-hook"
+        },
+        "git.autofetch": true,
+        "redhat.telemetry.enabled": true,
+        "window.menuBarVisibility": "classic",
+        "workbench.colorTheme": "Atom One Dark",
+        "editor.minimap.enabled": false,
+        "cSpell.userWords": [
+          "calkit",
+          "Calkit"
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "conda init bash",
+  "postStartCommand": "docker pull texlive/texlive:latest-full"
+}
