@@ -43,3 +43,8 @@ figures:
   - path: figures/naca0012-re2e5-aoa-0-umag.html
     title: Velocity magnitude at 0 degrees angle of attack (interactive)
     stage: plot-flow@0
+app:
+  path: app
+  url: https://petebachant-nacafoil-openfoam.hf.space
+  title: NACA 0012
+  kind: hf
