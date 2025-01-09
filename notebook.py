@@ -17,10 +17,11 @@ def _():
 def _(slider):
     import pandas as pd
     import plotly.graph_objects as go
+    from calkit.datasets import read_dataset
 
-    df = pd.read_csv("processed/all-simulated.csv").sort_values("alpha_deg")
+    df = read_dataset("processed/all-simulated.csv").sort_values("alpha_deg")
     df["cl_cd"] = df.cl / df.cd
-    dfe = pd.read_csv("processed/NACA0012_6e6_Ladson_180grit.csv")
+    dfe = read_dataset("processed/NACA0012_6e6_Ladson_180grit.csv")
     dfe["cl_cd"] = dfe.cl / dfe.cd
     dfe = dfe[dfe.alpha_deg > 0]
 
@@ -31,17 +32,16 @@ def _(slider):
     fig.update_layout(xaxis_title="Angle of attack (deg)", yaxis_title="$C_l/C_d$")
     fig.add_vline(x=slider.value, line_dash="dash")
     fig
-    return df, dfe, fig, go, pd
+    return df, dfe, fig, go, pd, read_dataset
 
 
 @app.cell
 def _(mo, slider):
     # Load flow snapshot for this angle of attack
-    fpath = f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png"
-    with open(fpath, "rb") as f:
-        content = f.read()
-    mo.image(content)
-    return content, f, fpath
+    import calkit
+
+    mo.image(calkit.read_file(f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png"))
+    return (calkit,)
 
 
 if __name__ == "__main__":
