@@ -2130,3 +2130,40 @@ stages:
       hash: md5
       md5: 48f919dd1c34bf59e301c3162cc9ce58
       size: 53468
+  build-app:
+    cmd: bash scripts/build-app.sh
+    deps:
+    - path: figures
+      hash: md5
+      md5: 6f4f3366d9366f03b75e505926741068.dir
+      size: 61752127
+      nfiles: 46
+    - path: layouts
+      hash: md5
+      md5: 7e7de9088d69630cdddf688f3e95c493.dir
+      size: 446
+      nfiles: 1
+    - path: notebook.py
+      hash: md5
+      md5: 5283db6a618f63749cb96735b11e1b3d
+      size: 1274
+    - path: processed
+      hash: md5
+      md5: a182db1796025232cda9a02f0094e541.dir
+      size: 24520
+      nfiles: 9
+    - path: requirements.txt
+      hash: md5
+      md5: 76f338f22b90e993e3ef79e03c97bfb4
+      size: 116
+    - path: scripts/build-app.sh
+      hash: md5
+      md5: cea40289005db599afee94921ead29c1
+      size: 309
+      isexec: true
+    outs:
+    - path: app
+      hash: md5
+      md5: 1569df41d40472b9786c0568ec3929aa.dir
+      size: 918113
+      nfiles: 30

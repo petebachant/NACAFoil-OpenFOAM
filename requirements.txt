@@ -7,3 +7,4 @@ matplotlib
 seaborn
 pyvista[all,trame]
 marimo
+calkit-python>=0.13.0

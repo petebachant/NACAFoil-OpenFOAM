@@ -53,3 +53,16 @@ stages:
       outs:
         - figures/naca0012-re2e5-aoa-${item}-umag.png
         - figures/naca0012-re2e5-aoa-${item}-umag.html
+  build-app:
+    cmd: bash scripts/build-app.sh
+    deps:
+      - scripts/build-app.sh
+      - figures
+      - processed
+      - requirements.txt
+      - notebook.py
+      - layouts
+    outs:
+      - app:
+          cache: false
+          persist: true
