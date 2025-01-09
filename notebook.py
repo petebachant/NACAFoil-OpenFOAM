@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.10.9"
-app = marimo.App(width="medium")
+app = marimo.App(width="medium", layout_file="layouts/notebook.grid.json")
 
 
 @app.cell
@@ -27,7 +27,7 @@ def _(slider):
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=df.alpha_deg, y=df.cl_cd, name="CFD", mode="lines+markers"))
-    fig.add_trace(go.Scatter(x=dfe.alpha_deg, y=dfe.cl_cd, name="exp"))
+    fig.add_trace(go.Scatter(x=dfe.alpha_deg, y=dfe.cl_cd, name="Exp."))
     fig.update_layout(xaxis_title="Angle of attack (deg)", yaxis_title="$C_l/C_d$")
     fig.add_vline(x=slider.value, line_dash="dash")
     fig
@@ -35,8 +35,13 @@ def _(slider):
 
 
 @app.cell
-def _():
-    return
+def _(mo, slider):
+    # Load flow snapshot for this angle of attack
+    fpath = f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png"
+    with open(fpath, "rb") as f:
+        content = f.read()
+    mo.image(content)
+    return content, f, fpath
 
 
 if __name__ == "__main__":
