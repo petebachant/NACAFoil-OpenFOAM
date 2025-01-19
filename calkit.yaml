@@ -48,3 +48,5 @@ app:
   url: https://petebachant-nacafoil-openfoam.hf.space
   title: NACA 0012
   kind: hf
+questions:
+  - How well does a 2-D steady RANS simulation predict airfoil loading?
