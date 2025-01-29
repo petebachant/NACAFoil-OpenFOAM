@@ -50,3 +50,10 @@ app:
   kind: hf
 questions:
   - How well does a 2-D steady RANS simulation predict airfoil loading?
+showcase:
+  - markdown: >
+      The figure below shows NACA 0012 lift-to-drag ratio plotted against
+      the experimental data from Ladson.
+      Note that the experimental data was collected at a much higher
+      Reynolds number, which explains some of the discrepancy.
+  - figure: figures/naca0012-clcd.json
