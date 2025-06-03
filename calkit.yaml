@@ -33,6 +33,8 @@ environments:
     prefix: .venv
     python: "3.12"
 parameters:
+  foil_name: "0012"
+  reynolds_number: 2e5
   angle_of_attack:
     kind: list[int]
     values:
@@ -53,10 +55,6 @@ pipeline:
         - arg_name: angle_of_attack
           values:
             - parameter: angle_of_attack
-            - range:
-                start: 0
-                stop: 20
-                step: 1
       inputs:
         - system/controlDict
         - system/fvSchemes
@@ -114,11 +112,11 @@ figures:
   - path: figures/naca0012-re2e5-aoa-0-umag.html
     title: Velocity magnitude at 0 degrees angle of attack (interactive)
     stage: plot-flow@0
-  - path: figures/naca0012-re2e5-aoa-{aoa}-umag.png
-    title: Velocity at {aoa} degrees angle of attack
+  - path: figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
+    title: Velocity at {angle_of_attack} degrees angle of attack
     stage: plot-flow
-    iterate_over:
-      - arg_name: aoa
+    iterate_over: # Unnecessary since the stage iterates?
+      - arg_name: angle_of_attack
         values:
           - parameter: angle_of_attack
 app:
