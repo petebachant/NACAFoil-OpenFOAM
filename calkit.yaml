@@ -32,15 +32,15 @@ environments:
     kind: uv-venv
     prefix: .venv
     python: "3.12"
+parameters:
+  angle_of_attack:
+    kind: list[int]
+    values:
+      - range:
+          start: 0
+          stop: 20
+          step: 1
 pipeline:
-  parameters:
-    angle_of_attack:
-      kind: list[int]
-      values:
-        - range:
-            start: 0
-            stop: 20
-            step: 1
   stages:
     naca0012-re2e5:
       kind: python-script
