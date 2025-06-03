@@ -81,7 +81,7 @@ pipeline:
       script_path: scripts/plot-clcd.py
       environment: py
       inputs:
-        - from_stage_outs: aggregate-results
+        - from_stage_outputs: aggregate-results
       outputs:
         - path: figures/naca0012-clcd.json
           storage: git
