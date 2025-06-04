@@ -36,12 +36,10 @@ parameters:
   foil_name: "0012"
   reynolds_number: 2e5
   angle_of_attack:
-    kind: list[int]
-    values:
-      - range:
-          start: 0
-          stop: 20
-          step: 1
+    - range:
+        start: 0
+        stop: 21
+        step: 1
 pipeline:
   stages:
     naca0012-re2e5:
@@ -100,6 +98,21 @@ pipeline:
       outputs:
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.html
+    build-app:
+      kind: shell-script
+      script_path: scripts/build-app.sh
+      environment: _system
+      shell: bash
+      inputs:
+        - figures
+        - processed
+        - requirements.txt
+        - notebook.py
+        - layouts
+      outputs:
+        - path: app
+          storage: git
+          delete_before_run: false
 figures:
   - path: figures/naca0012-clcd.json
     title: NACA 0012 lift-to-drag ratio
