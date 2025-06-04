@@ -1,58 +1,113 @@
 stages:
+  _check-env-foam:
+    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o .calkit/env-locks/foam.json
+    deps:
+      - Dockerfile
+    outs:
+      - .calkit/env-locks/foam.json:
+          cache: false
+          persist: true
+    always_changed: true
+  _check-env-py:
+    cmd: calkit check venv requirements.txt -o .calkit/env-locks/py.txt
+    deps:
+      - requirements.txt
+    outs:
+      - .calkit/env-locks/py.txt:
+          cache: false
+          persist: true
+    always_changed: true
   naca0012-re2e5:
-    foreach: ${aoa-values}
-    do:
-      cmd: calkit xenv python run.py 0012 ${item}
-      deps:
-        - system/controlDict
-        - system/fvSchemes
-        - system/fvSolution
-        - system/createPatchDict
-        - system/surfaces
-        - constant/transportProperties
-        - constant/turbulenceProperties
-        - run.py
-        - scripts/blockmeshdict.py
-        - 0.org
-        - Dockerfile
-      outs:
-        - cases/naca0012-re2e5-aoa-${item}
+    cmd: calkit xenv -n foam --no-check -- python run.py 0012 ${item.angle_of_attack}
+    deps:
+      - run.py
+      - system/controlDict
+      - system/fvSchemes
+      - system/fvSolution
+      - system/createPatchDict
+      - system/surfaces
+      - constant/transportProperties
+      - constant/turbulenceProperties
+      - scripts/blockmeshdict.py
+      - 0.org
+      - .calkit/env-locks/foam.json
+    outs:
+      - cases/naca0012-re2e5-aoa-${item.angle_of_attack}
+    matrix:
+      angle_of_attack:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
   aggregate-results:
-    cmd: calkit xenv -n py python scripts/aggregate.py
+    cmd: calkit xenv -n py --no-check -- python scripts/aggregate.py
     deps:
       - scripts/aggregate.py
       - cases
+      - .calkit/env-locks/py.txt
     outs:
       - processed/all-simulated.csv:
           cache: false
-    meta:
-      calkit:
-        type: dataset
-        title: All simulation results
+          persist: false
   plot-clcd:
-    cmd: calkit xenv -n py python scripts/plot-clcd.py
+    cmd: calkit xenv -n py --no-check -- python scripts/plot-clcd.py
     deps:
       - scripts/plot-clcd.py
+      - .calkit/env-locks/py.txt
       - processed/all-simulated.csv
     outs:
       - figures/naca0012-clcd.json:
           cache: false
-    meta:
-      calkit:
-        type: figure
-        title: NACA 0012 lift-to-drag ratio
-        description: >
-          Plotted against the Ladson 180 grit experimental data.
+          persist: false
   plot-flow:
-    foreach: ${aoa-values}
-    do:
-      cmd: calkit xenv -n py python scripts/plot-flow.py ${item}
-      deps:
-        - scripts/plot-flow.py
-        - cases/naca0012-re2e5-aoa-${item}/postProcessing/surfaces
-      outs:
-        - figures/naca0012-re2e5-aoa-${item}-umag.png
-        - figures/naca0012-re2e5-aoa-${item}-umag.html
+    cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py ${item.angle_of_attack}
+    deps:
+      - scripts/plot-flow.py
+      - cases/naca0012-re2e5-aoa-${item.angle_of_attack}/postProcessing/surfaces
+      - .calkit/env-locks/py.txt
+    outs:
+      - figures/naca0012-re2e5-aoa-${item.angle_of_attack}-umag.png
+      - figures/naca0012-re2e5-aoa-${item.angle_of_attack}-umag.html
+    matrix:
+      angle_of_attack:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
   build-app:
     cmd: bash scripts/build-app.sh
     deps:
