@@ -115,10 +115,6 @@ figures:
   - path: figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
     title: Velocity at {angle_of_attack} degrees angle of attack
     stage: plot-flow
-    iterate_over: # Unnecessary since the stage iterates?
-      - arg_name: angle_of_attack
-        values:
-          - parameter: angle_of_attack
 app:
   path: app
   url: https://petebachant-nacafoil-openfoam.hf.space
