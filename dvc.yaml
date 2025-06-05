@@ -109,7 +109,7 @@ stages:
         - 19
         - 20
   build-app:
-    cmd: bash scripts/build-app.sh
+    cmd: bash --noprofile --norc scripts/build-app.sh
     deps:
       - scripts/build-app.sh
       - figures

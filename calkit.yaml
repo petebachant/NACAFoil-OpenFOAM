@@ -21,6 +21,7 @@ environments:
   foam:
     kind: docker
     image: openfoam-2406-foampy
+    user: root
     wdir: /work
     path: Dockerfile
     default: true
@@ -33,8 +34,6 @@ environments:
     prefix: .venv
     python: "3.12"
 parameters:
-  foil_name: "0012"
-  reynolds_number: 2e5
   angle_of_attack:
     - range:
         start: 0

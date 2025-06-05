@@ -7,4 +7,13 @@ cp requirements.txt app
 cp notebook.py app/app.py
 cp layouts/notebook.grid.json app/layouts
 
-cd app && git add . && git commit -m "Update app" && git push
+# Commit and push if anything has changed
+cd app && git add .
+DIFF=$(git diff --staged)
+if [ "$DIFF" ]
+then
+  echo "Changes detected, committing and pushing"
+  git commit -m "Update app" && git push
+else
+  echo "No changes detected, skipping commit and push"
+fi
