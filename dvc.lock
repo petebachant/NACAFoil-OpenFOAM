@@ -1661,8 +1661,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases
       hash: md5
       md5: dafe8db8bac7b77804f61853ac3d0b1c.dir
@@ -1682,8 +1682,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: processed/all-simulated.csv
       hash: md5
       md5: 62b168c3e503731b43e0f4dd5a3059a8
@@ -1702,8 +1702,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-0/postProcessing/surfaces
       hash: md5
       md5: 67dadf137655f6f098a4daf85d96ea61.dir
@@ -1716,7 +1716,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-0-umag.html
       hash: md5
-      md5: 8c727308d9de5aefda25efd129095d17
+      md5: 4a6824e0697742aa9082ba557fbbbef9
       size: 2873770
     - path: figures/naca0012-re2e5-aoa-0-umag.png
       hash: md5
@@ -1727,8 +1727,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-1/postProcessing/surfaces
       hash: md5
       md5: 3ed43984aa0a48c8d45a7f43a5a31f68.dir
@@ -1741,8 +1741,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-1-umag.html
       hash: md5
-      md5: eacfec9f0d00864b2e6717a8acc1412a
-      size: 2870086
+      md5: 1cc18c0dcc133ec3a07d4f2490754591
+      size: 2870090
     - path: figures/naca0012-re2e5-aoa-1-umag.png
       hash: md5
       md5: 7075e8aeca8f6456567ac2f67dac89fd
@@ -1752,8 +1752,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-2/postProcessing/surfaces
       hash: md5
       md5: 193175b9f7f57c41a1efc717752466ab.dir
@@ -1766,8 +1766,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-2-umag.html
       hash: md5
-      md5: b62427e3c6e8f80730153a0462d980d6
-      size: 2867954
+      md5: 9572b5f3ab0a3f05c3d4b5fbec477a2a
+      size: 2867974
     - path: figures/naca0012-re2e5-aoa-2-umag.png
       hash: md5
       md5: 5d05f6ac73a3cdbabbcc36e80f7395c6
@@ -1777,8 +1777,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-3/postProcessing/surfaces
       hash: md5
       md5: dddce52d477698d070eee19d1caa6a50.dir
@@ -1791,8 +1791,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-3-umag.html
       hash: md5
-      md5: 194c638da081834c9f81e9e8d153f0b9
-      size: 2866362
+      md5: 96789905c9a535e36898f08b6a8d1d86
+      size: 2866366
     - path: figures/naca0012-re2e5-aoa-3-umag.png
       hash: md5
       md5: da7c0b33df0a0d716238a6d7cd2f7bfa
@@ -1802,8 +1802,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-4/postProcessing/surfaces
       hash: md5
       md5: 0b6192643bc9761ce215be8fbdbe8443.dir
@@ -1816,8 +1816,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-4-umag.html
       hash: md5
-      md5: ad8c728ec598a29494d29c4d4265211b
-      size: 2869038
+      md5: f6e98c3abafacef937b7dd22992cc38d
+      size: 2869042
     - path: figures/naca0012-re2e5-aoa-4-umag.png
       hash: md5
       md5: 339dcb409bae56bf68b63a4f02f3daa6
@@ -1827,8 +1827,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-5/postProcessing/surfaces
       hash: md5
       md5: 8acbb39b38c9abcf0dd4aafac575f284.dir
@@ -1841,8 +1841,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-5-umag.html
       hash: md5
-      md5: 2623964a14c2ef9f4a7c310018200abe
-      size: 2870346
+      md5: 26e40538480365340791b3fb8d3f3af4
+      size: 2870354
     - path: figures/naca0012-re2e5-aoa-5-umag.png
       hash: md5
       md5: 92d35c5f72ba230120596d052d2514e3
@@ -1852,8 +1852,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-6/postProcessing/surfaces
       hash: md5
       md5: 5c678792e2fedba309217e301a44c8cd.dir
@@ -1866,8 +1866,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-6-umag.html
       hash: md5
-      md5: 684fa31bb77ef67830bab03ce76a2ac2
-      size: 2875818
+      md5: ffb99cdc6d2c589dc37b578c46b6dd7d
+      size: 2875802
     - path: figures/naca0012-re2e5-aoa-6-umag.png
       hash: md5
       md5: 9fd6d14e8dcc7b6f8398021f9ffdd5f7
@@ -1877,8 +1877,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-7/postProcessing/surfaces
       hash: md5
       md5: ead4fa822a15e5d8773d08e0cc3d0c3b.dir
@@ -1891,8 +1891,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-7-umag.html
       hash: md5
-      md5: c07cba5db8eb9c80e6e0879540ce4deb
-      size: 2885982
+      md5: f18741ceb4d2d32fd0c1ed3305a5b961
+      size: 2885970
     - path: figures/naca0012-re2e5-aoa-7-umag.png
       hash: md5
       md5: ac7992be8bbcbdf4f0476a73e4ddbcd5
@@ -1902,8 +1902,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-8/postProcessing/surfaces
       hash: md5
       md5: 2a01be36f90efd3702816bd2a80a7fa5.dir
@@ -1916,8 +1916,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-8-umag.html
       hash: md5
-      md5: e9b36741af5d7a4cee48252d3e47a5d3
-      size: 2890258
+      md5: 58a70e7a4e8ef74be011fa9bc8871860
+      size: 2890250
     - path: figures/naca0012-re2e5-aoa-8-umag.png
       hash: md5
       md5: a53bc2ae832d9cab00527921a4371905
@@ -1927,8 +1927,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-9/postProcessing/surfaces
       hash: md5
       md5: e906312ff90689fbaa56f5ed015b3f97.dir
@@ -1941,7 +1941,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-9-umag.html
       hash: md5
-      md5: bcbebfa2a3afdfdebb927a6ae1ac7993
+      md5: 0887553a8e263cc56fe6a296967b3ac7
       size: 2893718
     - path: figures/naca0012-re2e5-aoa-9-umag.png
       hash: md5
@@ -1952,8 +1952,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-10/postProcessing/surfaces
       hash: md5
       md5: bb241a68a28f40b5b0dc3d18aa5a60e8.dir
@@ -1966,8 +1966,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-10-umag.html
       hash: md5
-      md5: 6a3e26895f7a6a94a0ba6df74f2ec946
-      size: 2897830
+      md5: f068c4e7c329585a47be907b3a2eb4fc
+      size: 2897834
     - path: figures/naca0012-re2e5-aoa-10-umag.png
       hash: md5
       md5: 3245abfe02a025bf0e0e1ec53073005d
@@ -1977,8 +1977,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-11/postProcessing/surfaces
       hash: md5
       md5: 4f1bb2d978b435093d4b48b9096a4103.dir
@@ -1991,8 +1991,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-11-umag.html
       hash: md5
-      md5: 44ea7f978a6455bd99eb4832597fe54e
-      size: 2902938
+      md5: d4e328ce5fe63c9972f3de1ac2c96ae5
+      size: 2902946
     - path: figures/naca0012-re2e5-aoa-11-umag.png
       hash: md5
       md5: a49d33953661ed528dd7c45ed3f890a4
@@ -2002,8 +2002,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-12/postProcessing/surfaces
       hash: md5
       md5: e1b6f70e5b4d6829bf4d1f34356dc5f8.dir
@@ -2016,8 +2016,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-12-umag.html
       hash: md5
-      md5: ef1c7a271eb93d20f8dd7b2c4820bbea
-      size: 2907094
+      md5: 96e0206f7a8df9c7118e62875b0e66b6
+      size: 2907082
     - path: figures/naca0012-re2e5-aoa-12-umag.png
       hash: md5
       md5: 1f1119b09901cb86d749a1c8a3132e99
@@ -2027,8 +2027,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-13/postProcessing/surfaces
       hash: md5
       md5: 3ae07393e84039e82c56707c5d27f3a5.dir
@@ -2041,8 +2041,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-13-umag.html
       hash: md5
-      md5: 2a5cd09353b4270a2d724acd6a20da1e
-      size: 2909650
+      md5: 1bb55c62f01b3056493557daabc65318
+      size: 2909666
     - path: figures/naca0012-re2e5-aoa-13-umag.png
       hash: md5
       md5: e116f27ff454e1a9b59cddd76ccab24e
@@ -2052,8 +2052,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-14/postProcessing/surfaces
       hash: md5
       md5: 0ea0f6c67ddb8dc52f0355de45142ae8.dir
@@ -2066,7 +2066,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-14-umag.html
       hash: md5
-      md5: 3b9756d427ec7a288901602068e621e9
+      md5: 82f09ada4cdf5a9142c37f683494830f
       size: 2916002
     - path: figures/naca0012-re2e5-aoa-14-umag.png
       hash: md5
@@ -2077,8 +2077,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-15/postProcessing/surfaces
       hash: md5
       md5: afec89939fef179aeaf90114c1b27c73.dir
@@ -2091,8 +2091,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-15-umag.html
       hash: md5
-      md5: 08a310a9a456307ef2afdde2e5b81f82
-      size: 2917282
+      md5: 66178d2cf7a2c122fa0af21134e0d35d
+      size: 2917286
     - path: figures/naca0012-re2e5-aoa-15-umag.png
       hash: md5
       md5: f5c049c36e303437230e2815e0219651
@@ -2102,8 +2102,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-16/postProcessing/surfaces
       hash: md5
       md5: 30e06d2343ea78af5a514bfba361c01a.dir
@@ -2116,8 +2116,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-16-umag.html
       hash: md5
-      md5: 82b6b921fc67f65288cbb39524ee0faf
-      size: 2918698
+      md5: 7388242bac4f0182f4aa3a64e8d196bd
+      size: 2918694
     - path: figures/naca0012-re2e5-aoa-16-umag.png
       hash: md5
       md5: 175e8b431f14d16b8f1e24937ed6b5f7
@@ -2127,8 +2127,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-17/postProcessing/surfaces
       hash: md5
       md5: 0abd1710a1ee97b712ce0f981748d7e2.dir
@@ -2141,8 +2141,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-17-umag.html
       hash: md5
-      md5: 4cb95933731497a4b4a76e2d6cdb5efe
-      size: 2920450
+      md5: 3c52511a9679f98dbb8ab9930d5ab146
+      size: 2920454
     - path: figures/naca0012-re2e5-aoa-17-umag.png
       hash: md5
       md5: 2b9232354a247b106e279434135e3e29
@@ -2152,8 +2152,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-18/postProcessing/surfaces
       hash: md5
       md5: 0a5ddf6e3ba788f17201c4cad1c7817b.dir
@@ -2166,8 +2166,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-18-umag.html
       hash: md5
-      md5: 68e34440d449a15132f1ac54eadf69bc
-      size: 2923462
+      md5: bf8b88ea74167394bbd8a85461343933
+      size: 2923466
     - path: figures/naca0012-re2e5-aoa-18-umag.png
       hash: md5
       md5: 43dd3dca545a2d2470783ecbd350a16a
@@ -2177,8 +2177,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-19/postProcessing/surfaces
       hash: md5
       md5: 345601485eabc6db6e197a34314792b4.dir
@@ -2191,8 +2191,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-19-umag.html
       hash: md5
-      md5: e9fa9448b79d12cce2614844fe927691
-      size: 2926530
+      md5: 0352925c110e638722c5b7534c65cfe3
+      size: 2926526
     - path: figures/naca0012-re2e5-aoa-19-umag.png
       hash: md5
       md5: 73087474ef60a1999305a58c749ae9b7
@@ -2202,8 +2202,8 @@ stages:
     deps:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
     - path: cases/naca0012-re2e5-aoa-20/postProcessing/surfaces
       hash: md5
       md5: b8d2ff40aaad40ffa680ca7b1bc2c314.dir
@@ -2216,8 +2216,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-20-umag.html
       hash: md5
-      md5: 79587a812f176e7c44b2e2da1e76ae6a
-      size: 2928290
+      md5: dbc1634cc7066a2b987de757054c608f
+      size: 2928286
     - path: figures/naca0012-re2e5-aoa-20-umag.png
       hash: md5
       md5: 60e97b911dbeb26ef75eebd5ac085997
@@ -2227,8 +2227,8 @@ stages:
     deps:
     - path: figures
       hash: md5
-      md5: 8b0a7fdf41f57ac5eced850ee6812529.dir
-      size: 61752441
+      md5: 7e988df542ca91d80de9e5bd85888d8e.dir
+      size: 61752461
       nfiles: 46
     - path: layouts
       hash: md5
@@ -2256,8 +2256,8 @@ stages:
     outs:
     - path: app
       hash: md5
-      md5: 843f071f1bd1205fe8768f7fa03aed2a.dir
-      size: 918371
+      md5: 48f42aaf702078066e79b2d62cdc2d7d.dir
+      size: 918370
       nfiles: 30
   _check-env-foam:
     cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o .calkit/env-locks/foam.json
@@ -2281,5 +2281,5 @@ stages:
     outs:
     - path: .calkit/env-locks/py.txt
       hash: md5
-      md5: da8c216307b9a77068e62542eaa78af0
-      size: 3921
+      md5: 03b7871a47ba355b82b31ddcdfebea23
+      size: 3934
