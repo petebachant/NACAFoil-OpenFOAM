@@ -2227,9 +2227,9 @@ stages:
     deps:
     - path: figures
       hash: md5
-      md5: 7e988df542ca91d80de9e5bd85888d8e.dir
-      size: 61752461
-      nfiles: 46
+      md5: 28a442b8d2ea0c6b57df33a67335fec3.dir
+      size: 61752107
+      nfiles: 45
     - path: layouts
       hash: md5
       md5: 33836da88ecb3d840f4b5f50d1476768.dir
@@ -2256,9 +2256,9 @@ stages:
     outs:
     - path: app
       hash: md5
-      md5: 3e62e168f51a1b7180f58bad7a6c1195.dir
-      size: 872497578
-      nfiles: 35708
+      md5: 71bb484b579a5b3088c27e900aa6286e.dir
+      size: 872645649
+      nfiles: 35723
   _check-env-foam:
     cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o 
       .calkit/env-locks/foam.json
