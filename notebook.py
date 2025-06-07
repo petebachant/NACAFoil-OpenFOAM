@@ -7,6 +7,9 @@ app = marimo.App(width="medium", layout_file="layouts/notebook.grid.json")
 @app.cell
 def _():
     import marimo as mo
+    import plotly.io as pio
+
+    pio.renderers.default = "notebook"
 
     slider = mo.ui.slider(0, 20, 1, label="Angle of attack (deg)")
     slider
@@ -27,9 +30,15 @@ def _(slider):
 
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(x=df.alpha_deg, y=df.cl_cd, name="CFD", mode="lines+markers"))
+    fig.add_trace(
+        go.Scatter(
+            x=df.alpha_deg, y=df.cl_cd, name="CFD", mode="lines+markers"
+        )
+    )
     fig.add_trace(go.Scatter(x=dfe.alpha_deg, y=dfe.cl_cd, name="Exp."))
-    fig.update_layout(xaxis_title="Angle of attack (deg)", yaxis_title="$C_l/C_d$")
+    fig.update_layout(
+        xaxis_title="Angle of attack (deg)", yaxis_title="$C_l/C_d$"
+    )
     fig.add_vline(x=slider.value, line_dash="dash")
     fig
     return df, dfe, fig, go, pd, read_dataset
@@ -40,7 +49,9 @@ def _(mo, slider):
     # Load flow snapshot for this angle of attack
     import calkit
 
-    mo.image(calkit.read_file(f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png"))
+    mo.image(
+        calkit.read_file(f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png")
+    )
     return (calkit,)
 
 

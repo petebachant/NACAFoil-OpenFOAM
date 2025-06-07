@@ -2237,8 +2237,8 @@ stages:
       nfiles: 1
     - path: notebook.py
       hash: md5
-      md5: 5283db6a618f63749cb96735b11e1b3d
-      size: 1274
+      md5: 185ec53fe78cf007267489dcfcee5499
+      size: 1406
     - path: processed
       hash: md5
       md5: fd21da71f37d191cfec406d2cc975cc5.dir
@@ -2256,11 +2256,12 @@ stages:
     outs:
     - path: app
       hash: md5
-      md5: 48f42aaf702078066e79b2d62cdc2d7d.dir
-      size: 918370
-      nfiles: 30
+      md5: 3e62e168f51a1b7180f58bad7a6c1195.dir
+      size: 872497578
+      nfiles: 35708
   _check-env-foam:
-    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o .calkit/env-locks/foam.json
+    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o 
+      .calkit/env-locks/foam.json
     deps:
     - path: Dockerfile
       hash: md5
