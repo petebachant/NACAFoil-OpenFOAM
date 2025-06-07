@@ -5,7 +5,7 @@
         ],
         "Parent": "",
         "Comment": "buildkit.dockerfile.v0",
-        "Created": "2025-01-07T16:04:18.294354843Z",
+        "Created": "2025-06-06T15:43:46.389426168Z",
         "Author": "",
         "Config": {
             "Hostname": "",
@@ -47,7 +47,7 @@
         },
         "Architecture": "arm64",
         "Os": "linux",
-        "Size": 588254453,
+        "Size": 577721834,
         "GraphDriver": {
             "Data": null,
             "Name": "overlayfs"
@@ -55,20 +55,26 @@
         "RootFS": {
             "Type": "layers",
             "Layers": [
-                "sha256:1575723d84b80a2963cb6b2bf2ae5cefd3859bda7470710cff2b703d40a92000",
-                "sha256:a8002854aebac5aa79f0c7fe61fdda7deb5a2ffc10fb92b801b1b80e1db84b79",
-                "sha256:81a7f75cbb049d210b2e567621bcc8888c6c191aa243d994a41c9cdc9cc8b1b3",
-                "sha256:840be8c3331857ba538b7378711ccf58097a9a389b1cf1e7a91da96716d8b7ba",
-                "sha256:0d344fd8c5fd6768efb67bc44c7bc1d9a16725f9515f53692e6faa04f2fb7136",
-                "sha256:f4130fb40abb0463b4ab7c4bf79e34c237ff5ba2b8cd590bff719b19c998d634",
-                "sha256:ff4e7762e6ed5372aba6749b69a413ced69f4a637f4e7235aceb26536e358dec",
+                "sha256:e03f520a17abd5b8603b7187bb5aec0eafe8972faf801eab0687f08c516d28e3",
+                "sha256:8fd84d32689b07bef8db99d6db9f152426cedc11ceb8020fd91eed9333a142af",
+                "sha256:a8731671cb89425c556ff2b34c5d278d293ffe8cb44fab3614db31760471a185",
+                "sha256:801c7b5b05311d6435a092fc647495f8e8784e48a6fa24514645295b756224dc",
+                "sha256:a28d31efdc7c4dd24273a4b474b63ae07ce02b34257a2b1e4d1be877242f1568",
+                "sha256:8fbb70ba4c853dafce432cff7d751501b9caa7aa1ad70361b4ec2905ad332771",
+                "sha256:c70558a8303fcea1103cd51d8a7465624755a7278c0347a5f223685969270cfd",
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-                "sha256:145f5abd514d5d7306476748362dbbb32baa18b8fc7d87c5ecf8f7f830ed0e84",
-                "sha256:a60b408c4bd3ae7a9fcfbc5970efd77742253059bbc77b75d05d315ded09fda9",
-                "sha256:511eb7d54c17757aac7697f9dcb771151258afb931f38515603b06d3b998afef",
+                "sha256:f01a6ec1b5df029f8ccd128b18259969ab2b64afa7e58e3a01a951bb274877f4",
+                "sha256:21c1f98b02a0855ed8614d706751c6441f46cb2081d6a1916f6824b2b51abd15",
+                "sha256:8063eff02b2a1d21f92d17c8db8f0c7fdf839a895879793555aa0986ea0a27af",
                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
             ]
         },
-        "DockerfileMD5": "4cb9eb167796afa0dc6c167f02f57351"
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:93af7ab2e12ea65f2be12b4f47a5e73b9f8366ac146f67237a4f498ed2dc42df",
+            "size": 856
+        },
+        "DockerfileMD5": "4cb9eb167796afa0dc6c167f02f57351",
+        "DepsMD5s": {}
     }
 ]

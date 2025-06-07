@@ -21,6 +21,7 @@ environments:
   foam:
     kind: docker
     image: openfoam-2406-foampy
+    user: root
     wdir: /work
     path: Dockerfile
     default: true
@@ -31,6 +32,86 @@ environments:
     path: requirements.txt
     kind: uv-venv
     prefix: .venv
+    python: "3.12"
+parameters:
+  angle_of_attack:
+    - range:
+        start: 0
+        stop: 21
+        step: 1
+pipeline:
+  stages:
+    naca0012-re2e5:
+      kind: python-script
+      script_path: run.py
+      environment: foam
+      args:
+        - "0012"
+        - "{angle_of_attack}"
+      iterate_over:
+        - arg_name: angle_of_attack
+          values:
+            - parameter: angle_of_attack
+      inputs:
+        - system/controlDict
+        - system/fvSchemes
+        - system/fvSolution
+        - system/createPatchDict
+        - system/surfaces
+        - constant/transportProperties
+        - constant/turbulenceProperties
+        - scripts/blockmeshdict.py
+        - 0.org
+      outputs:
+        - cases/naca0012-re2e5-aoa-{angle_of_attack}
+    aggregate-results:
+      kind: python-script
+      script_path: scripts/aggregate.py
+      environment: py
+      inputs:
+        - cases
+      outputs:
+        - path: processed/all-simulated.csv
+          storage: git
+    plot-clcd:
+      kind: python-script
+      script_path: scripts/plot-clcd.py
+      environment: py
+      inputs:
+        - from_stage_outputs: aggregate-results
+      outputs:
+        - path: figures/naca0012-clcd.json
+          storage: git
+    plot-flow:
+      kind: python-script
+      script_path: scripts/plot-flow.py
+      environment: py
+      args:
+        - "{angle_of_attack}"
+      iterate_over:
+        - arg_name: angle_of_attack
+          values:
+            - parameter: angle_of_attack
+      inputs:
+        - cases/naca0012-re2e5-aoa-{angle_of_attack}/postProcessing/surfaces
+      outputs:
+        - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
+        - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.html
+    build-app:
+      kind: shell-script
+      script_path: scripts/build-app.sh
+      environment: _system
+      shell: bash
+      inputs:
+        - figures
+        - processed
+        - requirements.txt
+        - notebook.py
+        - layouts
+      outputs:
+        - path: app
+          storage: git
+          delete_before_run: false
 figures:
   - path: figures/naca0012-clcd.json
     title: NACA 0012 lift-to-drag ratio
@@ -43,6 +124,9 @@ figures:
   - path: figures/naca0012-re2e5-aoa-0-umag.html
     title: Velocity magnitude at 0 degrees angle of attack (interactive)
     stage: plot-flow@0
+  - path: figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
+    title: Velocity at {angle_of_attack} degrees angle of attack
+    stage: plot-flow
 app:
   path: app
   url: https://petebachant-nacafoil-openfoam.hf.space

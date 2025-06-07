@@ -1,5 +1,6 @@
 [core]
     remote = calkit
+    autostage = true
 ['remote "calkit"']
     url = https://api.calkit.io/projects/petebachant/nacafoil-openfoam/dvc
     auth = custom
