@@ -5,29 +5,35 @@ NACA airfoils with OpenFOAM in a Docker container.
 
 ## Usage
 
-To download all of the cases and their results, execute
+To download all of the cases and their results, execute:
 
 ```sh
 calkit pull
 ```
 
-To run all cases and aggregate the results, execute
+To run all cases and aggregate the results, execute:
 
 ```sh
 calkit run
 ```
 
-To run a single case, execute
+To run a single case, execute:
 
 ```sh
-calkit xenv python run.py {profile} {angle_of_attack}
+calkit xenv -n foam -- python run.py {profile} {angle_of_attack}
 ```
 
 For example, to simulate the flow around a NACA 0012 at 8 degrees angle
-of attack, run
+of attack, run:
 
 ```sh
-calkit xenv python run.py 0012 8
+calkit xenv -n foam -- python run.py 0012 8
+```
+
+To start an interactive OpenFOAM shell, run:
+
+```sh
+calkit xenv -n foam bash
 ```
 
 ## Acknowledgements

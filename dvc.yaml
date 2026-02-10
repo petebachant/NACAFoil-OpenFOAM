@@ -1,27 +1,6 @@
 stages:
-  _check-env-foam:
-    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o
-      .calkit/env-locks/foam.json
-    deps:
-      - Dockerfile
-    outs:
-      - .calkit/env-locks/foam.json:
-          cache: false
-          persist: true
-    always_changed: true
-  _check-env-py:
-    cmd: calkit check venv requirements.txt -o 
-      .calkit/env-locks/py.txt
-    deps:
-      - requirements.txt
-    outs:
-      - .calkit/env-locks/py.txt:
-          cache: false
-          persist: true
-    always_changed: true
   naca0012-re2e5:
-    cmd: calkit xenv -n foam --no-check -- python run.py 0012 
-      ${item.angle_of_attack}
+    cmd: calkit xenv -n foam --no-check -- python run.py 0012 ${item.angle_of_attack}
     deps:
       - run.py
       - system/controlDict
@@ -33,7 +12,7 @@ stages:
       - constant/turbulenceProperties
       - scripts/blockmeshdict.py
       - 0.org
-      - .calkit/env-locks/foam.json
+      - .calkit/env-locks/foam
     outs:
       - cases/naca0012-re2e5-aoa-${item.angle_of_attack}
     matrix:
@@ -59,33 +38,38 @@ stages:
         - 18
         - 19
         - 20
+    desc: Automatically generated from the 'naca0012-re2e5' stage in calkit.yaml.
+      Changes made here will be overwritten.
   aggregate-results:
     cmd: calkit xenv -n py --no-check -- python scripts/aggregate.py
     deps:
       - scripts/aggregate.py
       - cases
-      - .calkit/env-locks/py.txt
+      - .calkit/env-locks/py
     outs:
       - processed/all-simulated.csv:
           cache: false
           persist: false
+    desc: Automatically generated from the 'aggregate-results' stage in
+      calkit.yaml. Changes made here will be overwritten.
   plot-clcd:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-clcd.py
     deps:
       - scripts/plot-clcd.py
-      - .calkit/env-locks/py.txt
+      - .calkit/env-locks/py
       - processed/all-simulated.csv
     outs:
       - figures/naca0012-clcd.json:
           cache: false
           persist: false
+    desc: Automatically generated from the 'plot-clcd' stage in calkit.yaml.
+      Changes made here will be overwritten.
   plot-flow:
-    cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 
-      ${item.angle_of_attack}
+    cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py ${item.angle_of_attack}
     deps:
       - scripts/plot-flow.py
       - cases/naca0012-re2e5-aoa-${item.angle_of_attack}/postProcessing/surfaces
-      - .calkit/env-locks/py.txt
+      - .calkit/env-locks/py
     outs:
       - figures/naca0012-re2e5-aoa-${item.angle_of_attack}-umag.png
       - figures/naca0012-re2e5-aoa-${item.angle_of_attack}-umag.html
@@ -112,8 +96,10 @@ stages:
         - 18
         - 19
         - 20
+    desc: Automatically generated from the 'plot-flow' stage in calkit.yaml.
+      Changes made here will be overwritten.
   build-app:
-    cmd: bash --noprofile --norc scripts/build-app.sh
+    cmd: ' bash --noprofile --norc scripts/build-app.sh'
     deps:
       - scripts/build-app.sh
       - figures
@@ -125,3 +111,5 @@ stages:
       - app:
           cache: false
           persist: true
+    desc: Automatically generated from the 'build-app' stage in calkit.yaml.
+      Changes made here will be overwritten.

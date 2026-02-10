@@ -4,19 +4,7 @@ description:
 dependencies:
   - docker
   - uv
-datasets:
-  - path: processed/NACA0012_6e6_Ladson_80grit.csv
-    imported_from:
-      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
-  - path: processed/NACA0012_6e6_Ladson_120grit.csv
-    imported_from:
-      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
-  - path: processed/NACA0012_6e6_Ladson_180grit.csv
-    imported_from:
-      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
-  - path: processed/all-simulated.csv
-    title: All simulation results
-    stage: aggregate-results
+
 environments:
   foam:
     kind: docker
@@ -33,14 +21,18 @@ environments:
     kind: uv-venv
     prefix: .venv
     python: "3.12"
+
+# Project-level parameters
 parameters:
   angle_of_attack:
     - range:
         start: 0
         stop: 21
         step: 1
+
 pipeline:
   stages:
+    # Run OpenFOAM simulations for NACA 0012 at different angles of attack
     naca0012-re2e5:
       kind: python-script
       script_path: run.py
@@ -64,6 +56,7 @@ pipeline:
         - 0.org
       outputs:
         - cases/naca0012-re2e5-aoa-{angle_of_attack}
+    # Aggregate results from all simulations into a single CSV file
     aggregate-results:
       kind: python-script
       script_path: scripts/aggregate.py
@@ -73,6 +66,7 @@ pipeline:
       outputs:
         - path: processed/all-simulated.csv
           storage: git
+    # Plot the lift-to-drag ratio against the experimental data from Ladson
     plot-clcd:
       kind: python-script
       script_path: scripts/plot-clcd.py
@@ -82,6 +76,7 @@ pipeline:
       outputs:
         - path: figures/naca0012-clcd.json
           storage: git
+    # Plot flow fields for each angle of attack
     plot-flow:
       kind: python-script
       script_path: scripts/plot-flow.py
@@ -97,6 +92,7 @@ pipeline:
       outputs:
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.html
+    # Build the marimo app for HF Space deployment
     build-app:
       kind: shell-script
       script_path: scripts/build-app.sh
@@ -112,6 +108,7 @@ pipeline:
         - path: app
           storage: git
           delete_before_run: false
+
 figures:
   - path: figures/naca0012-clcd.json
     title: NACA 0012 lift-to-drag ratio
@@ -127,13 +124,30 @@ figures:
   - path: figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
     title: Velocity at {angle_of_attack} degrees angle of attack
     stage: plot-flow
+
+datasets:
+  - path: processed/NACA0012_6e6_Ladson_80grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_120grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/NACA0012_6e6_Ladson_180grit.csv
+    imported_from:
+      url: http://turbmodels.larc.nasa.gov/naca0012_val.html
+  - path: processed/all-simulated.csv
+    title: All simulation results
+    stage: aggregate-results
+
 app:
   path: app
   url: https://petebachant-nacafoil-openfoam.hf.space
   title: NACA 0012
   kind: hf
+
 questions:
   - How well does a 2-D steady RANS simulation predict airfoil loading?
+
 showcase:
   - markdown: >
       The figure below shows NACA 0012 lift-to-drag ratio plotted against

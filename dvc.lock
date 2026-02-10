@@ -3,10 +3,11 @@ stages:
   naca0012-re2e5@0:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 0
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -53,16 +54,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-0
       hash: md5
-      md5: 8bb141769a58035144195048c25a0167.dir
-      size: 30230710
+      md5: 4185a86f24be3bdd04b686aeffa27177.dir
+      size: 30230752
       nfiles: 42
   naca0012-re2e5@1:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 1
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -109,16 +111,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-1
       hash: md5
-      md5: fb46ce1c2efff29d085e87a10fb6e16b.dir
-      size: 30237304
+      md5: dff3ccb762a26176d64860ec1d87395b.dir
+      size: 30237344
       nfiles: 42
   naca0012-re2e5@2:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 2
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -165,16 +168,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-2
       hash: md5
-      md5: ad9f7d0dc02704c4526a2cba05bc3d0f.dir
-      size: 30230323
+      md5: e3b2583f04a3c2d12b6afa0a2d05028d.dir
+      size: 30230372
       nfiles: 42
   naca0012-re2e5@3:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 3
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -221,16 +225,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-3
       hash: md5
-      md5: 9cff60b4d12eda272bac8a423a719d49.dir
-      size: 30221971
+      md5: 1d6595780ec63bc7cc5d3e8b3e3cb5de.dir
+      size: 30222023
       nfiles: 42
   naca0012-re2e5@4:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 4
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -277,16 +282,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-4
       hash: md5
-      md5: 2cd51b9897711b53c941b02573f05bdd.dir
-      size: 30209619
+      md5: 8e1c0f2174f4c0161a0c2b56af5ccdd8.dir
+      size: 30209652
       nfiles: 42
   naca0012-re2e5@5:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 5
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -333,16 +339,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-5
       hash: md5
-      md5: d3baadef5bf3e9f90f85b18d573672d9.dir
-      size: 30201045
+      md5: d56ae5538f9cdb62ed68e801a8b499cb.dir
+      size: 30201109
       nfiles: 42
   naca0012-re2e5@6:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 6
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -389,16 +396,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-6
       hash: md5
-      md5: 24de2df7f7fb49b6d0c7ae93c8e72d13.dir
-      size: 30188565
+      md5: dbc64e1fee59699a8eafb494fa64e8c3.dir
+      size: 30188617
       nfiles: 42
   naca0012-re2e5@7:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 7
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -445,16 +453,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-7
       hash: md5
-      md5: 3acf37a8346b16cd0e9c9cf163a37494.dir
-      size: 30181984
+      md5: 964015ab6347d75698f4801cc1a01afe.dir
+      size: 30182075
       nfiles: 42
   naca0012-re2e5@8:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 8
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -501,16 +510,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-8
       hash: md5
-      md5: fbfaafd4726ad925c2c94f2c9d2f2209.dir
-      size: 30170517
+      md5: 579407f256d5e7899c97a03f0a391b50.dir
+      size: 30170571
       nfiles: 42
   naca0012-re2e5@9:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 9
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -557,16 +567,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-9
       hash: md5
-      md5: 82a1b07e5e3523f93baf3b27f30d8a40.dir
-      size: 30158549
+      md5: f00185e12f82513d3e8caa7d62bf5b5d.dir
+      size: 30158583
       nfiles: 42
   naca0012-re2e5@10:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 10
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -613,16 +624,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-10
       hash: md5
-      md5: 79ca7d16be632bc353c9b1f8f646c2f9.dir
-      size: 30143882
+      md5: 00db53863cd92ea4479682e0a880038b.dir
+      size: 30143922
       nfiles: 42
   naca0012-re2e5@11:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 11
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -669,16 +681,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-11
       hash: md5
-      md5: ebddab1c5ac3d84ab6aaffd6aa71d901.dir
-      size: 30136728
+      md5: 0f8a1ac58bfadf7a5bb9605a36f961f4.dir
+      size: 30136785
       nfiles: 42
   naca0012-re2e5@12:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 12
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -725,16 +738,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-12
       hash: md5
-      md5: e30d4a027a57aa00ac17dd5df8010753.dir
-      size: 30121731
+      md5: 14e08e5e0c3e742dc13dc27adc1f8eb1.dir
+      size: 30121775
       nfiles: 42
   naca0012-re2e5@13:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 13
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -781,16 +795,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-13
       hash: md5
-      md5: f67ef5d50ba01da833f9ad996c38af61.dir
-      size: 30114658
+      md5: cc830b5f549cbc2b8061dad29852fd09.dir
+      size: 30114707
       nfiles: 42
   naca0012-re2e5@14:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 14
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -837,16 +852,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-14
       hash: md5
-      md5: a94cc350b02ea8fc2e24027fb7706953.dir
-      size: 30111354
+      md5: 19a703f9ea194cb395e983f2236ce098.dir
+      size: 30111406
       nfiles: 42
   naca0012-re2e5@15:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 15
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -893,16 +909,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-15
       hash: md5
-      md5: 844ed245b88d0fbeb3203fb7466daf65.dir
-      size: 30107672
+      md5: 437e969141493a1d1e42c58c05be9a7f.dir
+      size: 30107732
       nfiles: 42
   naca0012-re2e5@16:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 16
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -949,16 +966,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-16
       hash: md5
-      md5: 48a24487df6b184f74c5499629772a6f.dir
-      size: 30110030
+      md5: bc5138017d5aefb1bde115a943abbc8d.dir
+      size: 30110091
       nfiles: 42
   naca0012-re2e5@17:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 17
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -1005,16 +1023,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-17
       hash: md5
-      md5: c2a0c99f8220c578bae2108255232dc6.dir
-      size: 30103354
+      md5: 7cfe4832d58be1c71da201202b6c305c.dir
+      size: 30103406
       nfiles: 42
   naca0012-re2e5@18:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 18
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -1061,16 +1080,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-18
       hash: md5
-      md5: 673c2669ad55c38d8b560aca892f83f3.dir
-      size: 30108917
+      md5: 281d1b8380f06ec15e4807b6f0989f39.dir
+      size: 30108956
       nfiles: 42
   naca0012-re2e5@19:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 19
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -1117,16 +1137,17 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-19
       hash: md5
-      md5: 6fe010fd5c2d1efcbb6677fba910fbd0.dir
-      size: 30105171
+      md5: 5494c019114223285c71908d904eaf57.dir
+      size: 30105207
       nfiles: 42
   naca0012-re2e5@20:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 20
     deps:
-    - path: .calkit/env-locks/foam.json
+    - path: .calkit/env-locks/foam
       hash: md5
-      md5: 7f05d3c9408d38c9a84d019b83215740
-      size: 3109
+      md5: 7e5e92a6be77202f12ae445fd81aa82a.dir
+      size: 1480
+      nfiles: 1
     - path: 0.org
       hash: md5
       md5: 5a63092cc8939fd158aae4f6bf2f7e03.dir
@@ -1173,8 +1194,8 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-20
       hash: md5
-      md5: 3e2358968f590a47c94b2714d7b04fad.dir
-      size: 30123031
+      md5: 2589fbf0c86fa072272e7cc2492d308e.dir
+      size: 30123077
       nfiles: 42
   naca0012-re2e5@21:
     cmd: calkit xenv python run.py 0012 21
@@ -1659,14 +1680,15 @@ stages:
   aggregate-results:
     cmd: calkit xenv -n py --no-check -- python scripts/aggregate.py
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases
       hash: md5
-      md5: dafe8db8bac7b77804f61853ac3d0b1c.dir
-      size: 633317115
+      md5: 2abfaced8ae6c1d805ace953699d41e5.dir
+      size: 633318162
       nfiles: 882
     - path: scripts/aggregate.py
       hash: md5
@@ -1680,10 +1702,11 @@ stages:
   plot-clcd:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-clcd.py
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: processed/all-simulated.csv
       hash: md5
       md5: 62b168c3e503731b43e0f4dd5a3059a8
@@ -1700,10 +1723,11 @@ stages:
   plot-flow@0:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 0
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-0/postProcessing/surfaces
       hash: md5
       md5: 67dadf137655f6f098a4daf85d96ea61.dir
@@ -1716,8 +1740,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-0-umag.html
       hash: md5
-      md5: 4a6824e0697742aa9082ba557fbbbef9
-      size: 2873770
+      md5: bade6d8ca721c4bf4bd28084727a9adb
+      size: 2873766
     - path: figures/naca0012-re2e5-aoa-0-umag.png
       hash: md5
       md5: 089d5d31e5fd132e84398083233671c0
@@ -1725,10 +1749,11 @@ stages:
   plot-flow@1:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 1
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-1/postProcessing/surfaces
       hash: md5
       md5: 3ed43984aa0a48c8d45a7f43a5a31f68.dir
@@ -1741,8 +1766,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-1-umag.html
       hash: md5
-      md5: 1cc18c0dcc133ec3a07d4f2490754591
-      size: 2870090
+      md5: 4769a3af41e1b17f2f1af291a94d1f46
+      size: 2870094
     - path: figures/naca0012-re2e5-aoa-1-umag.png
       hash: md5
       md5: 7075e8aeca8f6456567ac2f67dac89fd
@@ -1750,10 +1775,11 @@ stages:
   plot-flow@2:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 2
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-2/postProcessing/surfaces
       hash: md5
       md5: 193175b9f7f57c41a1efc717752466ab.dir
@@ -1766,8 +1792,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-2-umag.html
       hash: md5
-      md5: 9572b5f3ab0a3f05c3d4b5fbec477a2a
-      size: 2867974
+      md5: 71f20de321ae08cc7bb11213dddcf272
+      size: 2867970
     - path: figures/naca0012-re2e5-aoa-2-umag.png
       hash: md5
       md5: 5d05f6ac73a3cdbabbcc36e80f7395c6
@@ -1775,10 +1801,11 @@ stages:
   plot-flow@3:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 3
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-3/postProcessing/surfaces
       hash: md5
       md5: dddce52d477698d070eee19d1caa6a50.dir
@@ -1791,7 +1818,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-3-umag.html
       hash: md5
-      md5: 96789905c9a535e36898f08b6a8d1d86
+      md5: 132c961e3ee0fc9538273ebbf2f0a52f
       size: 2866366
     - path: figures/naca0012-re2e5-aoa-3-umag.png
       hash: md5
@@ -1800,10 +1827,11 @@ stages:
   plot-flow@4:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 4
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-4/postProcessing/surfaces
       hash: md5
       md5: 0b6192643bc9761ce215be8fbdbe8443.dir
@@ -1816,7 +1844,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-4-umag.html
       hash: md5
-      md5: f6e98c3abafacef937b7dd22992cc38d
+      md5: 9c7db527a3fd1e057251083a76f7e420
       size: 2869042
     - path: figures/naca0012-re2e5-aoa-4-umag.png
       hash: md5
@@ -1825,10 +1853,11 @@ stages:
   plot-flow@5:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 5
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-5/postProcessing/surfaces
       hash: md5
       md5: 8acbb39b38c9abcf0dd4aafac575f284.dir
@@ -1841,8 +1870,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-5-umag.html
       hash: md5
-      md5: 26e40538480365340791b3fb8d3f3af4
-      size: 2870354
+      md5: fec2c75afe3bb26b0a7194ab073d8361
+      size: 2870362
     - path: figures/naca0012-re2e5-aoa-5-umag.png
       hash: md5
       md5: 92d35c5f72ba230120596d052d2514e3
@@ -1850,10 +1879,11 @@ stages:
   plot-flow@6:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 6
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-6/postProcessing/surfaces
       hash: md5
       md5: 5c678792e2fedba309217e301a44c8cd.dir
@@ -1866,8 +1896,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-6-umag.html
       hash: md5
-      md5: ffb99cdc6d2c589dc37b578c46b6dd7d
-      size: 2875802
+      md5: 671279c9c15d06f4cbf505a43949e4ef
+      size: 2875814
     - path: figures/naca0012-re2e5-aoa-6-umag.png
       hash: md5
       md5: 9fd6d14e8dcc7b6f8398021f9ffdd5f7
@@ -1875,10 +1905,11 @@ stages:
   plot-flow@7:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 7
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-7/postProcessing/surfaces
       hash: md5
       md5: ead4fa822a15e5d8773d08e0cc3d0c3b.dir
@@ -1891,8 +1922,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-7-umag.html
       hash: md5
-      md5: f18741ceb4d2d32fd0c1ed3305a5b961
-      size: 2885970
+      md5: 03172829fc8dcc93fc2e195355da31ea
+      size: 2885990
     - path: figures/naca0012-re2e5-aoa-7-umag.png
       hash: md5
       md5: ac7992be8bbcbdf4f0476a73e4ddbcd5
@@ -1900,10 +1931,11 @@ stages:
   plot-flow@8:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 8
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-8/postProcessing/surfaces
       hash: md5
       md5: 2a01be36f90efd3702816bd2a80a7fa5.dir
@@ -1916,8 +1948,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-8-umag.html
       hash: md5
-      md5: 58a70e7a4e8ef74be011fa9bc8871860
-      size: 2890250
+      md5: e996b4a8ad75b1e8509b11f676ff5d72
+      size: 2890266
     - path: figures/naca0012-re2e5-aoa-8-umag.png
       hash: md5
       md5: a53bc2ae832d9cab00527921a4371905
@@ -1925,10 +1957,11 @@ stages:
   plot-flow@9:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 9
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-9/postProcessing/surfaces
       hash: md5
       md5: e906312ff90689fbaa56f5ed015b3f97.dir
@@ -1941,7 +1974,7 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-9-umag.html
       hash: md5
-      md5: 0887553a8e263cc56fe6a296967b3ac7
+      md5: be568d0eb9a81e2998fb8ba1f32d7595
       size: 2893718
     - path: figures/naca0012-re2e5-aoa-9-umag.png
       hash: md5
@@ -1950,10 +1983,11 @@ stages:
   plot-flow@10:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 10
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-10/postProcessing/surfaces
       hash: md5
       md5: bb241a68a28f40b5b0dc3d18aa5a60e8.dir
@@ -1966,8 +2000,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-10-umag.html
       hash: md5
-      md5: f068c4e7c329585a47be907b3a2eb4fc
-      size: 2897834
+      md5: 84a07a89fa9774164d0af1775000d04b
+      size: 2897838
     - path: figures/naca0012-re2e5-aoa-10-umag.png
       hash: md5
       md5: 3245abfe02a025bf0e0e1ec53073005d
@@ -1975,10 +2009,11 @@ stages:
   plot-flow@11:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 11
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-11/postProcessing/surfaces
       hash: md5
       md5: 4f1bb2d978b435093d4b48b9096a4103.dir
@@ -1991,8 +2026,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-11-umag.html
       hash: md5
-      md5: d4e328ce5fe63c9972f3de1ac2c96ae5
-      size: 2902946
+      md5: 77697124f79fddd94e85ae67dce52663
+      size: 2902942
     - path: figures/naca0012-re2e5-aoa-11-umag.png
       hash: md5
       md5: a49d33953661ed528dd7c45ed3f890a4
@@ -2000,10 +2035,11 @@ stages:
   plot-flow@12:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 12
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-12/postProcessing/surfaces
       hash: md5
       md5: e1b6f70e5b4d6829bf4d1f34356dc5f8.dir
@@ -2016,8 +2052,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-12-umag.html
       hash: md5
-      md5: 96e0206f7a8df9c7118e62875b0e66b6
-      size: 2907082
+      md5: e1a0c0d8a928c194ea30bd8a7f72f0c6
+      size: 2907106
     - path: figures/naca0012-re2e5-aoa-12-umag.png
       hash: md5
       md5: 1f1119b09901cb86d749a1c8a3132e99
@@ -2025,10 +2061,11 @@ stages:
   plot-flow@13:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 13
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-13/postProcessing/surfaces
       hash: md5
       md5: 3ae07393e84039e82c56707c5d27f3a5.dir
@@ -2041,8 +2078,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-13-umag.html
       hash: md5
-      md5: 1bb55c62f01b3056493557daabc65318
-      size: 2909666
+      md5: e634e8bedd28780ac02753d2a07061a3
+      size: 2909658
     - path: figures/naca0012-re2e5-aoa-13-umag.png
       hash: md5
       md5: e116f27ff454e1a9b59cddd76ccab24e
@@ -2050,10 +2087,11 @@ stages:
   plot-flow@14:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 14
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-14/postProcessing/surfaces
       hash: md5
       md5: 0ea0f6c67ddb8dc52f0355de45142ae8.dir
@@ -2066,8 +2104,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-14-umag.html
       hash: md5
-      md5: 82f09ada4cdf5a9142c37f683494830f
-      size: 2916002
+      md5: 9bb66f310a28be56d362eb8b3616c4b8
+      size: 2916018
     - path: figures/naca0012-re2e5-aoa-14-umag.png
       hash: md5
       md5: 99f352d8f8af34e62e3cd41f3fcfd34a
@@ -2075,10 +2113,11 @@ stages:
   plot-flow@15:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 15
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-15/postProcessing/surfaces
       hash: md5
       md5: afec89939fef179aeaf90114c1b27c73.dir
@@ -2091,8 +2130,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-15-umag.html
       hash: md5
-      md5: 66178d2cf7a2c122fa0af21134e0d35d
-      size: 2917286
+      md5: 404db4c8e1fed3ef138bb680ee41ab24
+      size: 2917298
     - path: figures/naca0012-re2e5-aoa-15-umag.png
       hash: md5
       md5: f5c049c36e303437230e2815e0219651
@@ -2100,10 +2139,11 @@ stages:
   plot-flow@16:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 16
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-16/postProcessing/surfaces
       hash: md5
       md5: 30e06d2343ea78af5a514bfba361c01a.dir
@@ -2116,8 +2156,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-16-umag.html
       hash: md5
-      md5: 7388242bac4f0182f4aa3a64e8d196bd
-      size: 2918694
+      md5: 99ae38c0fd4425aee1c2a04bc8661244
+      size: 2918710
     - path: figures/naca0012-re2e5-aoa-16-umag.png
       hash: md5
       md5: 175e8b431f14d16b8f1e24937ed6b5f7
@@ -2125,10 +2165,11 @@ stages:
   plot-flow@17:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 17
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-17/postProcessing/surfaces
       hash: md5
       md5: 0abd1710a1ee97b712ce0f981748d7e2.dir
@@ -2141,8 +2182,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-17-umag.html
       hash: md5
-      md5: 3c52511a9679f98dbb8ab9930d5ab146
-      size: 2920454
+      md5: ea2bf587c948ea15c4a00331da3d55bf
+      size: 2920474
     - path: figures/naca0012-re2e5-aoa-17-umag.png
       hash: md5
       md5: 2b9232354a247b106e279434135e3e29
@@ -2150,10 +2191,11 @@ stages:
   plot-flow@18:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 18
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-18/postProcessing/surfaces
       hash: md5
       md5: 0a5ddf6e3ba788f17201c4cad1c7817b.dir
@@ -2166,8 +2208,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-18-umag.html
       hash: md5
-      md5: bf8b88ea74167394bbd8a85461343933
-      size: 2923466
+      md5: 4b1bb03278b36961838f7737bf1eea12
+      size: 2923470
     - path: figures/naca0012-re2e5-aoa-18-umag.png
       hash: md5
       md5: 43dd3dca545a2d2470783ecbd350a16a
@@ -2175,10 +2217,11 @@ stages:
   plot-flow@19:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 19
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-19/postProcessing/surfaces
       hash: md5
       md5: 345601485eabc6db6e197a34314792b4.dir
@@ -2191,8 +2234,8 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-19-umag.html
       hash: md5
-      md5: 0352925c110e638722c5b7534c65cfe3
-      size: 2926526
+      md5: e11d59a283eb9924631c878d6b16be18
+      size: 2926534
     - path: figures/naca0012-re2e5-aoa-19-umag.png
       hash: md5
       md5: 73087474ef60a1999305a58c749ae9b7
@@ -2200,10 +2243,11 @@ stages:
   plot-flow@20:
     cmd: calkit xenv -n py --no-check -- python scripts/plot-flow.py 20
     deps:
-    - path: .calkit/env-locks/py.txt
+    - path: .calkit/env-locks/py
       hash: md5
-      md5: 03b7871a47ba355b82b31ddcdfebea23
+      md5: 387a309a8dda91281d18ff620afad1a1.dir
       size: 3934
+      nfiles: 1
     - path: cases/naca0012-re2e5-aoa-20/postProcessing/surfaces
       hash: md5
       md5: b8d2ff40aaad40ffa680ca7b1bc2c314.dir
@@ -2216,19 +2260,19 @@ stages:
     outs:
     - path: figures/naca0012-re2e5-aoa-20-umag.html
       hash: md5
-      md5: dbc1634cc7066a2b987de757054c608f
-      size: 2928286
+      md5: 333be8adf096ff487785a336517553e2
+      size: 2928302
     - path: figures/naca0012-re2e5-aoa-20-umag.png
       hash: md5
       md5: 60e97b911dbeb26ef75eebd5ac085997
       size: 53511
   build-app:
-    cmd: bash --noprofile --norc scripts/build-app.sh
+    cmd: ' bash --noprofile --norc scripts/build-app.sh'
     deps:
     - path: figures
       hash: md5
-      md5: 28a442b8d2ea0c6b57df33a67335fec3.dir
-      size: 61752107
+      md5: 34edba2feb67763bdc1af0b0989be45c.dir
+      size: 61752267
       nfiles: 45
     - path: layouts
       hash: md5
@@ -2260,8 +2304,7 @@ stages:
       size: 872645649
       nfiles: 35723
   _check-env-foam:
-    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o 
-      .calkit/env-locks/foam.json
+    cmd: calkit check docker-env openfoam-2406-foampy -i Dockerfile -o .calkit/env-locks/foam.json
     deps:
     - path: Dockerfile
       hash: md5
