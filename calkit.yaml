@@ -155,3 +155,24 @@ showcase:
       Note that the experimental data was collected at a much higher
       Reynolds number, which explains some of the discrepancy.
   - figure: figures/naca0012-clcd.json
+releases:
+  v2.0.0:
+    kind: project
+    path: .
+    publisher: github
+    url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v2.0.0
+    date: '2025-02-11'
+    title: v2.0.0
+    description: "## What's Changed\r\n* Modernize and turn into a Calkit
+      project by @petebachant in https://github.com/petebachant/NACAFoil-OpenFOAM/pull/34\r
+      \n* Add marimo notebook and HF app by @petebachant in https://github.com/petebachant/NACAFoil-OpenFOAM/pull/35\r
+      \n\r\n\r\n**Full Changelog**: https://github.com/petebachant/NACAFoil-OpenFOAM/compare/v1.0.0...v2.0.0"
+  v1.0.0:
+    kind: project
+    path: .
+    publisher: github
+    url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v1.0.0
+    date: '2025-01-08'
+    title: v1.0.0
+    description: "Compatible with OpenFOAM 3.0.x and Anaconda versions with
+      Python 3.5.\r\n\r\n**Full Changelog**: https://github.com/petebachant/NACAFoil-OpenFOAM/commits/v1.0.0"
