@@ -121,9 +121,6 @@ figures:
   - path: figures/naca0012-re2e5-aoa-0-umag.html
     title: Velocity magnitude at 0 degrees angle of attack (interactive)
     stage: plot-flow@0
-  - path: figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
-    title: Velocity at {angle_of_attack} degrees angle of attack
-    stage: plot-flow
 
 datasets:
   - path: processed/NACA0012_6e6_Ladson_80grit.csv
@@ -155,6 +152,7 @@ showcase:
       Note that the experimental data was collected at a much higher
       Reynolds number, which explains some of the discrepancy.
   - figure: figures/naca0012-clcd.json
+
 releases:
   v2.0.0:
     kind: project
