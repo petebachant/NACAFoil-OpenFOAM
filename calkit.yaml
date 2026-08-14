@@ -8,14 +8,10 @@ dependencies:
 environments:
   foam:
     kind: docker
-    image: openfoam-2406-foampy
+    image: openfoam-2412-foampy
     user: root
     wdir: /work
     path: Dockerfile
-    default: true
-    layers:
-      - miniforge
-      - foampy
   py:
     path: requirements.txt
     kind: uv-venv
@@ -159,7 +155,7 @@ releases:
     path: .
     publisher: github
     url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v2.0.0
-    date: '2025-02-11'
+    date: "2025-02-11"
     title: v2.0.0
     description: "## What's Changed\r\n* Modernize and turn into a Calkit
       project by @petebachant in https://github.com/petebachant/NACAFoil-OpenFOAM/pull/34\r
@@ -170,7 +166,7 @@ releases:
     path: .
     publisher: github
     url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v1.0.0
-    date: '2025-01-08'
+    date: "2025-01-08"
     title: v1.0.0
     description: "Compatible with OpenFOAM 3.0.x and Anaconda versions with
       Python 3.5.\r\n\r\n**Full Changelog**: https://github.com/petebachant/NACAFoil-OpenFOAM/commits/v1.0.0"

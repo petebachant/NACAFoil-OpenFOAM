@@ -1,4 +1,4 @@
-FROM microfluidica/openfoam:2406
+FROM microfluidica/openfoam:2412
 
 # Install Miniforge
 ARG MINIFORGE_NAME=Miniforge3
