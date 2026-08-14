@@ -1,3 +1,0 @@
-[submodule "app"]
-	path = app
-	url = https://huggingface.co/spaces/petebachant/nacafoil-openfoam

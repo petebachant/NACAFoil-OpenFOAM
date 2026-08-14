@@ -1,30 +1,45 @@
+# This is not our environment spec -- the `py` environment in calkit.yaml is.
+# marimo requires it to know what to micropip-install in the browser, and the
+# WASM app fails with ModuleNotFoundError without it. Version constraints here
+# are ignored at runtime, so it is a package list and nothing more.
+#
+# TODO: the `marimo` stage should generate this into the build copy from the
+# stage environment, so the source notebook carries no second dependency spec.
+# /// script
+# dependencies = ["marimo", "pandas", "plotly"]
+# ///
+
 import marimo
 
-__generated_with = "0.10.9"
+__generated_with = "0.23.16"
 app = marimo.App(width="medium", layout_file="layouts/notebook.grid.json")
 
 
 @app.cell
 def _():
     import marimo as mo
-    import plotly.io as pio
+    import pandas as pd
+    import plotly.graph_objects as go
 
-    pio.renderers.default = "notebook"
+    # Resolves to this directory when run with a kernel, and to the served
+    # base URL when running in the browser via WebAssembly. Paths beneath it
+    # mirror the project layout, so a cell reads the same either way.
+    public = mo.notebook_location() / "public"
 
     slider = mo.ui.slider(0, 20, 1, label="Angle of attack (deg)")
     slider
-    return mo, slider
+    return go, mo, pd, public, slider
 
 
 @app.cell
-def _(slider):
-    import pandas as pd
-    import plotly.graph_objects as go
-    from calkit.datasets import read_dataset
-
-    df = read_dataset("processed/all-simulated.csv").sort_values("alpha_deg")
+def _(go, pd, public, slider):
+    df = pd.read_csv(
+        str(public / "processed" / "all-simulated.csv")
+    ).sort_values("alpha_deg")
     df["cl_cd"] = df.cl / df.cd
-    dfe = read_dataset("processed/NACA0012_6e6_Ladson_180grit.csv")
+    dfe = pd.read_csv(
+        str(public / "processed" / "NACA0012_6e6_Ladson_180grit.csv")
+    )
     dfe["cl_cd"] = dfe.cl / dfe.cd
     dfe = dfe[dfe.alpha_deg > 0]
 
@@ -41,18 +56,20 @@ def _(slider):
     )
     fig.add_vline(x=slider.value, line_dash="dash")
     fig
-    return df, dfe, fig, go, pd, read_dataset
+    return
 
 
 @app.cell
-def _(mo, slider):
+def _(mo, public, slider):
     # Load flow snapshot for this angle of attack
-    import calkit
-
     mo.image(
-        calkit.read_file(f"figures/naca0012-re2e5-aoa-{slider.value}-umag.png")
+        str(
+            public
+            / "figures"
+            / f"naca0012-re2e5-aoa-{slider.value}-umag.png"
+        )
     )
-    return (calkit,)
+    return
 
 
 if __name__ == "__main__":

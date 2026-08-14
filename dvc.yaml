@@ -101,17 +101,20 @@ stages:
     desc: Automatically generated from the 'plot-flow' stage in 
       calkit.yaml. Changes made here will be overwritten.
   build-app:
-    cmd: bash --noprofile --norc scripts/build-app.sh
+    cmd: calkit marimo export --environment py --no-check --show-code 
+      --layout layouts/notebook.grid.json --include 
+      processed/all-simulated.csv --include 
+      processed/NACA0012_6e6_Ladson_180grit.csv --include 
+      'figures/naca0012-re2e5-aoa-*-umag.png' -o app notebook.py
     deps:
-      - scripts/build-app.sh
-      - figures
-      - processed
-      - requirements.txt
       - notebook.py
-      - layouts
+      - layouts/notebook.grid.json
+      - processed/all-simulated.csv
+      - processed/NACA0012_6e6_Ladson_180grit.csv
+      - figures
+      - .calkit/env-locks/py
     outs:
       - app:
-          cache: false
-          persist: true
+          cache: true
     desc: Automatically generated from the 'build-app' stage in 
       calkit.yaml. Changes made here will be overwritten.

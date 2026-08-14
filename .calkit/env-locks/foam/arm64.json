@@ -3,7 +3,7 @@
         "openfoam-2412-foampy"
     ],
     "RepoDigests": [
-        "openfoam-2412-foampy@sha256:cf0d6696b62b1178183c66594703aa6789754734be7d8b2545b934abad1e7f00"
+        "openfoam-2412-foampy@sha256:94918bf0e32c724b02a9dafaca8315bb2c5fd2fd6707cbbdc2c5c6a833e14651"
     ],
     "Architecture": "arm64",
     "Os": "linux",
@@ -18,9 +18,9 @@
             "sha256:30859781e5553c8b3c5cc9af7e1443882947a021983f85f74878202cab11807d",
             "sha256:fdaa516d3ac796316db6e0a16e560cbc22011277257eb323ef8a88e662ac49f0",
             "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
-            "sha256:0463104343eb4fef2794ca1f602d1178569a8a98df2416eb10b7648ff3a2c441",
-            "sha256:167364b9d9ed0328a04aaaedce32c8982b301d466e668106fbb3c4b0f545cd3a",
-            "sha256:ea4553a17d0d8d6358671c21a0d94851870bdf8f2e69df07ec8c5f19e8c67f99",
+            "sha256:dcb802f7216879534197b911689991663e0a6e15aa1a89ebece417bd93cdcf55",
+            "sha256:78ff28c809bbeabb2bb0274d4abc43cdf78b653c7075fc032de6581b7e8db6b0",
+            "sha256:902e548911ef937392e0096c6f15a81baff130679172fc5f4b11fc3f3ff46221",
             "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
         ]
     },
