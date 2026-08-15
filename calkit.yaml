@@ -90,41 +90,20 @@ pipeline:
       outputs:
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.html
-    # Export the marimo notebook to a self-contained WebAssembly app.
-    #
-    # The stage assembles a build directory (marimo requires public/ to sit
-    # next to the notebook, and we don't want it at the repo root), copies
-    # each included path into public/ preserving its project-relative path,
-    # then runs `marimo export html-wasm`.
-    #
-    # `include_paths` is deliberately explicit rather than reusing `inputs`:
-    # publishing data to the web should be opt-in per path, not inferred.
-    # Paths listed here are deps as well.
-    #
-    # Note that `marimo export html-wasm` only packages the notebook, it does
-    # not execute it, and exits 0 even when every cell is broken. So the stage
-    # should also run `marimo export html` from the build directory first,
-    # which does execute and exits 1 on cell failure. Assembling public/
-    # before validating means it runs against exactly the data we publish.
-    build-app:
-      kind: marimo
+    # Export the marimo notebook to a self-contained WebAssembly app
+    app:
+      kind: marimo-html-wasm
       notebook_path: notebook.py
       layout_path: layouts/notebook.grid.json
       environment: py
-      # Export format, mirroring marimo's own export subcommands. `html`
-      # executes the notebook and bakes the results into a single ~120 kB
-      # file: static, but validated and free of runtime version drift.
-      # `html-wasm` keeps it interactive at ~28 MB. `mode` applies only to
-      # html-wasm; `show_code` only to `mode: run`.
-      to: html-wasm
-      mode: run
+      mode: run # edit|run, run default
       show_code: true
       include_paths:
         - processed/all-simulated.csv
         - processed/NACA0012_6e6_Ladson_180grit.csv
         - figures/naca0012-re2e5-aoa-*-umag.png
-      output_path: app
-      app_storage: dvc
+      output_dir: app
+      output_storage: dvc
 
 figures:
   - path: figures/naca0012-clcd.json
@@ -165,7 +144,7 @@ apps:
     # The HTML file itself. Its containing folder is the serving root, and
     # index.html is implied when a folder is served.
     path: app/index.html
-    stage: build-app
+    stage: app
 
 questions:
   - How well does a 2-D steady RANS simulation predict airfoil loading?

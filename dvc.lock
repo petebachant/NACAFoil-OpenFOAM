@@ -5,7 +5,7 @@ stages:
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -54,15 +54,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-0
       hash: md5
-      md5: b54a4f2b96af441bacb2b27d3e3184ff.dir
-      size: 30230732
+      md5: 9dd5fce6a62f2536f70f614977c22808.dir
+      size: 30230713
       nfiles: 42
   naca0012-re2e5@1:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 1
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -111,15 +111,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-1
       hash: md5
-      md5: 3d8beb8fc140b1d14273077cf0539617.dir
-      size: 30237310
+      md5: 751bef9ed15b799bb33b986205c0f418.dir
+      size: 30237325
       nfiles: 42
   naca0012-re2e5@2:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 2
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -168,15 +168,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-2
       hash: md5
-      md5: f574a5d504269ab6c90b1024d22dfe50.dir
-      size: 30230342
+      md5: 99a019aa0a7801771d99e7dc46662dd4.dir
+      size: 30230337
       nfiles: 42
   naca0012-re2e5@3:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 3
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -225,15 +225,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-3
       hash: md5
-      md5: 4a469418b5071f456d25815f82d55c7b.dir
-      size: 30221969
+      md5: d7114128aa78ec7f04c5c19021904ea8.dir
+      size: 30221981
       nfiles: 42
   naca0012-re2e5@4:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 4
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -282,15 +282,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-4
       hash: md5
-      md5: fcf7f01cf0bd1e739939e60afa71a920.dir
-      size: 30209628
+      md5: 285ff2d292763b1ad0da6b0570eaad33.dir
+      size: 30209632
       nfiles: 42
   naca0012-re2e5@5:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 5
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -339,15 +339,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-5
       hash: md5
-      md5: f263e028c822c8a8091a7099c1c6fa9f.dir
-      size: 30201054
+      md5: 58da0bf4a619f130ca06ccb2d36513cd.dir
+      size: 30201063
       nfiles: 42
   naca0012-re2e5@6:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 6
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -396,15 +396,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-6
       hash: md5
-      md5: 7bcd824c8e528919a55388beb39d43bb.dir
-      size: 30188571
+      md5: eb751c6dc59c7a6ff01ecb7b868cd301.dir
+      size: 30188570
       nfiles: 42
   naca0012-re2e5@7:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 7
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -453,15 +453,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-7
       hash: md5
-      md5: 0152709597ef71467882daf01c7a13b7.dir
-      size: 30182023
+      md5: 8d9758665f71cacf58839893131a347a.dir
+      size: 30182019
       nfiles: 42
   naca0012-re2e5@8:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 8
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -510,15 +510,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-8
       hash: md5
-      md5: 849e6083fb8c3e9d84706cb69fa09bd9.dir
-      size: 30170539
+      md5: 1ee59c6472e1c5176100729cd35701f1.dir
+      size: 30170525
       nfiles: 42
   naca0012-re2e5@9:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 9
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -567,15 +567,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-9
       hash: md5
-      md5: eaed5726051482a580d7f00481661097.dir
-      size: 30158557
+      md5: 9612965ca42b852fff00e08c150714c7.dir
+      size: 30158559
       nfiles: 42
   naca0012-re2e5@10:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 10
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -624,7 +624,7 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-10
       hash: md5
-      md5: f68b28bdcc3b38bee9e652e6a105ba44.dir
+      md5: 8d4d7e3adb5fc9c5943e2469a5a32c98.dir
       size: 30143892
       nfiles: 42
   naca0012-re2e5@11:
@@ -632,7 +632,7 @@ stages:
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -681,15 +681,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-11
       hash: md5
-      md5: 3cec9499b274c0f4e611dcd7e43acba2.dir
-      size: 30136724
+      md5: d352eb69ca234e59063347f640782ca2.dir
+      size: 30136739
       nfiles: 42
   naca0012-re2e5@12:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 12
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -738,15 +738,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-12
       hash: md5
-      md5: 40bf70a24dc44715aa04bde048087518.dir
-      size: 30121737
+      md5: 9648b5e293d4ab802ce657dde0f38eaa.dir
+      size: 30121726
       nfiles: 42
   naca0012-re2e5@13:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 13
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -795,15 +795,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-13
       hash: md5
-      md5: 8555545128399020736f20fa45824801.dir
-      size: 30114672
+      md5: 786f9ed35b27889ce3b78dab7d63f846.dir
+      size: 30114666
       nfiles: 42
   naca0012-re2e5@14:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 14
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -852,15 +852,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-14
       hash: md5
-      md5: 492c431851fc9df5d3a50d328e4d3259.dir
-      size: 30111385
+      md5: 9b489e93f745943d36612d9620ba1c75.dir
+      size: 30111368
       nfiles: 42
   naca0012-re2e5@15:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 15
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -909,15 +909,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-15
       hash: md5
-      md5: 2378d17738b7254fcb8a46a10c6362a3.dir
-      size: 30107689
+      md5: e4ca48b31f35624187a707f19da330a6.dir
+      size: 30107686
       nfiles: 42
   naca0012-re2e5@16:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 16
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -966,15 +966,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-16
       hash: md5
-      md5: c435fbc2d889a609443295671405ff45.dir
-      size: 30110043
+      md5: a35baca755c3c07cbc24af988d476530.dir
+      size: 30110053
       nfiles: 42
   naca0012-re2e5@17:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 17
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -1023,15 +1023,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-17
       hash: md5
-      md5: 94bb962838f69636961ae93b564b663a.dir
-      size: 30103365
+      md5: 76e4a2f63b4afbdbde84f1cf24ac847c.dir
+      size: 30103361
       nfiles: 42
   naca0012-re2e5@18:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 18
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -1080,15 +1080,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-18
       hash: md5
-      md5: fd66ba5e1fc6494086eec96ed4d30e5f.dir
-      size: 30108923
+      md5: 5f1dfc8cd6f55043bec64b7181cdbddc.dir
+      size: 30108930
       nfiles: 42
   naca0012-re2e5@19:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 19
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -1137,15 +1137,15 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-19
       hash: md5
-      md5: 5a9dab059054d50951013eb1ce7d360e.dir
-      size: 30105167
+      md5: ba35b4f3eec6c3647c032c0762d6a583.dir
+      size: 30105222
       nfiles: 42
   naca0012-re2e5@20:
     cmd: calkit xenv -n foam --no-check -- python run.py 0012 20
     deps:
     - path: .calkit/env-locks/foam
       hash: md5
-      md5: cad7d0b8e2267c593ae72ee4410b8f11.dir
+      md5: 199c5f84e371ee881f06dab38ed17aad.dir
       size: 1480
       nfiles: 1
     - path: 0.org
@@ -1194,8 +1194,8 @@ stages:
     outs:
     - path: cases/naca0012-re2e5-aoa-20
       hash: md5
-      md5: 63e5a06cec6836af61fd0f70d81fee1c.dir
-      size: 30123029
+      md5: e6ce28d2645f409b9bbf72acb86ea5d8.dir
+      size: 30123066
       nfiles: 42
   naca0012-re2e5@21:
     cmd: calkit xenv python run.py 0012 21
@@ -1687,8 +1687,8 @@ stages:
       nfiles: 1
     - path: cases
       hash: md5
-      md5: c5a56e706c8a312c117ff9aefb520882.dir
-      size: 633317351
+      md5: 0c0a012564c2432ee22639ed038b0bf2.dir
+      size: 633317433
       nfiles: 882
     - path: scripts/aggregate.py
       hash: md5
@@ -2267,9 +2267,9 @@ stages:
       md5: 83d59e10b6789102c24d2f593bbadd12
       size: 53922
   build-app:
-    cmd: calkit marimo export --environment py --no-check --show-code --layout 
-      layouts/notebook.grid.json --include processed/all-simulated.csv --include
-      processed/NACA0012_6e6_Ladson_180grit.csv --include 
+    cmd: calkit nb export-marimo --environment py --no-check --show-code 
+      --layout layouts/notebook.grid.json --include processed/all-simulated.csv 
+      --include processed/NACA0012_6e6_Ladson_180grit.csv --include 
       'figures/naca0012-re2e5-aoa-*-umag.png' -o app notebook.py
     deps:
     - path: .calkit/env-locks/py
@@ -2329,3 +2329,41 @@ stages:
       hash: md5
       md5: 03b7871a47ba355b82b31ddcdfebea23
       size: 3934
+  app:
+    cmd: calkit nb export-marimo-wasm --environment py --no-check --show-code 
+      --layout layouts/notebook.grid.json --include processed/all-simulated.csv 
+      --include processed/NACA0012_6e6_Ladson_180grit.csv --include 
+      'figures/naca0012-re2e5-aoa-*-umag.png' -o app notebook.py
+    deps:
+    - path: .calkit/env-locks/py
+      hash: md5
+      md5: 73768cb7fb71c62af3ca879b7880a01d.dir
+      size: 2598
+      nfiles: 1
+    - path: figures
+      hash: md5
+      md5: 5509aebd60af393b2cae452e8fe0e53e.dir
+      size: 63577681
+      nfiles: 45
+    - path: layouts/notebook.grid.json
+      hash: md5
+      md5: ce2b0421f574ba2e0f957861176e4b38
+      size: 446
+    - path: notebook.py
+      hash: md5
+      md5: 086cb1a2c0abdb6e9c41b6d43f85c3c5
+      size: 2176
+    - path: processed/NACA0012_6e6_Ladson_180grit.csv
+      hash: md5
+      md5: beba3fe473dd5a5b698eafa491c1d862
+      size: 455
+    - path: processed/all-simulated.csv
+      hash: md5
+      md5: 62b168c3e503731b43e0f4dd5a3059a8
+      size: 1356
+    outs:
+    - path: app
+      hash: md5
+      md5: 893aeea7f9b7b401463615c1a08e8f3b.dir
+      size: 27286633
+      nfiles: 733

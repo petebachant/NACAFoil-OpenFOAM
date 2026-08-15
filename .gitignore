@@ -17,5 +17,4 @@ cases
 *.foam
 .DS_Store
 scratch.ipynb
-.calkit/build
 /app
