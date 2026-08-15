@@ -1,14 +1,3 @@
-# This is not our environment spec -- the `py` environment in calkit.yaml is.
-# marimo requires it to know what to micropip-install in the browser, and the
-# WASM app fails with ModuleNotFoundError without it. Version constraints here
-# are ignored at runtime, so it is a package list and nothing more.
-#
-# TODO: the `marimo` stage should generate this into the build copy from the
-# stage environment, so the source notebook carries no second dependency spec.
-# /// script
-# dependencies = ["marimo", "pandas", "plotly"]
-# ///
-
 import marimo
 
 __generated_with = "0.23.16"

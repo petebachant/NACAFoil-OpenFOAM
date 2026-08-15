@@ -2351,8 +2351,8 @@ stages:
       size: 446
     - path: notebook.py
       hash: md5
-      md5: 086cb1a2c0abdb6e9c41b6d43f85c3c5
-      size: 2176
+      md5: a39cd90986ff06f0568b4b7a1a056aed
+      size: 1647
     - path: processed/NACA0012_6e6_Ladson_180grit.csv
       hash: md5
       md5: beba3fe473dd5a5b698eafa491c1d862
@@ -2364,6 +2364,6 @@ stages:
     outs:
     - path: app
       hash: md5
-      md5: 893aeea7f9b7b401463615c1a08e8f3b.dir
-      size: 27286633
+      md5: cc7dd8ec500456353f3888c15721c1d4.dir
+      size: 27285628
       nfiles: 733
