@@ -1,6 +1,8 @@
 name: nacafoil-openfoam
 title: Simulating a NACA airfoil with OpenFOAM
 description:
+hub: calkit.io
+
 dependencies:
   - docker
   - uv
@@ -8,14 +10,10 @@ dependencies:
 environments:
   foam:
     kind: docker
-    image: openfoam-2406-foampy
+    image: openfoam-2412-foampy
     user: root
     wdir: /work
     path: Dockerfile
-    default: true
-    layers:
-      - miniforge
-      - foampy
   py:
     path: requirements.txt
     kind: uv-venv
@@ -92,22 +90,20 @@ pipeline:
       outputs:
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.png
         - figures/naca0012-re2e5-aoa-{angle_of_attack}-umag.html
-    # Build the marimo app for HF Space deployment
-    build-app:
-      kind: shell-script
-      script_path: scripts/build-app.sh
-      environment: _system
-      shell: bash
-      inputs:
-        - figures
-        - processed
-        - requirements.txt
-        - notebook.py
-        - layouts
-      outputs:
-        - path: app
-          storage: git
-          delete_before_run: false
+    # Export the marimo notebook to a self-contained WebAssembly app
+    app:
+      kind: marimo-html-wasm
+      notebook_path: notebook.py
+      layout_path: layouts/notebook.grid.json
+      environment: py
+      mode: run # edit|run, run default
+      show_code: true
+      include_paths:
+        - processed/all-simulated.csv
+        - processed/NACA0012_6e6_Ladson_180grit.csv
+        - figures/naca0012-re2e5-aoa-*-umag.png
+      output_dir: app
+      output_storage: dvc
 
 figures:
   - path: figures/naca0012-clcd.json
@@ -136,11 +132,19 @@ datasets:
     title: All simulation results
     stage: aggregate-results
 
-app:
-  path: app
-  url: https://petebachant-nacafoil-openfoam.hf.space
-  title: NACA 0012
-  kind: hf
+# Apps are artifacts the Hub serves, not processes. Keyed by slug, since the
+# key becomes a public URL segment and must survive a directory rename.
+apps:
+  naca0012:
+    title: NACA 0012 explorer
+    description: >
+      Lift-to-drag ratio against the Ladson experimental data, with the
+      velocity field at each simulated angle of attack.
+    kind: static-html
+    # The HTML file itself. Its containing folder is the serving root, and
+    # index.html is implied when a folder is served.
+    path: app/index.html
+    stage: app
 
 questions:
   - How well does a 2-D steady RANS simulation predict airfoil loading?
@@ -159,7 +163,7 @@ releases:
     path: .
     publisher: github
     url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v2.0.0
-    date: '2025-02-11'
+    date: "2025-02-11"
     title: v2.0.0
     description: "## What's Changed\r\n* Modernize and turn into a Calkit
       project by @petebachant in https://github.com/petebachant/NACAFoil-OpenFOAM/pull/34\r
@@ -170,7 +174,7 @@ releases:
     path: .
     publisher: github
     url: https://github.com/petebachant/NACAFoil-OpenFOAM/releases/tag/v1.0.0
-    date: '2025-01-08'
+    date: "2025-01-08"
     title: v1.0.0
     description: "Compatible with OpenFOAM 3.0.x and Anaconda versions with
       Python 3.5.\r\n\r\n**Full Changelog**: https://github.com/petebachant/NACAFoil-OpenFOAM/commits/v1.0.0"

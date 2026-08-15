@@ -1,10 +1,5 @@
 pandas>=2
 numpy
 plotly
-ipykernel
-nbformat>=4.2.0
-matplotlib
-seaborn
 pyvista[all,trame]
-marimo
-calkit-python>=0.13.0
+marimo>=0.23
