@@ -1,7 +1,7 @@
 name: nacafoil-openfoam
 title: Simulating a NACA airfoil with OpenFOAM
 description:
-hub: localhost
+hub: calkit.io
 
 dependencies:
   - docker
